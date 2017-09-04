@@ -530,18 +530,6 @@ $('.menu-li').hover(function(){
 		height: 63px;
 		top: 73px;
 	}
-</style>
-
-<style>
-	#right-part{
-		width: 290px;
-		float: right;
-		
-	}	
-	#left-part{
-		width: 890px;
-		float: left;
-	}
 	.ux-realtime-box{
 		display: none;
 		width: 100%;
@@ -612,6 +600,18 @@ $('.menu-li').hover(function(){
 		border: 1px solid #ebeced;
 		
 	}
+</style><!---uX Slider-->
+<style>
+	#right-part{
+		width: 290px;
+		float: right;
+		
+	}	
+	#left-part{
+		width: 890px;
+		float: left;
+	}
+	
 </style><!--Right Part-->
 <style>
 	#slider-hr{
@@ -977,7 +977,7 @@ $('.menu-li').hover(function(){
 	}
 	.scroll-main ul{
 		height: 100%;
-		width: auto;
+		width: 870px;
 		float: right;
 		overflow: hidden;
 	}
@@ -1043,6 +1043,15 @@ $('.menu-li').hover(function(){
 		display: block;
 	}
 </style><!--Scroll Slider-->
+<style>
+	#gallery{
+		width: 100%;
+	}
+	.galerry-img{
+		display: block;
+		float: right;
+	}
+</style>
 		<div id="main">
 			<div id="content">
 				<div id="right-part">
@@ -1082,6 +1091,18 @@ $('.menu-li').hover(function(){
 						</div>
 						<p class="view-box dk-box">مشاهده</p>
 					</a>
+					<a class="ux-realtime-box">
+						<span class="ux-header">پیشنهاد لحظه ای برای شما</span>
+						<img src="img/uxbox  img/Mobile-Phone-Apple-iPhone-SE-64-GBb28f40.jpg"/>
+						<span class="ux-name">گوشي موبايل شياومي مدل Mi 4i دو سيم‌ کارت ظرفيت 16 گيگابايت</span>
+						<span class="ux-loader"></span>
+						<span class="ux-loader1"></span>
+						<div class="price-view">
+							<span class="new-price">1,400,000 تومان</span>
+							<span class="old-price">1,588,000</span>
+						</div>
+						<p class="view-box dk-box">مشاهده</p>
+					</a>
 					<a class="sidebar-baner" href="#" title="title"><img src="img/sidebar img/2FFB-459E-CA38-48B3-90B1-1A67-7767_2-active-.jpg" /></a>
 					<a class="sidebar-baner" href="#" title="title"><img src="img/sidebar img/9c0dd05b.jpg" /></a>
 					<a href="#" title="title"><img src="img/sidebar img/1503742255qweqwe.png"/></a>
@@ -1098,7 +1119,6 @@ $('.menu-li').hover(function(){
 						<a class="even-brands"><img src="img/brand img/x.vision.png"/></a>
 					</div>
 				</div><!--Right Left-->	
-				
 				
 				<div id="left-part">
 					<div id="slider-hr" >
@@ -1359,9 +1379,18 @@ $('.menu-li').hover(function(){
 							</ul>
 						</div>
 					</div><!--Vertical Slider-->
+					<div id="gallery">
+						<a class="galerry-img"><img src="img/gallery/gallery1.jpg"></a>
+						<a class="galerry-img-last"><img src="img/gallery/gallery2.jpg"></a>
+						<a class="galerry-img"><img src="img/gallery/gallery3.jpg"></a>
+						<a class="galerry-img"><img src="img/gallery/gallery4.jpg"></a>
+						<a class="galerry-img-last"><img src="img/gallery/gallery5.jpg"></a>
+						<a class="galerry-img"><img src="img/gallery/gallery6.jpg"></a>
+						<a class="galerry-img-last"><img src="img/gallery/gallery7.jpg"></a>
+					</div>
 					<div class="scroll-slider dk-box">
 						<h3>فقط در دیجی کالا</h3>
-						<div class="scroll-next"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></div>
+						<div class="scroll-next" onClick="scroll('left',this);"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></div>
 						<div class="scroll-main">
 							<ul>
 								<li>
@@ -1474,7 +1503,7 @@ $('.menu-li').hover(function(){
 							</li>
 							</ul>
 						</div>
-						<div class="scroll-prev"><i class="fa fa-angle-left fa-4x" aria-hidden="true"></i></div>
+						<div class="scroll-prev" onClick="scroll('right',this);"><i class="fa fa-angle-left fa-4x" aria-hidden="true"></i></div>
 						
 					</div><!--Scroll Slider-->
 				</div>	
@@ -1489,32 +1518,26 @@ $('.menu-li').hover(function(){
 	var uxRealTime = $('.ux-realtime-box');
 	var uxLoader = $('.ux-loader');
 	var uxLoaderWidth = uxLoader.css('width');
-	var uxTimeOut = 10000;
-	
-	$('.ux-loader').animate({'width':'100%'},10000,function(){
-		$('.ux-loader').css({'width':'0'});
-		uxRealTime.eq(uxIndex-1).hide;
-		uxIndex++;
+	var uxBoxLenght = uxRealTime.length;
+	var uxTimeOut = 2000;
+
+	function uxRealTimeFunc(){
+		if(uxIndex >= uxBoxLenght+1 ){
+			uxIndex = 1;
+			uxRealTime.eq(uxIndex-1).find(uxLoader).animate({'width':'1'});
+		}
+		uxRealTime.eq(uxIndex-1).find(uxLoader).animate({'width':'100%'},uxTimeOut,function(){
+			uxRealTime.eq(uxIndex-1).find(uxLoader).animate({'width':'1'});
+		});
+		uxRealTime.eq(uxIndex-2).css({'display':'none'});
 		uxRealTime.eq(uxIndex-1).css({'display':'block'});
+		uxIndex++
 		
-	});
+	};
+	uxRealTimeFunc();
+	var uxRelaTimeInterval = setInterval(uxRealTimeFunc , uxTimeOut);
 	
-//	function uxRealtimeFunc(){
-//		
-//		uxRealTime.eq(uxIndex-1).css({'display':'block'});
-//		$('.ux-loader').animate({'width':'100%'},10000);
-//		
-//		if(uxLoaderWidth == '290px'){
-//			uxLoader.css('width':'0');
-//			uxRealTime.eq(uxIndex-1).hide;
-//			uxIndex++;
-//			uxRealTime.eq(uxIndex-1).show;
-//		}
-//	}
-//	uxRealtimeFunc();
-//	setInterval(uxRealtimeFunc , uxTimeOut);
-</script>
-		
+</script><!---uX Slider-->
 <script>
 	
 	var slide = 1;
@@ -1564,7 +1587,7 @@ $('.menu-li').hover(function(){
 <script>
 	$('.flipTimer').flipTimer({
 		direction:'down',
-		date: 'september 03, 2017 16:53:30',
+		date: 'september 04, 2017 19:27:30',
 		callback:function(){
 			$('.slider-vr-content').css('filter','blur(3px)');
 			$('.finished').fadeIn(100);
@@ -1609,16 +1632,16 @@ $('.menu-li').hover(function(){
 	}
 </script><!--Vertical Slider-->
 <script>
-	var sliderScrollUl = $('.scroll-main').find('ul');
-	var liLength = sliderScrollUl.find('li').length;
-	var liWidth = parseInt(sliderScrollUl.find('li').outerWidth());
-	var ulWidthSize = (liLength) * (liWidth);
-	var ulWidth = sliderScrollUl.css("width", ulWidthSize);
-	var maxMargin = (liLength - 3) * liWidth;
-	var marginRight = parseFloat(sliderScrollUl.css('margin-right'));
-	
-	
-	function scroll(direction){
+	function scroll(direction,tag){
+		
+		var slideTag = $(tag);
+		var sliderScrollUl = slideTag.parent('.scroll-slider').find('ul');
+		var liLength = sliderScrollUl.find('li').length;
+		var liWidth = parseInt(sliderScrollUl.find('li').outerWidth());
+		var ulWidthSize = (liLength) * (liWidth);
+		var maxMargin = (liLength - 3) * liWidth;
+		var marginRight = parseFloat(sliderScrollUl.css('margin-right'));
+		sliderScrollUl.css("width", ulWidthSize);
 		
 		if(direction == 'left'){
 			marginRight=marginRight-liWidth;
@@ -1635,12 +1658,11 @@ $('.menu-li').hover(function(){
 		sliderScrollUl.animate({'marginRight':marginRight},1000);
 	}
 	$('.scroll-next').click(function(){
-		scroll('left');
+		scroll('left',this);
 	});
 	$('.scroll-prev').click(function(){
-		scroll('right');
+		scroll('right',this);
 	});
-	
 	
 	
 	
