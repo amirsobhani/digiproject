@@ -1485,14 +1485,20 @@ $('.menu-li').hover(function(){
 		</div>
 <script>
 	
-	var uxIndex = 2;
+	var uxIndex = 1;
 	var uxRealTime = $('.ux-realtime-box');
 	var uxLoader = $('.ux-loader');
 	var uxLoaderWidth = uxLoader.css('width');
 	var uxTimeOut = 10000;
-	uxRealTime.eq(uxIndex-1).css({'display':'block'});
 	
-//	uxRealTime.eq(0).css({'display':'block'});
+	$('.ux-loader').animate({'width':'100%'},10000,function(){
+		$('.ux-loader').css({'width':'0'});
+		uxRealTime.eq(uxIndex-1).hide;
+		uxIndex++;
+		uxRealTime.eq(uxIndex-1).css({'display':'block'});
+		
+	});
+	
 //	function uxRealtimeFunc(){
 //		
 //		uxRealTime.eq(uxIndex-1).css({'display':'block'});
@@ -1504,8 +1510,6 @@ $('.menu-li').hover(function(){
 //			uxIndex++;
 //			uxRealTime.eq(uxIndex-1).show;
 //		}
-//		
-//
 //	}
 //	uxRealtimeFunc();
 //	setInterval(uxRealtimeFunc , uxTimeOut);
