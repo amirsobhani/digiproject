@@ -327,13 +327,18 @@ a{
 	#content{
 		width: 1190px;
 		margin: 0 auto;
-		height: 2500px;
+		height: 100%;
+		padding: 10px 0 100px 0;
 	}
 	#main{
 		background-image: url(img/1503990105pattern42.png);
 		background-color: rgb(238,239,241);
 		width: 100%;
 		height: auto;
+	}
+	#HomeTopBanner{
+		margin: 0 auto;
+		width: 1190px;
 	}
 </style>
 
@@ -533,7 +538,7 @@ $('.menu-li').hover(function(){
 	.ux-realtime-box{
 		display: none;
 		width: 100%;
-		margin-top: 20px;
+		margin-top: 10px;
 		border: 1px solid #ebeced;
 		border-radius: 4px;
 		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
@@ -610,7 +615,6 @@ $('.menu-li').hover(function(){
 	}	
 	#left-part{
 		width: 890px;
-		float: left;
 	}
 	#brands{
 		margin-top: 10px;
@@ -645,14 +649,14 @@ $('.menu-li').hover(function(){
 		width: 890px;
 		height: 310px;
 		margin-bottom: 10px;
+		position: relative;
 	}
 	#main-slider{
 		width: 100%;
 		height: 100%;
 		position: relative;
-		margin: 20px 0 0 0;
+		margin: 10px 0 0 0;
 		overflow: hidden;
-		
 	}
 	.slider-a{
 		display: none;
@@ -662,7 +666,7 @@ $('.menu-li').hover(function(){
 		height: 43px;
 		background-color: rgba(92,92,92,0.5);
 		position: absolute;
-		top: 436px;
+		top: 265px;
 	}
 	.tab-item{
 		width: 20%;
@@ -1071,8 +1075,104 @@ $('.menu-li').hover(function(){
 		margin-bottom: 10px;
 	}
 </style><!--gallery--->
+<style>
+	#footer{
+		width: 100%;
+		height: auto;
+	}
+	.info-bar{
+		width: 100%;
+		height: 45px;
+		background-color: #6D717A;
+	}	
+	.wrapper{
+		width: 1190px;
+		margin: 0 auto;
+		height: 100%;
+	}
+	.info-bar-meta{
+		float: right;
+		direction: rtl;
+		font-family: iran-sans;
+		color: #fff;
+		line-height: 45px;
+	}
+	.info-bar-ul {
+		float: left;
+		line-height: 45px;
+	}
+	.info-bar-ul  li{
+		float: left;
+		direction: rtl;
+		color: #fff;
+		font-family: iran-sans;
+		margin-right: 100px;
+	}
+	.info-bar-ul li i{
+		float: left;
+		line-height: 40px;
+		margin-right: 10px;
+	}
+	.subscribe-bar{
+		width: 100%;
+		background-color: #F7F8FA;
+		height: auto;
+		float: right;
+	}
+	.subscribe-bar-menu{
+		width: 640px;
+		float: right;
+		margin: 50px 0;
+	}
+	.subscribe-bar-form{
+		width: 550px;
+		float: right;
+		margin: 50px 0;
+	}
+	.menu-right{
+		float: right;
+		direction: rtl;
+		width: 30%;
+		line-height: 30px;
+		font-family: iran-sans;
+	}
+	.menu-right a{
+		direction: rtl;
+		float: right;
+		font-weight: bolder;
+	}
+	.menu-right ul{
+		float: right;
+		display: block;
+		margin: 10px 0;
+		font-size: 14px;
+	}
+	.menu-left{
+		float: right;
+		direction: rtl;
+		width: 30%;
+		line-height: 30px;
+		font-family: iran-sans;
+		margin-right: 170px;
+	}
+	.menu-left a{
+		direction: rtl;
+		float: right;
+		font-weight: bolder;
+	}
+	.menu-left ul{
+		float: right;
+		display: block;
+		margin: 10px 0;
+		font-size: 14px;
+	}
+
+</style>
 		<div id="main">
 			<div id="content">
+				<div id="HomeTopBanner" class="dk-box">
+					<a><img src="img/87c954a7.jpg"/></a>
+				</div><!--HomeTopBanner--->
 				<div id="right-part">
 					<div>
 						<a class="ux-realtime-box">
@@ -1140,8 +1240,7 @@ $('.menu-li').hover(function(){
 						<a class="odd-brands dk-box"><img src="img/brand img/snowa-cc6b61.png"/></a>
 						<a class="even-brands dk-box"><img src="img/brand img/x.vision.png"/></a>
 					</div>
-				</div><!--Right Left-->	
-				
+				</div><!--Right Part-->	
 				<div id="left-part">
 					<div id="slider-hr" >
 						<div id="main-slider" class="dk-box">
@@ -1152,7 +1251,6 @@ $('.menu-li').hover(function(){
 							<a class="slider-a"><img src="img/slider img/c6bec8ad.jpg"/></a>
 							<a class="slider-a"><img src="img/slider img/d555d2e0.jpg"/></a>
 							<i class="fa fa-angle-left fa-4x" aria-hidden="true" onClick="nextSlider()"></i>
-							
 						</div>
 						<div id="slider-navigator">
 							<ul>
@@ -1764,11 +1862,75 @@ $('.menu-li').hover(function(){
 						<div class="scroll-prev" onClick="scroll('right',this);"><i class="fa fa-angle-left fa-4x" aria-hidden="true"></i></div>
 						
 					</div><!--Scroll Slider-->
-				</div>	
-			</div>
+				</div><!--Left Part-->	
+			</div><!---Content--->
 		</div>
 		<div id="footer">
-				
+				<div class="info-bar">
+					<div class="wrapper">
+						<span class="info-bar-meta">
+۷ روز هفته، ۲۴ ساعته پاسخگوی شما هستیم.
+						</span>
+						<ul class="info-bar-ul">
+							<li>
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+								info@digikala.com
+							</li>
+							<li>
+								<i class="fa fa-question-circle" aria-hidden="true"></i>
+								<a>
+									سوالات متداول
+								</a>
+							</li>
+							<li>
+								<a>
+									<span>۹٥۱۱۹۰۹٥ - ۰۲۱</span>
+									<span> | </span>
+									<span>۶۱۹۳۰۰۰۰ - ۰۲۱</span>
+								</a>
+								<i class="fa fa-phone" aria-hidden="true"></i>
+							</li>
+						</ul>
+					</div><!--info-bar-->
+					
+					<div class="subscribe-bar">
+						<div class="wrapper">
+							<div class="subscribe-bar-menu">
+								<div class="menu-right">
+									<a>راهنمای خرید از دیجی‌کالا</a>
+									<ul>
+										<li><a>ثبت سفارش</a></li>
+										<li><a>رویه های ارسال سفارش</a></li>
+										<li><a>شیوه های پرداخت</a></li>
+										<li><a>معرفی دیجی بن</a></li>
+									</ul>
+								</div>
+								<div class="menu-left">
+									<a>خدمات مشتریان</a>
+									<ul>
+										<li><a>پاسخ به پرسش های متداول</a></li>
+										<li><a>رویه های باز گرداندن کالا</a></li>
+										<li><a>شرایط استفاده</a></li>
+										<li><a>حریم خصوصی</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="subscribe-bar-form">
+								<h2>از تخفیف‌ها و جدیدترین‌های دیجی کالا باخبر شوید!</h2>
+								<input type="email" placeholder="آدرس ایمیل خود را وارد کنید" />
+								<button>تایید ایمیل</button>
+								<div id="social-net">
+									<i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+									<i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+									<i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i>
+									<i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+									<i class="fa fa-telegram fa-3x" aria-hidden="true"></i>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
 		</div>
 <script>
 	
@@ -1845,7 +2007,7 @@ $('.menu-li').hover(function(){
 <script>
 	$('.flipTimer').flipTimer({
 		direction:'down',
-		date: 'september 04, 2017 19:27:30',
+		date: 'september 05, 2017 18:12:30',
 		callback:function(){
 			$('.slider-vr-content').css('filter','blur(3px)');
 			$('.finished').fadeIn(100);
