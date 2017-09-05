@@ -967,9 +967,10 @@ $('.menu-li').hover(function(){
 		height: 275px;
 		float: left;
 		position: absolute;
-		top: 40px;
+		top: 35px;
 		left: 0;
 		background-color: #fff;
+		box-shadow: 0px 15px 15px #888888;
 	}
 	.scroll-slider i{
 		text-align: center;
@@ -1128,6 +1129,34 @@ $('.menu-li').hover(function(){
 		width: 550px;
 		float: right;
 		margin: 50px 0;
+		direction: rtl;
+	}
+	.subscribe-bar-form input{
+		font-family: iran-sans;
+		float: right;
+		padding: 0 10px;
+		line-height: 39px;
+		font-size: 15px;
+		width: 405px;
+		margin: 19px 0 40px 10px;
+	}
+	.subscribe-bar-form h2{
+		line-height: 40px;
+		font-family: iran-sans;
+	}
+	.subscribe-bar-form button{
+		    width: 110px;
+			line-height: 40px;
+			float: left;
+			margin: 18px 0 40px 0;
+			font-family: iran-sans;
+			background-color: #208DE6;
+			border: 1px solid #ebeced;
+			border-radius: 4px;
+			color: #fff;
+	}
+	.subscribe-bar-form #social-net{
+		float: right;
 	}
 	.menu-right{
 		float: right;
@@ -1166,7 +1195,15 @@ $('.menu-li').hover(function(){
 		margin: 10px 0;
 		font-size: 14px;
 	}
-
+	#social-net{
+		float: right;
+	}
+	#social-net i{
+		line-height: 48px;
+	}
+	#appStore{
+		float: left;
+	}
 </style>
 		<div id="main">
 			<div id="content">
@@ -1920,13 +1957,16 @@ $('.menu-li').hover(function(){
 								<input type="email" placeholder="آدرس ایمیل خود را وارد کنید" />
 								<button>تایید ایمیل</button>
 								<div id="social-net">
-									<i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>
-									<i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i>
-									<i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i>
-									<i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
-									<i class="fa fa-telegram fa-3x" aria-hidden="true"></i>
+									<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+									<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+									<i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i>
+									<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+									<i class="fa fa-telegram fa-2x" aria-hidden="true"></i>
 								</div>
-								
+								<div id="appStore">
+									<a><img src="img/ios_app_bg.png"/></a>
+									<a><img src="img/cafebazaar-digikala.png"/></a>
+								</div>
 							</div>
 						</div>
 					</div>
