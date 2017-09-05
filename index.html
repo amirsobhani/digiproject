@@ -595,9 +595,10 @@ $('.menu-li').hover(function(){
 	.sidebar-baner{
 		width: 290px;
 		height: 260px;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
 		border: 1px solid #ebeced;
+		display: block;
 		
 	}
 </style><!---uX Slider-->
@@ -611,28 +612,26 @@ $('.menu-li').hover(function(){
 		width: 890px;
 		float: left;
 	}
-	
-</style><!--Right Part-->
-<style>
-	#slider-hr{
-		width: 890px;
-		height: 310px;
-		margin-bottom: 10px;
-	}	
+	#brands{
+		margin-top: 10px;
+	}
 	.odd-brands{
-		float: left;
-		margin-bottom: 12px;
+		float: right;
+		margin-bottom: 5px;
+		margin-left: 5px;
 		display: block;
+		background-color: #fff;
 	}
 	.odd-brands img{
 		width: 140px;
 		height: 95px;
-		float: left;
+		float: right;
 		margin-left: 0;                                                        
 	}
 	.even-brands{
+		background-color: #fff;
 		float: right;
-		margin-bottom: 12px;
+		margin-bottom: 5px;
 		display: block;
 	}
 	.even-brands img{
@@ -640,7 +639,13 @@ $('.menu-li').hover(function(){
 		width: 140px;
 		height: 95px;
 	}
-
+</style><!--Right Part-->
+<style>
+	#slider-hr{
+		width: 890px;
+		height: 310px;
+		margin-bottom: 10px;
+	}
 	#main-slider{
 		width: 100%;
 		height: 100%;
@@ -1047,15 +1052,30 @@ $('.menu-li').hover(function(){
 	#gallery{
 		width: 100%;
 	}
-	.galerry-img{
+	.gallery-img{
 		display: block;
 		float: right;
+		width: 290px;
+		height: 190px;
+		margin : 0 0 10px 10px;
 	}
-</style>
+	.larg-img{
+		width: 590px!important;
+	}
+	.gallery-img-last{
+		margin-left: 0!important;
+		display: block;
+		float: right;
+		width: 290px;
+		height: 190px;
+		margin-bottom: 10px;
+	}
+</style><!--gallery--->
 		<div id="main">
 			<div id="content">
 				<div id="right-part">
-					<a class="ux-realtime-box">
+					<div>
+						<a class="ux-realtime-box">
 						<span class="ux-header">پیشنهاد لحظه ای برای شما</span>
 						<img src="img/Mobile-Huawei-P8-Lite-Dual-SIM-16-GBd5a77b.jpg"/>
 						<span class="ux-name">گوشي موبايل شياومي مدل Mi 4i دو سيم‌ کارت ظرفيت 16 گيگابايت</span>
@@ -1103,20 +1123,22 @@ $('.menu-li').hover(function(){
 						</div>
 						<p class="view-box dk-box">مشاهده</p>
 					</a>
-					<a class="sidebar-baner" href="#" title="title"><img src="img/sidebar img/2FFB-459E-CA38-48B3-90B1-1A67-7767_2-active-.jpg" /></a>
-					<a class="sidebar-baner" href="#" title="title"><img src="img/sidebar img/9c0dd05b.jpg" /></a>
-					<a href="#" title="title"><img src="img/sidebar img/1503742255qweqwe.png"/></a>
-					<a class="sidebar-baner" href="#" title="title"><img src="img/sidebar img/381317ac.jpg" /></a>
-					<a class="sidebar-baner" href="#" title="title"><img src="img/sidebar img/a82c7fff.jpg"  /></a>
-					<a class="sidebar-baner" href="#" title="title"><img src="img/sidebar img/e7966cc8.jpg" /></a>
+					</div><!---uX Slider-->
+					
+					<a class="sidebar-baner dk-box" href="#" title="title"><img src="img/sidebar img/2FFB-459E-CA38-48B3-90B1-1A67-7767_2-active-.jpg" /></a>
+					<a class="sidebar-baner dk-box" href="#" title="title"><img src="img/sidebar img/9c0dd05b.jpg" /></a>
+					<a class="dk-box" style="margin-bottom: 10px;" href="#" title="title"><img src="img/sidebar img/1503742255qweqwe.png"/></a>
+					<a class="sidebar-baner dk-box" href="#" title="title"><img src="img/sidebar img/381317ac.jpg" /></a>
+					<a class="sidebar-baner dk-box" href="#" title="title"><img src="img/sidebar img/a82c7fff.jpg"  /></a>
+					<a class="sidebar-baner dk-box" href="#" title="title"><img src="img/sidebar img/e7966cc8.jpg" /></a>
 					
 					<div id="brands">
-						<a class="odd-brands"><img src="img/brand img/lg.png"/></a>
-						<a class="even-brands"><img src="img/brand img/oral-b.png"/></a>
-						<a class="odd-brands"><img src="img/brand img/pars-khazar-8cdaa4.png"/></a>
-						<a class="even-brands"><img src="img/brand img/samsung-brand.jpg"/></a>
-						<a class="odd-brands"><img src="img/brand img/snowa-cc6b61.png"/></a>
-						<a class="even-brands"><img src="img/brand img/x.vision.png"/></a>
+						<a class="odd-brands dk-box"><img src="img/brand img/lg.png"/></a>
+						<a class="even-brands dk-box"><img src="img/brand img/oral-b.png"/></a>
+						<a class="odd-brands dk-box"><img src="img/brand img/pars-khazar-8cdaa4.png"/></a>
+						<a class="even-brands dk-box"><img src="img/brand img/samsung-brand.jpg"/></a>
+						<a class="odd-brands dk-box"><img src="img/brand img/snowa-cc6b61.png"/></a>
+						<a class="even-brands dk-box"><img src="img/brand img/x.vision.png"/></a>
 					</div>
 				</div><!--Right Left-->	
 				
@@ -1380,14 +1402,250 @@ $('.menu-li').hover(function(){
 						</div>
 					</div><!--Vertical Slider-->
 					<div id="gallery">
-						<a class="galerry-img"><img src="img/gallery/gallery1.jpg"></a>
-						<a class="galerry-img-last"><img src="img/gallery/gallery2.jpg"></a>
-						<a class="galerry-img"><img src="img/gallery/gallery3.jpg"></a>
-						<a class="galerry-img"><img src="img/gallery/gallery4.jpg"></a>
-						<a class="galerry-img-last"><img src="img/gallery/gallery5.jpg"></a>
-						<a class="galerry-img"><img src="img/gallery/gallery6.jpg"></a>
-						<a class="galerry-img-last"><img src="img/gallery/gallery7.jpg"></a>
-					</div>
+						<a class="gallery-img dk-box"><img src="img/gallery/gallery1.jpg"></a>
+						<a class="gallery-img-last dk-box larg-img"><img src="img/gallery/gallery2.jpg"></a>
+						<a class="gallery-img dk-box"><img src="img/gallery/gallery3.jpg"></a>
+						<a class="gallery-img dk-box"><img src="img/gallery/gallery4.jpg"></a>
+						<a class="gallery-img-last dk-box"><img src="img/gallery/gallery5.jpg"></a>
+						<a class="gallery-img dk-box larg-img"><img src="img/gallery/gallery6.jpg"></a>
+						<a class="gallery-img-last dk-box"><img src="img/gallery/gallery7.jpg"></a>
+					</div><!--gallery--->
+					<div class="scroll-slider dk-box">
+						<h3>فقط در دیجی کالا</h3>
+						<div class="scroll-next" onClick="scroll('left',this);"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></div>
+						<div class="scroll-main">
+							<ul>
+								<li>
+									<a class="scroll-product">
+										<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+										<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+							<div class="product-price">
+								<span class="product-price-old">2,700,000</span>
+								<span class="product-price-new">2,809,000 تومان</span>
+							</div>
+								
+									</a>
+								</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+							</ul>
+						</div>
+						<div class="scroll-prev" onClick="scroll('right',this);"><i class="fa fa-angle-left fa-4x" aria-hidden="true"></i></div>
+						
+					</div><!--Scroll Slider-->
+					<div class="scroll-slider dk-box">
+						<h3>فقط در دیجی کالا</h3>
+						<div class="scroll-next" onClick="scroll('left',this);"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></div>
+						<div class="scroll-main">
+							<ul>
+								<li>
+									<a class="scroll-product">
+										<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+										<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+							<div class="product-price">
+								<span class="product-price-old">2,700,000</span>
+								<span class="product-price-new">2,809,000 تومان</span>
+							</div>
+								
+									</a>
+								</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+								<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+									<span class="product-meta">
+گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
+						<div class="product-price">
+							<span class="product-price-old">2,700,000</span>
+							<span class="product-price-new">2,809,000 تومان</span>
+						</div>
+
+								</a>
+							</li>
+							</ul>
+						</div>
+						<div class="scroll-prev" onClick="scroll('right',this);"><i class="fa fa-angle-left fa-4x" aria-hidden="true"></i></div>
+						
+					</div><!--Scroll Slider-->
 					<div class="scroll-slider dk-box">
 						<h3>فقط در دیجی کالا</h3>
 						<div class="scroll-next" onClick="scroll('left',this);"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></div>
@@ -1519,12 +1777,12 @@ $('.menu-li').hover(function(){
 	var uxLoader = $('.ux-loader');
 	var uxLoaderWidth = uxLoader.css('width');
 	var uxBoxLenght = uxRealTime.length;
-	var uxTimeOut = 2000;
+	var uxTimeOut = 4000;
 
 	function uxRealTimeFunc(){
 		if(uxIndex >= uxBoxLenght+1 ){
 			uxIndex = 1;
-			uxRealTime.eq(uxIndex-1).find(uxLoader).animate({'width':'1'});
+			uxRealTime.eq(uxIndex-1).find(uxLoader).css({'width':'1'});
 		}
 		uxRealTime.eq(uxIndex-1).find(uxLoader).animate({'width':'100%'},uxTimeOut,function(){
 			uxRealTime.eq(uxIndex-1).find(uxLoader).animate({'width':'1'});
