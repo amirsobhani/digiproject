@@ -356,6 +356,7 @@ a{
 		background-color: #fff;
 		width: 1190px;
 		height: 300px;
+		padding: 50px 0;
 	}
 	#right-register{
 		width: 50%;
@@ -416,6 +417,7 @@ a{
 	}
 	.agreement{
 		direction: rtl;
+		position: relative;
 	}
 	.agreement label{
 		font-family: iran-sans;
@@ -423,6 +425,9 @@ a{
 		margin: 15px 0;
 		display: block;
 		line-height: 25px;
+	}
+	.lastNews{
+		position: relative;
 	}
 	.lastNews label{
 		font-family: iran-sans;
@@ -469,6 +474,34 @@ a{
 		margin-left: 20px;
 		font-size: 22px;
 	}
+	.check-box{
+		display: block;
+		float: right;
+		margin-left: 10px;
+		z-index: 2;
+		position: relative;
+		cursor: pointer;
+		opacity: 0;
+	}
+	.active-check{
+		width: 17px;
+		height: 17px;
+		display: block;
+		float: right;
+		border: 1px solid #eee;
+		position: absolute;
+		border-radius: 2px;
+	}
+	.active-check i{
+		color: #fff;
+		margin-right: 1px;
+	}
+	.active-check-cheked{
+		background-color: #208DE6;
+		border-radius: 2px;
+		border: none;
+	}
+	
 </style>
 	
 		<div id="header">
@@ -609,9 +642,15 @@ a{
 								<input type="password" placeholder="Password"/>
 							</div>
 							<div class="agreement">
+								<span  class="active-check" style="bottom: 30px;
+right: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
+								<input type="checkbox" class="check-box">
 								<label>حریم خصوصی و شرایط و قوانین استفاده از سرویس های سایت دیجی‌کالا را مطالعه نموده و با کلیه موارد آن موافقم.</label>
 							</div>
 							<div class="lastNews">
+								<span class="active-check" style="right: 3px;
+top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
+								<input type="checkbox" class="check-box">
 								<label>خبرنامه دیجی کالا را برای من ارسال کنید.</label>
 							</div>
 							<div class="submit">
@@ -664,6 +703,16 @@ $('.menu-li').hover(function(){
 
 		
 </script><!--Menu jQuery-->
+<script>
+	$('.check-box').click(function(){
+		if($(this).is(':checked')){
+			$(this).parent().find('.active-check').addClass('active-check-cheked');
+		}	
+		else{
+			$(this).parent().find('.active-check').removeClass('active-check-cheked');
+		}
+	});
+</script>
 <style>
 	#footer{
 		width: 100%;
