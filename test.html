@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jQueryRotate.js"></script>
+</head>
+
+<body>
+<style>
+	.rotate{
+		display: block;
+		width: 100px;
+		height: 100px;
+		background-color: aqua;
+	}	
+</style>
+<span class="rotate"></span>
+<button>Rotate</button>
+</body>
+
+<script>
+	$('button').click(function(){
+//		$(this).parents().('.filter-option').hide;
+		$('.rotate').rotate({
+      angle: 0,
+      animateTo:90
+      });
+	});
+	
+</script>
+</html>
