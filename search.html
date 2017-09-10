@@ -763,6 +763,7 @@ a{
 		width: 100%;
 		float: right;
 		position: relative;
+		display: none;
 	}
 	.filter-option ul{
 		width: 85%;
@@ -837,15 +838,95 @@ a{
 	.more{
 		display: block;
 		float: right;
-		margin-right: 30px;
 		direction: rtl;
+		font-family: iran-sans;
+		margin-right: 9px;
+		font-size: 12px;
+		color: rgb(32, 141, 230);
+		font-weight: bolder;
+		cursor: pointer;
+	}
+	.less{
+		display: none;
+		float: right;
+		direction: rtl;
+		font-family: iran-sans;
+		margin-right: 9px;
+		font-size: 12px;
+		color: rgb(32, 141, 230);
+		font-weight: bolder;
+		cursor: pointer;
+	}
+	.more span{
+		font-family: iran-sans;
+		margin-left: 5px;
+		font-size: 12px;
+	}
+	.back-color{
+		display: block;
+		width: 30px;
+		height: 30px;
+		border-radius: 100%;
+		float: right;
+		margin: 10px 15px 0 10px;
+	}
+	.input-color{
+		position: absolute;
+		top: 13px;
+		right: 17px;
+		opacity: 0;
+		cursor: pointer;
+	}
+	.color-name{
+		font-family: iran-sans;
+		font-size: 14px;
+		color: #fff;
+		background-color: #99999B;
+		display: block;
+		width: 70%;
+		position: absolute;
+		line-height: 25px;
+		top: -25px;
+		right: 14px;
+		text-align: center;
+		border-radius: 2px;
+		display: none;
+	}
+	.color-name::after{
+		content: " ";
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 7px 7px 0 7px;
+		border-color: #99999B transparent transparent transparent;
+		top: 26px;
+		right: 10px;
+		position: absolute;
+
+	}
+	.color{
+		width: 20%!important;
+		margin: 10px 7px 0 0;
+	}
+	.color-check{
+		color: #fff;
+		position: relative;
+		top: 7px;
+		right: 7px;
+		display: none;
+	}
+	.color-check::after{
+		content: " ";
+		display: block;
+		position: absolute;
+		top: -7px;
+		right: -7px;
+		width: 25px;
+		height: 25px;
+		border: 3px solid #fff;
+		border-radius: 100%;
 	}
 </style><!--filter-panel-->
-<style>
-	
-	
-</style><!--product-panel-->
-	
 		<div id="main">
 			<div id="filter-panel">
 				<div class="filtered">
@@ -913,6 +994,23 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 							<span class="per-text">سونی</span>
 							<span class="en-text">Sony</span>
 						</label>
+						<label>
+							<span class="active-check" style="right: 3px;
+top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
+							<input type="checkbox" class="check-box">
+							<span class="per-text">نوکیا</span>
+							<span class="en-text">Nokia</span>
+						</label>
+						<label>
+							<span class="active-check" style="right: 3px;
+top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
+							<input type="checkbox" class="check-box">
+							<span class="per-text">ال جی</span>
+							<span class="en-text">LG</span>
+						</label>
+						
+						<span class="more" style="display: none;"><span class="label-length"></span>مورد بیشتر</span>
+						<span class="less" style="display: none;">نمایش کمتر</span>
 					</div>
 				</div><!---Producer & Brand--->
 				<div class="filter">
@@ -945,6 +1043,8 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 							<input type="checkbox" class="check-box">
 							<span class="per-text">سیستم عامل ویندوز فون</span>
 						</label>
+						<span class="more"><span class="label-length"></span>مورد بیشتر</span>
+						<span class="less">نمایش کمتر</span>
 					</div>
 				</div><!--OS Sort-->
 				<div class="filter">
@@ -971,6 +1071,8 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 							<input type="checkbox" class="check-box">
 							<span class="per-text">سه سیم کارت</span>
 						</label>
+						<span class="more"><span class="label-length"></span>مورد بیشتر</span>
+						<span class="less">نمایش کمتر</span>
 					</div>
 				</div><!--Sim Sort-->
 				<div class="filter">
@@ -1003,7 +1105,6 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 							<input type="checkbox" class="check-box">
 							<span class="per-text">16 مگابایت</span>
 						</label>
-						<span class="more"><span class="label-length"></span>مورد بیشتر</span>
 						<label>
 							<span class="active-check" style="right: 3px;
 top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
@@ -1044,6 +1145,12 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 							<span class="active-check" style="right: 3px;
 top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 							<input type="checkbox" class="check-box">
+							<span class="per-text">32 مگابایت</span>
+						</label>
+						<label>
+							<span class="active-check" style="right: 3px;
+top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
+							<input type="checkbox" class="check-box">
 							<span class="per-text">4 گیگابایت</span>
 						</label>
 						<label>
@@ -1052,28 +1159,111 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 							<input type="checkbox" class="check-box">
 							<span class="per-text">4 مگابایت</span>
 						</label>
+						<span class="more"><span class="label-length"></span>مورد بیشتر</span>
+						<span class="less">نمایش کمتر</span>
 					</div>
 				</div><!--Storage Sort-->
+				<div class="filter">
+					<label class="filter-label">
+						<span class="filter-header">رنگ بندی</span>
+						<span class="filter-header-i"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+					</label>
+					<div class="filter-option" style="display: block;">
+						<label class="color">
+							<input autocomplete="off" class="input-color" type="checkbox"/>
+							<span class="back-color" style="background-color: red;">
+								<i class="fa fa-check color-check" aria-hidden="true"></i>
+							</span>
+							<span class="color-name">رنگ</span>
+						</label>
+						<label class="color">
+							<input autocomplete="off" class="input-color" type="checkbox"/>
+							<span class="back-color" style="background-color: blue;">
+								<i class="fa fa-check color-check" aria-hidden="true"></i>
+							</span>
+							<span class="color-name">رنگ</span>
+						</label>
+						<label class="color">
+							<input autocomplete="off" class="input-color" type="checkbox"/>
+							<span class="back-color" style="background-color: green;">
+								<i class="fa fa-check color-check" aria-hidden="true"></i>
+							</span>
+							<span class="color-name">رنگ</span>
+						</label>
+						<label class="color">
+							<input autocomplete="off" class="input-color" type="checkbox"/>
+							<span class="back-color" style="background-color: black;">
+								<i class="fa fa-check color-check" aria-hidden="true"></i>
+							</span>
+							<span class="color-name">رنگ</span>
+						</label>
+						<span class="more"><span class="label-length"></span>مورد بیشتر</span>
+						<span class="less">نمایش کمتر</span>
+					</div>
+				
+				</div><!--Color Sort-->
 			</div>
 			<div id="product-panel"></div>
 		</div>
 <script>
-	var labelLength = $('.more').parent('.filter-option').find('label').length;
-	$('.label-length').text(labelLength-4);
+	$('.color').hover(function(){
+		$(this).find('.color-name').fadeIn(100);
+	},function(){
+		$(this).find('.color-name').fadeOut(100);
+	})
+	
+	$('.input-color').click(function(){
+		if($(this).is(':checked')){
+			$(this).parent('.color').find('.color-check').fadeIn(100);
+		}else{
+			$(this).parent('.color').find('.color-check').fadeOut(100);
+		}
+	});
+</script><!--Color--->
+<script>
+	
+	
+//	var labelLength = $('.more').parent('.filter-option').find('label').length;
+	
+	
+	
 	var i;
 	
+	
+	
 	$('.filter-label').click(function(){
+		var labelLength = $(this).parent('.filter').find('.filter-option').find('label').length;
+		var more = $(this).parent('.filter').find('.filter-option').find('.more');
+		var less = $(this).parent('.filter').find('.filter-option').find('.less');
 		
+		if(labelLength <= 4){
+			more.css({display:"none"});
+			less.css({display:"none"});	
+			
+		}
+		
+		$(this).parent('.filter').find('.filter-option').find('.label-length').text(labelLength-4);
 		for(i=4;i<labelLength;i++){
 			$(this).parent('.filter').find('.filter-option').find('label').eq(i).css({display:"none"});
 		}
 	});
 
 	$('.more').click(function(){
-		
+		var labelLength = $(this).parent('.filter-option').find('label').length;
 		for(i=4;i<labelLength;i++){
 			$(this).parent('.filter-option').find('label').eq(i).slideDown(200);
+			$(this).hide();
+			$(this).parent('.filter-option').find('.less').show();
 		}
+	});
+	$('.less').click(function(){
+		var labelLength = $(this).parent('.filter-option').find('label').length;
+		for(i=4;i<labelLength;i++){
+			$(this).parent('.filter-option').find('label').eq(i).slideUp(200);
+			$(this).hide();
+			$(this).parent('.filter-option').find('.more').show();
+		}
+	
 	});
 	
 
@@ -1083,17 +1273,18 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 	
 	$('.filter-label').click(function(){
 		
-		
 		if($(this).parent('.filter').find('.filter-option').css('display') == 'block' ){
 			
-			$(this).parent('.filter').find('.filter-option').slideUp(300);
+			$(this).parent('.filter').find('.filter-option').slideUp(200);
 			roatateValue +=180;
 			$(this).find('.filter-header-i').rotate({animateTo:roatateValue});
 		}
 		else{
-			$(this).parent('.filter').find('.filter-option').slideDown(300);
+			$(this).parent('.filter').find('.filter-option').slideDown(200);
 			roatateValue +=180;
 			$(this).find('.filter-header-i').rotate({animateTo:roatateValue});
+			$(this).parent('.filter').find('.filter-option').find('.less').hide();
+			$(this).parent('.filter').find('.filter-option').find('.more').show();
 			
 			roatateValue=0;
 		}
