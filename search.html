@@ -690,19 +690,8 @@ a{
 		position: relative;
 		margin: 10px 5px;
 	}
-	.filter-existenc label{
-		font-family: iran-sans;
-		font-size: 13px;
-		margin: 15px 0;
-		display: block;
-		line-height: 25px;
-		direction: rtl;
-	}
-	.filter-existenc p{
-		float: right;
+	.filter-existenc span{
 		font-size: 14px;
-		margin: 6px 5px;
-		font-family: iran-sans;
 	}
 	.check-box{
 		display: block;
@@ -819,6 +808,7 @@ a{
 		font-size: 12px;
 		font-weight: normal;
 		color: #4B4B4B;
+		float: right;
 	}
 	.per-text:hover{
 		color: #000;
@@ -940,10 +930,13 @@ a{
 					</div>
 				</div>
 				<div class="filter-existenc">
+					<label>
 						<span class="active-check" style="right: 3px;
 top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 						<input type="checkbox" class="check-box">
-						<p>فقط کالاهای موجود</p>
+						<span class="per-text">فقط کالاهای موجود</span>
+					</label>
+		
 				</div>
 				<div class="filter">
 					<label class="filter-label">
@@ -1170,32 +1163,32 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 					</label>
 					<div class="filter-option" style="display: block;">
 						<label class="color">
-							<input autocomplete="off" class="input-color" type="checkbox"/>
+							<input autocomplete="off" class="input-color check-box" type="checkbox"/>
 							<span class="back-color" style="background-color: red;">
 								<i class="fa fa-check color-check" aria-hidden="true"></i>
 							</span>
-							<span class="color-name">رنگ</span>
+							<span class="color-name per-text">قرمز</span>
 						</label>
 						<label class="color">
-							<input autocomplete="off" class="input-color" type="checkbox"/>
+							<input autocomplete="off" class="input-color check-box" type="checkbox"/>
 							<span class="back-color" style="background-color: blue;">
 								<i class="fa fa-check color-check" aria-hidden="true"></i>
 							</span>
-							<span class="color-name">رنگ</span>
+							<span class="color-name per-text">آبی</span>
 						</label>
 						<label class="color">
-							<input autocomplete="off" class="input-color" type="checkbox"/>
+							<input autocomplete="off" class="input-color check-box" type="checkbox"/>
 							<span class="back-color" style="background-color: green;">
 								<i class="fa fa-check color-check" aria-hidden="true"></i>
 							</span>
-							<span class="color-name">رنگ</span>
+							<span class="color-name per-text">سبز</span>
 						</label>
 						<label class="color">
-							<input autocomplete="off" class="input-color" type="checkbox"/>
+							<input autocomplete="off" class="input-color check-box" type="checkbox"/>
 							<span class="back-color" style="background-color: black;">
 								<i class="fa fa-check color-check" aria-hidden="true"></i>
 							</span>
-							<span class="color-name">رنگ</span>
+							<span class="color-name per-text">سیاه</span>
 						</label>
 						<span class="more"><span class="label-length"></span>مورد بیشتر</span>
 						<span class="less">نمایش کمتر</span>
@@ -1223,13 +1216,12 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 <script>
 	
 	
-//	var labelLength = $('.more').parent('.filter-option').find('label').length;
-	
-	
+	$('.check-box').click(function(){
+		var text = $(this).parent('label').find('.per-text').text();
+		alert(text);
+	});
 	
 	var i;
-	
-	
 	
 	$('.filter-label').click(function(){
 		var labelLength = $(this).parent('.filter').find('.filter-option').find('label').length;
