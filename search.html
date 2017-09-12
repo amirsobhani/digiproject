@@ -660,6 +660,7 @@ a{
 		font-size: 12px;
 		margin: 15px;
 		color: #208DE6;
+		cursor: pointer;
 	}
 	.filter-item{
 		float: right;
@@ -753,6 +754,7 @@ a{
 		float: right;
 		position: relative;
 		display: none;
+		padding-bottom: 15px;
 	}
 	.filter-option ul{
 		width: 85%;
@@ -846,6 +848,9 @@ a{
 		color: rgb(32, 141, 230);
 		font-weight: bolder;
 		cursor: pointer;
+		position: absolute;
+		bottom: 3px;
+		right: 0;
 	}
 	.more span{
 		font-family: iran-sans;
@@ -873,11 +878,11 @@ a{
 		color: #fff;
 		background-color: #99999B;
 		display: block;
-		width: 70%;
+		width: 100%;
 		position: absolute;
-		line-height: 25px;
+		line-height: 27px;
 		top: -25px;
-		right: 14px;
+		right: 7px;
 		text-align: center;
 		border-radius: 2px;
 		display: none;
@@ -889,8 +894,8 @@ a{
 		border-style: solid;
 		border-width: 7px 7px 0 7px;
 		border-color: #99999B transparent transparent transparent;
-		top: 26px;
-		right: 10px;
+		top: 27px;
+		right: 17px;
 		position: absolute;
 
 	}
@@ -921,24 +926,18 @@ a{
 			<div id="filter-panel">
 				<div class="filtered">
 					<span class="filter-header">انتخاب شما</span>
-					<div class="filter-clearAll">پاک کردن همه</div>
+					<div class="filter-clearAll" onClick="removeAll()">پاک کردن همه</div>
 					<div class="filter-item">
-						<span class="filter-selected">اپل<i class="fa fa-times-circle" aria-hidden="true"></i>
-</span>
-						<span class="filter-selected">سامسونگ<i class="fa fa-times-circle" aria-hidden="true"></i>
-</span>
 					</div>
-				</div>
-				<div class="filter-existenc">
+				</div><!--filtered-->
+				<div class="filter-existenc filter-option" style="display: block;">
 					<label>
 						<span class="active-check" style="right: 3px;
 top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 						<input type="checkbox" class="check-box">
 						<span data-id="1" class="per-text">فقط کالاهای موجود</span>
 					</label>
-		
-
-				</div>
+				</div><!--filter-existenc-->
 				<div class="filter">
 					<label class="filter-label">
 						<span class="filter-header">دسته بندی</span>
@@ -1158,7 +1157,7 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 						<span class="filter-header">رنگ بندی</span>
 						<span class="filter-header-i"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
 					</label>
-					<div class="filter-option" style="display: block;">
+					<div class="filter-option" style="display: none;">
 						<label class="color">
 							<input autocomplete="off" class="input-color check-box" type="checkbox"/>
 							<span class="back-color" style="background-color: red;">
@@ -1187,6 +1186,20 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 							</span>
 							<span data-id="31" class="color-name per-text">سیاه</span>
 						</label>
+						<label class="color">
+							<input autocomplete="off" class="input-color check-box" type="checkbox"/>
+							<span class="back-color" style="background-color: #662021;">
+								<i class="fa fa-check color-check" aria-hidden="true"></i>
+							</span>
+							<span data-id="32" class="color-name per-text">قهوه ای</span>
+						</label>
+						<label class="color">
+							<input autocomplete="off" class="input-color check-box" type="checkbox"/>
+							<span class="back-color" style="background-color:yellow;">
+								<i class="fa fa-check color-check" aria-hidden="true"></i>
+							</span>
+							<span data-id="33" class="color-name per-text">زرد</span>
+						</label>
 						<span class="more"><span class="label-length"></span>مورد بیشتر</span>
 						<span class="less">نمایش کمتر</span>
 					</div>
@@ -1201,7 +1214,7 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 		var text = $(this).parent('label').find('.per-text').text();
 		
 		var id = $(this).parent('label').find('.per-text').attr("data-id");
-		var append_tag ='<span data-id="'+id+'" class="filter-selected">'+text+'<i onClick=removeItem(this) class="fa fa-times-circle" aria-hidden="true"></i></span>';
+		var append_tag ='<span data-id="'+id+'" class="filter-selected">'+text+'<i onClick=removeItem(this,'+id+') class="fa fa-times-circle" aria-hidden="true"></i></span>';
 
 		var idLength = $('.filter-item').find('span[data-id="'+id+'"]').length;
 		
@@ -1214,14 +1227,29 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 		}
 			
 	});
-	
-	function removeItem(tag){
+</script><!--Append Filter-->
+<script>
+	function removeItem(tag,dataId){
 		$(tag).parent('span').remove();
-
-	}
-
-</script>
+		var spanID = $('.filter-option label').find('span[data-id="'+dataId+'"]');
+		spanID.parent('label').find('.active-check').removeClass('active-check-cheked');
+		spanID.parent('label').find('.color-check').css({display:'none'});
+		spanID.parent('label').find('input').prop('checked', false);
+		spanID.parent('label').find('.per-text').css({color:"#000"});
+		spanID.parent('label').find('.en-text').css({color:"#000"});
+		spanID.parent('label').find('.color-name').css({color:"#fff"});
 		
+	}
+	
+	function removeAll(){
+		var filters = $('.filter-item span');
+		$.each(filters, function(index,value){
+			var idAttr = $(value).attr("data-id");
+			removeItem(value ,idAttr);
+			value.remove();
+		})
+	}
+</script><!--Remove-->
 <script>
 	$('.color').hover(function(){
 		$(this).find('.color-name').fadeIn(100);
@@ -1230,71 +1258,76 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 	})
 	
 	$('.input-color').click(function(){
+		var color = $(this).parent('.color').find('.color-check');
 		if($(this).is(':checked')){
-			$(this).parent('.color').find('.color-check').fadeIn(100);
+			color.fadeIn(100);
 		}else{
-			$(this).parent('.color').find('.color-check').fadeOut(100);
+			color.fadeOut(100);
 		}
 	});
 </script><!--Color--->
 <script>
-	
 	var i;
-	
 	$('.filter-label').click(function(){
-		var labelLength = $(this).parent('.filter').find('.filter-option').find('label').length;
-		var more = $(this).parent('.filter').find('.filter-option').find('.more');
-		var less = $(this).parent('.filter').find('.filter-option').find('.less');
+		var filterOption = $(this).parent('.filter').find('.filter-option');
+		var labelLength = filterOption.find('label').length;
+		var more = filterOption.find('.more');
+		var less = filterOption.find('.less');
 		
 		if(labelLength <= 4){
 			more.css({display:"none"});
 			less.css({display:"none"});	
-			
 		}
 		
-		$(this).parent('.filter').find('.filter-option').find('.label-length').text(labelLength-4);
+		filterOption.find('.label-length').text(labelLength-4);
 		for(i=4;i<labelLength;i++){
-			$(this).parent('.filter').find('.filter-option').find('label').eq(i).css({display:"none"});
+			filterOption.find('label').eq(i).css({display:"none"});
 		}
 	});
-
+	
+	
 	$('.more').click(function(){
-		var labelLength = $(this).parent('.filter-option').find('label').length;
+		var filterOption = $(this).parent('.filter-option');
+		var labelLength = filterOption.find('label').length;
+		
 		for(i=4;i<labelLength;i++){
-			$(this).parent('.filter-option').find('label').eq(i).slideDown(200);
+			filterOption.find('label').eq(i).slideDown(200);
 			$(this).hide();
-			$(this).parent('.filter-option').find('.less').show();
+			filterOption.find('.less').show();
 		}
 	});
 	$('.less').click(function(){
-		var labelLength = $(this).parent('.filter-option').find('label').length;
+		var filterOption = $(this).parent('.filter-option');
+		var labelLength = filterOption.find('label').length;
+		
 		for(i=4;i<labelLength;i++){
-			$(this).parent('.filter-option').find('label').eq(i).slideUp(200);
+			filterOption.find('label').eq(i).slideUp(200);
 			$(this).hide();
-			$(this).parent('.filter-option').find('.more').show();
+			filterOption.find('.more').show();
 		}
 	
 	});
 	
 
-</script><!--More &  Less-->
+</script><!--More &  Less & Filter Label-->
 <script>
 	var roatateValue=0;
 	
 	$('.filter-label').click(function(){
+		var filterOption = $(this).parent('.filter').find('.filter-option');
 		
-		if($(this).parent('.filter').find('.filter-option').css('display') == 'block' ){
+		if(filterOption.css('display') == 'block' ){
 			
-			$(this).parent('.filter').find('.filter-option').slideUp(200);
+			filterOption.slideUp(200);
 			roatateValue +=180;
 			$(this).find('.filter-header-i').rotate({animateTo:roatateValue});
 		}
 		else{
-			$(this).parent('.filter').find('.filter-option').slideDown(200);
+			filterOption.slideDown(200);
 			roatateValue +=180;
 			$(this).find('.filter-header-i').rotate({animateTo:roatateValue});
-			$(this).parent('.filter').find('.filter-option').find('.less').hide();
-			$(this).parent('.filter').find('.filter-option').find('.more').show();
+			filterOption.find('.less').hide();
+			filterOption.find('.more').show();
 			
 			roatateValue=0;
 		}
@@ -1455,13 +1488,21 @@ $('.menu-li').hover(function(){
 </style><!--Footer-->
 <script>
 	$('.check-box').click(function(){
+			var parent = $(this).parent();
 		if($(this).is(':checked')){
-			$(this).parent().find('.active-check').addClass('active-check-cheked');
-			$(this).parent().find('p').css({'color':"#208DE6"});
+			
+			parent.find('.active-check').addClass('active-check-cheked');
+			parent.find('.per-text').css({'color':"#208DE6"});
+			parent.find('.en-text').css({'color':"#208DE6"});
+			parent.find('.color-name').css({'color':"#fff"});
 		}	
 		else{
-			$(this).parent().find('.active-check').removeClass('active-check-cheked');
-			$(this).parent().find('p').css({'color':"#000"});
+			
+			parent.find('.active-check').removeClass('active-check-cheked');
+			parent.find('.per-text').css({'color':"#000"});
+			parent.find('.en-text').css({'color':"#000s"});
+			parent.find('.color-name').css({'color':"#fff"});
+			
 		}
 	});
 </script><!--checkbox-->
