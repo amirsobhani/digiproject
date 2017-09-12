@@ -1205,7 +1205,8 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 	
 	$('.filter').find('.filter-option').find('input').click(function(){
 		var title = $(this).parent('label').find('.per-text').text();
-		alert(title);
+		$('.filtered').find('.filter-item').append('<span class="filter-selected">'+title+'<i class="fa fa-times-circle" aria-hidden="true"></i>
+</span>')
 	});
 	
 	function removeItem(tag){
