@@ -78,6 +78,151 @@ a{
 	}
 </style>
 
+<style>
+	#product-panel{
+		width: 83%;
+		height: 500px;
+		float: left;
+		background-color: #fff;
+		margin: 15px 10px;
+	}
+	.option{
+		width: 100%;
+		margin: 0 0 15px;
+		padding: 5px 20px 0;
+		border-bottom: 1px solid #e3e3e3;
+		float: right;
+	}
+	.breadcrumb{
+		position: relative;
+		overflow: hidden;
+		line-height: 30px;
+		float: right;
+		font-family: iran-sans;
+		font-size: 13px;
+		color: #7C7C7C;
+		margin: 5px 0;
+		float: right;
+		width: 97%;
+	}
+	.breadcrumb li{
+		float: right;
+		cursor: pointer;
+	}
+	.breadcrumb li:hover{
+		color: #000;
+	}
+	.breadcrumb i{
+		margin: 0px 10px;
+	}
+	.search-count{
+		font-family: iran-sans;
+	}
+	.show-res{
+		float: right;
+		direction: rtl;
+		line-height: 30px;
+		margin-left: 10px;
+		color: #777;
+		position: relative;
+	}
+	.show-res::after{
+		content: " ";
+		width: 1px;
+		height: 30px;
+		border-style: solid;
+		border-width: 0 0 0 1px;
+		color: #BEBEBE;
+		top: 0px;
+		left: -10px;
+		position: absolute;
+	}
+	.show-res span{
+		float: right;
+		margin: 0 2px;
+		display: block;
+		font-size: 12px;
+	}
+	.pro-category{
+		float: right;
+		font-weight: bolder;
+		font-size: 17px;
+		margin: 5px 0 10px 10px;
+	}
+	.search-box{
+		float: right;
+		direction: rtl;
+		margin: 0 15px 10px;
+		line-height: 30px;
+		font-family: iran-sans;
+		width: 225px;
+		position: relative;
+	}
+	.search-box input{
+		float: right;
+		width: 85%;
+		font-family: iran-sans;
+		padding:2px 5px;
+		color: #777;
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		direction: rtl;
+		line-height: 25px;
+	}
+	.search-box-i{
+		position: absolute;
+		top: 1px;
+		left: 23px;
+		color: #777;
+		cursor: pointer;
+		padding: 7px;
+	}
+	.sorting{
+		float: left;
+		width: 600px;
+	}
+	.sort-title{
+		display: block;
+		width: 18%;
+		float: right;
+		font-size: 12px;
+		direction: rtl;
+		margin-top: 19px;
+	}
+	.sorting ul{
+		display: block;
+		width: 80%;
+		float: left;
+		margin-top: 15px;
+	}
+	.sorting ul li{
+		float: right;
+		padding: 0 12px 10px 12px;
+		cursor: pointer;
+	}
+	.active-sort{
+		border-bottom: 2px solid #2196f3;
+	}
+	.product-items{
+		width: 100%;
+	}
+	.product-item{
+		width: calc(20% - 12px);
+		height: 430px;
+		float: left;
+		margin-left: 10px;
+	}
+	.pro-img img{
+		width: 220px;
+		text-align: center;
+		margin: 20px 0;
+	}
+	.pro-color{
+		width: 100%;
+		margin-bottom: 10px;
+		display: block;
+	}
+</style><!--Product Panel-->
 </head>
 
 <body>
@@ -189,17 +334,34 @@ a{
 		border: solid #A2A2A2 1px;
 		font-family: iran-sans;
 	}
-	.fa-search{
+	.header-search{
 		float: right;
-		width: 42px;
+		width: 4%;
 		height: 35px;
 		background-color: rgb(156,162,176);
-		line-height: 30px;
+		line-height: 35px;
 		text-align: center;
 		margin-top: 6px;
 		border-radius: 3px 0 0 3px;
 		color: #fff;
 		cursor: pointer;
+		position: absolute;
+		top: 0;
+		left: 130px;
+	}
+	.haeder-searchbox{
+		position: relative;
+		width: 850px;
+	}
+	.header-search-box{
+		float: right;
+		direction: rtl;
+		width: 55%;
+		height: 30px;
+		margin: 6.5px 10px 0 0;
+		border-radius: 0 3px 3px 0;
+		border: solid #A2A2A2 1px;
+		font-family: iran-sans;
 	}
 </style><!--Header Style-->
 <style>
@@ -515,9 +677,9 @@ a{
 						<span id="cart-text">سبد خرید</span>
 						<span id="cart-count">0</span>
 					</div>
-					<div>
+					<div class="haeder-searchbox">
 					<input type="text" placeholder="  محصول، دسته یا برند مورد نظرتان را جستجو کنید. . .">
-					<i class="fa fa-search" aria-hidden="true"></i>
+					<i class="fa fa-search header-search" aria-hidden="true"></i>
 					</div>
 				</div>
 			</div>
@@ -631,10 +793,10 @@ a{
 		clear: both;
 	}
 	#filter-panel{
-		width: 250px;
+		width: 15%;
 		background-color: #fff;
 		float: right;
-		margin: 20px 5px;
+		margin: 15px 5px;
 		border: 1px solid #eee;
 		border-radius: 4px;
 	}
@@ -788,7 +950,7 @@ a{
 		width: 85%;
 		font-family: iran-sans;
 		padding: 5px;
-		color: #ccc;
+		color: #777;
 		border: 1px solid #ccc;
 		border-radius: 3px;
 		margin: 12px;
@@ -1205,8 +1367,52 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 					</div>
 				
 				</div><!--Color Sort-->
+			</div><!--filter-panel-->
+			<div id="product-panel" class="dk-box">
+				<div class="option">
+					<ul class="breadcrumb">
+						<li><i class="fa fa-angle-left"></i><a>فروشگاه اینترنتی دیجی کالا</a></li>
+						<li><i class="fa fa-angle-left"></i><a>کالای دیجی کالا</a></li>
+						<li><i class="fa fa-angle-left"></i><a>موبایل</a></li>
+						<li><a>گوشی موبایل</a></li>
+					</ul>
+					<div class="search-count">
+						<div class="cat-res">
+							<span class="pro-category">گوشی موبایل</span>
+							<div class="show-res">
+								<span class="show-res-txt">نمایش (</span>	
+								<span class="show-res-first">1</span>							
+								<span class="show-res-txt">-</span>							
+								<span class="show-res-last">40</span>							
+								<span class="show-res-txt">محصول از</span>							
+								<span class="show-res-total">53</span>							
+								<span class="show-res-txt">)</span>							
+							</div>
+						</div>
+						<div class="search-box">
+							<input type="text" placeholder="جستجو کنید . . ." autocomplete="off" /><i class="fa fa-search search-box-i" aria-hidden="true"></i>
+						</div>
+						<div class="sorting">
+							<span class="sort-title">مرتب سازی بر اساس:</span>
+							<ul>
+								<li>پربازدیدترین</li>
+								<li>جدیدترین</li>
+								<li class="active-sort">پرفروش ترین</li>
+								<li> ارزانترین</li>
+								<li>گرانترین</li>
+							</ul>
+						</div>
+					</div>
+				</div><!--option-->
+				<div class="product-items">
+					<div class="product-item">
+						<span class="pro-img"><img src="img/Mobile-Phone-Apple-iPhone-SE-64-GBb28f40.jpg"/></span>
+						<span class="pro-color">
+							<span></span>
+						</span>
+					</div>
+				</div>
 			</div>
-			<div id="product-panel"></div>
 		</div>
 <script>
 		
