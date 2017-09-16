@@ -1260,7 +1260,37 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 						</div>
 					</div>
 				</div><!--option-->
-				<div class="product-items">
+<!--				<div >-->' 
+				<ul class="product-items">
+					<li class="product-item">
+						<a>
+							<div class="pro-img">
+								<img src="img/Mobile-Phone-Apple-iPhone-SE-64-GBb28f40.jpg"/>
+							</div>
+							<div class="pro-color">
+								<div class="pro-color-wraper">
+									<span class="back-color-pro" style="background-color: red;"><span class="color-name-pro per-text">قرمز</span></span>
+									<span class="back-color-pro" style="background-color: greenyellow;"><span class="color-name-pro per-text">سبز</span></span>
+									<span class="back-color-pro" style="background-color: deepskyblue;"><span class="color-name-pro per-text">آبی</span></span>
+								</div>
+							</div>
+							<div class="product-title">
+								<span>گوشي موبايل اپل مدل iPhone 7 ظرفيت 32 گيگابايت</span>
+							</div>
+							<div class="rate">
+								<span class="starRate">
+									<i aria-hidden="true" class="fa fa-star"></i>
+									<span class="rateNumber">4.2</span>
+								</span>
+								<span class="countRate">از <span class="count">708</span> رای</span>
+							</div>
+							<div class="product-price">
+								<span>2,625,000 تومان</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+<!--
 					<div class="product-item">
 						<span class="pro-img"><img src="img/Mobile-Phone-Apple-iPhone-SE-64-GBb28f40.jpg"/></span>
 						<span class="pro-color">
@@ -1277,7 +1307,8 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 							</span>
 						</span>
 					</div>
-				</div>
+-->
+<!--				</div>-->
 			</div>
 		</div>
 <script>
@@ -1287,12 +1318,72 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 	},function(){
 		$(this).find('.color-name-pro').fadeOut(100);
 	});
+	$('.product-item').hover(function(){
+		$(this).find('.product-title span').css({whiteSpace : "normal"});
+	},function(){
+		$(this).find('.product-title span').css({whiteSpace : "nowrap"});
+	});
+	
 </script>
 <style>
+	.product-item{
+		padding-top: 10px;
+	}
+	.product-item:hover{
+		box-shadow: 0 0px 15px #898989;
+		transition: box-shadow .15s ease;
+	}
+	.product-price{
+		direction: rtl;
+		text-align: right;
+		margin: 19px 13px;
+		font-family: iran-sans;
+		font-size: 17px;
+	}
+	.countRate{
+		display: inline-block;
+		direction: rtl;
+		font-family: iran-sans;
+		font-size: 13px;
+		
+	}
+	.rate{
+		direction: rtl;
+		margin-right: 13px;
+		text-align: right;
+	}
+	.starRate{
+		display: inline-block;
+		width: 45px;
+		height: 20px;
+		direction: rtl;
+		background-color: #4A90E2;
+		border-radius: 4px;
+		padding: 3px;
+		color: #fff;
+		text-align: center;
+		font-family: iran-sans;
+		font-size: 13px;
+		line-height: 20px;
+
+	}
+	.product-title{
+		margin-bottom: 10px;
+	}
+	.product-title span{
+		font-family: iran-sans;
+		font-size: 14px;
+		direction: rtl;
+		display: block;
+		text-align: right;
+		line-height: 25px;
+		width: 255px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}	
 	#product-panel{
 		width: 83%;
-		height: 500px;
-		float: left;
 		background-color: #fff;
 		margin: 15px 10px;
 	}
@@ -1415,11 +1506,14 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 	}
 	.product-items{
 		width: 100%;
+		content: " ";
+		clear: both;
+		display: block;
+		padding-bottom: 40px;
 	}
 	.product-item{
-		width: calc(20% - 12px);
+		width: 270px;
 		height: 430px;
-		float: left;
 		margin-left: 10px;
 	}
 	.pro-img img{
@@ -1435,12 +1529,11 @@ top: 3px;"><i class="fa fa-check" aria-hidden="true"></i></span>
 		position: relative;
 	}
 	.back-color-pro{
-		display: block;
+		display: inline-block;
 		width: 15px;
 		height: 15px;
 		border-radius: 100%;
-		float: right;
-		margin-left: 10px;
+		margin-left: 3px;
 		position: relative;
 	}
 	.pro-color-wraper{
