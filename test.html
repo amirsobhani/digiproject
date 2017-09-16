@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 <script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/jQueryRotate.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </head>
 
 <body>
@@ -12,9 +12,14 @@
 
 	
 </style>
-<span class="inp"></span>
-<input type="checkbox" />
-<button>Rotate</button>
+	
+	<div ng-app="">
+		<p>
+		my name is	<input type="text" ng-model="name"/>
+		<span ng-bind="name"></span>
+		</p>
+	</div>
+	
 </body>
 
 <script>
