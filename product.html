@@ -1,0 +1,1036 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>فروشگاه دی جی کالا</title>
+<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<script src="js/jquery-3.2.1.min.js"></script>
+<link href="css/flipTimer.css" rel="stylesheet" type="text/css"/>
+<script src="js/jquery.flipTimer.js"></script>
+<script src="js/jQueryRotate.js"></script>
+<meta name="viewport" content="initial-scale=1, width=device-width" />
+<style>
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+ HTML5 display-role reset for older browsers 
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: iran-sans;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+	@font-face{
+		font-family: iran-sans;
+		src: url(font/IRANSansLight.ttf),
+			url(font/IRANSansLight.woff),
+			url(font/IRANSansMedium.ttf),
+			url(font/IRANSansMedium.woff);
+	}
+a{
+	text-decoration: none;
+	}
+	.dk-box{
+		background-color: #fff;
+		border: 1px solid #ebeced;
+		-ms-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+		box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+</style>
+
+
+</head>
+<style>
+	#main{
+		background-image: url(img/1503990105pattern42.png);
+	}
+	#content{
+		width: 1190px;
+		margin: 0 auto;
+	}
+	.dk-box{
+		background-color: #fff;
+		border: 1px solid #ebeced;
+		-ms-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+		box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+.breadcrumb{
+		position: relative;
+		overflow: hidden;
+		line-height: 30px;
+		font-family: iran-sans;
+		font-size: 13px;
+		color: #7C7C7C;
+		margin: 5px 0;
+		width: 100%;
+	    content: " ";
+		display: block;
+		clear: both;
+	}
+	#breadcrumb{
+		content: " ";
+		display: block;
+		clear: both;
+		margin: 10px 0;
+		padding: 0 10px;
+	}
+	.breadcrumb li{
+		float: right;
+		cursor: pointer;
+	}
+	.breadcrumb li:hover{
+		color: #000;
+	}
+	.breadcrumb i{
+		margin: 0px 10px;
+	}	
+	
+</style><!--breadcrumb-->
+<style>
+	#productDetail{
+		width: 1190px;
+		margin: 0 auto;
+		background-color: #fff;
+	}
+	#productDetail::after{
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	.product-gallery{
+		float: right;
+		width: 430px;
+	}
+	.product-toolbar{
+		width: 100%;
+		line-height: 90px;
+		vertical-align: middle;
+	}
+	.product-toolbar ul li{
+		display: inline-block;
+		color: #999;
+		margin-right: 15px;
+	}
+	.product-img{
+		width: 100%;
+		text-align: center;
+		padding: 20px 0;
+	}
+	.product-img img{
+		width: 350px;
+		height: 350px;
+	}
+	.thumb-gallery{
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	.thumb-gallery::after{
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	.img-gallery{
+		width: 265px;
+		height: 75px;
+		overflow: hidden;
+	}
+	.product-list-img{
+		display: block;
+		width: 75px;
+		height: 68px;
+		cursor: pointer;
+		float: left;
+		text-align: center;
+		border: 1px solid #e5e5e5;
+		margin: 0 5px 10px;
+	}
+	.product-list-img img{
+		margin-top: 8px;
+		width: 50px;
+		height: 50px;
+	}
+	.more-img{
+		margin-right: 10px;
+		float: right;
+		width: 75px;
+		height: 68px;
+		display: block;
+		cursor: pointer;
+		border: 1px solid #e5e5e5;
+		text-align: center;
+		line-height: 68px;
+	}
+	.product-info{
+		float: left;
+		width: 720px;
+		margin: 15px;
+	}
+	.product-info header{
+		background-color: #F5F6F7;
+		border-radius: 4px;
+	}
+	.product-info header::after{
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	.info-header{
+		float: right;
+		text-align: right;
+		direction: rtl;
+		width: 510px;
+		margin: 10px 20px;
+		
+	}
+	.info-header h1{
+		font-size: 20px;
+		line-height: 30px;
+	}
+	.info-header h1 span{
+		font-size: 12px!important;
+		display: block;
+	}
+	.star{
+		width: 100px;
+		height: 14px;
+		float: left;
+		margin: 17px 20px 0;
+		text-align: center;
+		background: url(img/stars.png) repeat-x scroll 0 -14px;
+	}
+	.ratedStar{
+		height: 14px;
+		background: url(img/stars.png) repeat-x scroll 0 0;
+	}
+	.starText{
+		text-align: right;
+		font-size: 13px;
+		margin-top: 12px;
+	}
+	.starText span{
+		margin: 0 3px;
+	}
+</style>
+<body>
+
+<style>
+	#header{
+		height: 95px;
+		width: 1190px;
+		margin: 0 auto;
+		position: relative;
+	}	
+	#header-right{
+		float: right;
+		width: 70%;
+		height: 100%;
+	}
+	#header-left{
+		float: right;
+		width: 30%;
+		height: 100%;
+		margin: 17px;
+		position: absolute;
+	}
+	#header-right-top{
+		float: right;
+		height: 50%;
+		width: 100%;
+	}
+	#header-right-bottom{
+		float: right;
+		height: 50%;
+		width: 100%;
+	}
+	#header-right-top span,#header-right-top a{
+		float: right;
+		line-height: 47px;
+		color: rgb(150,155,168);
+		font-family: iran-sans;
+		font-size: 13px;
+		margin-left: 5px;
+	}
+	#header-right-top a:hover{
+		color: rgb(239,71,83);
+	}
+	.fa-lock{
+		float: right;
+		line-height: 47.5px;
+		color: rgb(150,155,168);
+		margin-left: 10px;
+	}
+	.fa-user{
+		float: right;
+		line-height: 47.5px;
+		color: rgb(150,155,168);
+		margin:0 30px 0 10px;
+	}
+	#cart{
+		width: 190px;
+		height: 36px;
+		background-color:rgb(70,163,73);
+		float: right;
+		border-radius: 3px;
+		margin: 5px 0;
+		position: relative;
+	}
+	#cart .fa-shopping-cart{
+		float: right;
+		line-height: 33.5px;
+		color: rgb(255,255,255);
+		margin: 0 9px;
+		
+	}
+	#cart #cart-icon{
+		background-color: rgb(92,173,95);
+		width: 45px;
+		height: 36px;
+		float: right;
+		display: block;
+		border-radius: 0 3px 3px 0;
+	}
+	#cart-text{
+		float: right;
+		font-family: iran-sans;
+		font-size: 14px;
+		line-height: 36px;
+		margin-right: 20px;
+		color: #fff;
+	}
+	#cart-count{
+		border-radius: 100%;
+		background-color: rgb(92,173,95);
+		float: right;
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		left: 15px;
+		top: 5px;
+		color: #fff;
+		text-align: center;
+		line-height: 23px;
+	}
+	#header-right-bottom input{
+		float: right;
+		direction: rtl;
+		width: 465px;
+		height: 30px;
+		margin: 6.5px 10px 0 0;
+		border-radius:0 3px 3px 0;
+		border: solid #A2A2A2 1px;
+		font-family: iran-sans;
+	}
+	.header-search{
+		float: right;
+		width: 4%;
+		height: 35px;
+		background-color: rgb(156,162,176);
+		line-height: 35px;
+		text-align: center;
+		margin-top: 6px;
+		border-radius: 3px 0 0 3px;
+		color: #fff;
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		left: 130px;
+	}
+	.haeder-searchbox{
+		position: relative;
+		width: 850px;
+	}
+	.header-search-box{
+		float: right;
+		direction: rtl;
+		width: 55%;
+		height: 30px;
+		margin: 6.5px 10px 0 0;
+		border-radius: 0 3px 3px 0;
+		border: solid #A2A2A2 1px;
+		font-family: iran-sans;
+	}
+</style><!--Header Style-->
+<style>
+	#main-menu{
+		display: block;
+		width: 100%;
+		height: 42px;
+		background-color: rgb(247,248,250);
+		margin-top: 10px;
+		box-shadow: 1px 2px 2px 2px #eee;
+		-webkit-box-shadow:1px 2px 2px 2px #eee;
+		-moz-box-shadow:1px 2px 2px 2px #eee;
+		border: solid 1px #E5E5E5 ;
+	}	
+	#menu{
+		width: 1190px;
+		height: 42px;
+		margin: 0 auto;
+		position: relative;
+		display: block;
+		
+	}
+	#menu ul{ 
+		position: relative;
+		z-index: 5;
+	}
+	#menu li{
+		display: inline-block;
+		float: right;
+		font-family: iran-sans;
+		font-size: 14px;
+		line-height: 40px;
+		padding: 0 15px;
+	}
+	#menu i{
+		margin: 0 5px;
+	}
+	.active-li{
+		background-color: white;
+		box-shadow: 1px 1px 1px 1px red;
+	}
+	
+	#menu .submenu1{
+		position: absolute;
+		width: 100%;
+		right: 0;
+		width: 100%;
+		height: 42px;
+		background-color: rgb(247,248,250);
+		box-shadow: 1px 1px 1px 1px #eee;
+		-webkit-box-shadow:1px 1px 1px 1px #eee;
+		-moz-box-shadow:1px 1px 1px 1px #eee;
+		border:1px solid rgb(218,219,221) ;
+		margin: 0 !important;
+		display: none;
+	}
+	.submenu1-li:hover{
+		background-image: url(img/red.png);
+		background-repeat: no-repeat;
+		background-position: center 30px;
+	}
+	#menu ul li ul li{
+		float: right;
+		padding:0 12px;
+	}
+	.submenu1 .submenu1-li:hover{
+		border-bottom: 4px solid red !important;
+	}
+	.submenu2{
+		width: 100%;
+		height: 400px;
+		position: absolute;
+		left: -1px;
+		box-shadow: 1px 1px 1px 1px #eee;
+		-webkit-box-shadow:1px 1px 1px 1px #eee;
+		-moz-box-shadow:1px 1px 1px 1px #eee;
+		border:1px solid rgb(218,219,221) ;
+		border-radius: 0 0 5px 5px;
+		border-top: none;
+		display: none;
+		top: 45px;
+		background-color: #fff;
+	}
+	#mobile-menu{
+		background-image: url(img/mobile.png);
+		background-repeat: no-repeat;
+		background-position: bottom left;
+	}
+	#tablet-menu{
+		background-image: url(img/tablet-ebook-reader.png);
+		background-repeat: no-repeat;
+		background-position: bottom left;
+	}
+	.submenu2 table{
+		width: 100%;
+		height: 400px;
+		direction: rtl;
+		float: right;
+	}
+	.submenu2 .sub-td{
+		width: 25%;
+		border-left: 1px solid #e2e2e2;
+	}
+	.sub-td ul{
+		height: auto;
+		width: 60%;
+		margin: 0;
+	}
+	.sub-td .title{
+		text-align: right;
+		font-size: 16px;
+		font-weight: bold;
+		color: rgb(96,193,243);
+		margin-left: 50px;
+	}
+	.item{
+		margin-left: 50px;
+	}
+</style><!--Menu Style-->
+	
+		<div id="header">
+			<div id="header-right">
+				<div id="header-right-top">
+					<i class="fa fa-lock fa-lg" aria-hidden="true"></i>
+					<span>،فروشگاه دی جی کالا</span><a href="#">وارد شوید</a>
+					<i class="fa fa-user fa-lg" aria-hidden="true"></i>
+					<a href="#">ثبت نام کنید</a>
+				</div>
+				<div id="header-right-bottom">
+					<div id="cart">
+						<span id="cart-icon"><i class="fa fa-shopping-cart fa-lg fa-flip-horizontal" aria-hidden="true"></i></span>
+						<span id="cart-text">سبد خرید</span>
+						<span id="cart-count">0</span>
+					</div>
+					<div class="haeder-searchbox">
+					<input type="text" placeholder="  محصول، دسته یا برند مورد نظرتان را جستجو کنید. . .">
+					<i class="fa fa-search header-search" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			<div id="header-left">
+				<img src="img/logo.png" alt="logo"/>
+			</div>
+		</div><!--Header-->
+		<div id="main-menu">
+			<nav id="menu">
+				<ul>
+					<li class="menu-li" ><i class="fa fa-angle-down" aria-hidden="true" ></i>
+<span>کالای دیجیتال</span>
+						<ul class="submenu1">
+							<li class="submenu1-li">موبایل
+								<div class="submenu2" id="mobile-menu">
+									<table>
+										<tbody>
+											<tr>
+												<td class="sub-td">
+													<ul>
+														<li class="title">گوشی موبایل</li>
+														<li class="item">Apple</li>
+														<li class="item">Samsung</li>
+														<li class="item">LG</li>
+														<li class="item">Sony</li>
+													</ul>
+												</td>
+												<td class="sub-td">
+													<ul>
+														<li class="title">گوشی موبایل</li>
+														<li class="item">Apple</li>
+														<li class="item">Samsung</li>
+														<li class="item">LG</li>
+														<li class="item">Sony</li>
+													</ul>
+												</td>
+												<td><ul></ul></td>
+												<td><ul></ul></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</li>
+							<li class="submenu1-li">تبلت و کتابخوان
+								<div class="submenu2" id="tablet-menu">
+									<table>
+										<tbody>
+											<tr>
+												<td class="sub-td">
+													<ul>
+														<li class="title">گوشی موبایل</li>
+														<li class="item">Apple</li>
+														<li class="item">Samsung</li>
+														<li class="item">LG</li>
+														<li class="item">Sony</li>
+													</ul>
+												</td>
+												<td class="sub-td">
+													<ul>
+														<li class="title">گوشی موبایل</li>
+														<li class="item">Apple</li>
+														<li class="item">Samsung</li>
+														<li class="item">LG</li>
+														<li class="item">Sony</li>
+													</ul>
+												</td>
+												<td><ul></ul></td>
+												<td><ul></ul></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</li>
+							<li class="submenu1-li">لپ تاپ</li>
+						</ul> 
+					</li>
+					<li class="menu-li" ><i class="fa fa-angle-down" aria-hidden="true" ></i>
+<span>لوازم خانگی
+</span>						<ul class="submenu1">
+							<li class="submenu1-li">صوتی و تصویری</li>
+							<li class="submenu1-li">لوازم برقی</li>
+							<li class="submenu1-li">آشپزخانه</li>
+						</ul>
+						</li>
+					<li class="menu-li"><i class="fa fa-angle-down" aria-hidden="true"></i>
+<span>زیبایی و سلامت</span>
+						<ul class="submenu1">
+							<li class="submenu1-li">عطر</li>
+							<li class="submenu1-li">لوازم آرایشی</li>
+							<li class="submenu1-li">لوازم بهداشتی</li>
+						</ul>
+						</li>
+					<li class="menu-li"><i class="fa fa-angle-down" aria-hidden="true"></i>
+<span>فرهنگ و هنر</span>
+						<ul class="submenu1">
+							<li class="submenu1-li">کتاب و مجلات</li>
+							<li class="submenu1-li">لوازم و تحریر</li>
+							<li class="submenu1-li">صنایع دستی</li>
+						</ul>
+						</li>
+				</ul>
+			</nav>
+		</div><!--Menu-->
+		<div id="main">
+		
+			<div id="content">
+				<div id="breadcrumb" class="dk-box">
+					<ul class="breadcrumb">
+						<li><i class="fa fa-angle-left"></i><a>فروشگاه اینترنتی دیجی کالا</a></li>
+						<li><i class="fa fa-angle-left"></i><a>کالای دیجی کالا</a></li>
+						<li><i class="fa fa-angle-left"></i><a>موبایل</a></li>
+						<li><a>گوشی موبایل</a></li>
+					</ul>
+				</div><!--breadcrumb-->
+				<section id="productDetail" class="dk-box">
+					<div class="product-gallery">
+						<div class="product-toolbar">
+							<ul>
+								<li><i class="fa fa-share-alt" aria-hidden="true"></i></li>
+								<li><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+								<li><i class="fa fa-bell-o" aria-hidden="true"></i></li>
+								<li><i class="fa fa-line-chart" aria-hidden="true"></i></li>
+							</ul>
+						</div>
+						<div class="product-img">
+							<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+						</div>
+						<div class="thumb-gallery">
+							<a class="more-img">
+								<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+							</a>
+							<ul class="img-gallery">
+								<li><a class="product-list-img"><img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/></a></li>
+								<li><a class="product-list-img"><img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/></a></li>
+								<li><a class="product-list-img"><img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/></a></li>
+								<li><a class="product-list-img"><img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/></a></li>
+								<li><a class="product-list-img"><img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/></a></li>
+							</ul><!--img-gallery-->
+						</div>
+					</div><!--product-gallery-->
+					<div class="product-info">
+						<header>
+							<div class="info-header">
+								<h1>
+									گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت
+									<span>
+										Samsung Galaxy S8 Plus SM-G955FD Dual SIM Mobile Phone
+									</span>
+								</h1>
+								
+							</div>
+							<div class="star">
+								<div class="ratedStar" style="width: 52%;"></div>
+								<div class="starText">از<span>86</span>رای</div>
+							</div>
+						</header>
+						<div class="product-config">
+							<div class="config-right">
+								<div class="guarantee">
+									<p>انتخاب گارانتی</p>
+									<div class="select-list">
+										<i class="fa fa-check" aria-hidden="true"></i>
+										<p>گارانتی 18 ماهه آروند</p>	
+										<i class="fa fa-angle-down down" aria-hidden="true"></i>
+										<i class="fa fa-angle-up up" aria-hidden="true"></i>
+										<ul class="subSelList">
+											<li>گارانتی 18 ماهه آروند</li>
+											<li>18 ماه گارانتی مدیا پردازش</li>
+										</ul>
+									</div>
+								</div>
+								<div class="seller">
+									<p>انتخاب فروشنده</p>
+									<div class="select-list">
+										<i class="fa fa-check" aria-hidden="true"></i>
+										<p>دیجی کالا</p>	
+										<i class="fa fa-angle-down down" aria-hidden="true"></i>
+										<i class="fa fa-angle-up up" aria-hidden="true"></i>
+										<ul class="subSelList">
+											<li> رايان (1 روز فاصله زمانی تحویل)</li>
+											<li>دیجی کالا</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="config-left"></div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+<style>
+	.fa-check{
+		margin-right: 10px;
+	}
+	.select-list p{
+		margin-right: 10px;
+	}
+	.select-list .down{
+		float: left;
+		margin: 9px 10px;
+	}
+	.select-list .up{
+		display: none;
+		float: left;
+		margin: 9px 10px;
+	}
+	.subSelList li{
+		padding-right: 15px;
+	}
+	.subSelList li:hover{
+		background-color: #FAFBFC;
+	}
+	.subSelList{
+		display: none;
+		position: absolute;
+		background-color: #fff;
+		border: 1px solid #eee;
+		width: 100%;
+		margin-top: 4px;
+		border-radius: 3px;
+		z-index: 2;
+	}
+	.guarantee i ,.seller i{
+		display: inline-block;
+		color: #999;
+	}
+	.guarantee p ,.seller p{
+		display: inline-block;
+	}
+	.guarantee ,.seller{
+		direction: rtl;
+		margin-top: 40px;
+		position: relative;
+	}
+	.select-list{
+		cursor: pointer;
+		font-size: 14px;
+		width: 100%;
+		background-color: #FAFBFC;
+		border: 1px solid #eee;
+		border-radius: 3px;
+		margin-top: 15px;
+		line-height: 35px;
+	}
+	.product-config{
+		width: 100%;
+	}
+	.config-right{
+		float: right;
+		width: 55%;
+	}
+	.config-left{
+		float: left;
+		width: 31%;
+	}
+	
+</style>
+<script>
+
+	$('.select-list').click(function(){
+		var subSelList = $(this).find('.subSelList');
+		
+		if(subSelList.css('display') == 'block'){
+			subSelList.slideUp(200);
+		}else{
+			subSelList.slideDown(250);
+		}
+	});
+	
+	
+	
+	
+	$('.select-list li').click(function(){
+		var text = $(this).text();
+		$(this).parents('.select-list').find('p').text(text);
+	});
+</script>
+<script>
+	$('.menu-li').hover(function(){
+		$(this).find('.submenu1').slideDown(200);
+	},function(){
+			$(this).find('.submenu1').slideUp(200);
+	})
+	$('.submenu1-li').hover(function(){
+		$(this).find('.submenu2').fadeIn(100);
+	},function(){
+			$(this).find('.submenu2').fadeOut(100);
+	})
+	
+$('.menu-li').hover(function(){
+	$(this).addClass('active-li');
+	$('.submenu1').css("background-color","#fff");
+},function(){
+	$(this).removeClass('active-li');
+	$('.submenu1').css("background-color","rgb(247,248,250)");
+})
+		
+</script><!--Menu jQuery-->
+<style>
+	#footer{
+		width: 100%;
+		height: auto;
+	}
+	.info-bar{
+		width: 100%;
+		height: 45px;
+		background-color: #6D717A;
+		float: right;
+	}	
+	.wrapper{
+		width: 1190px;
+		margin: 0 auto;
+		height: 100%;
+	}
+	.info-bar-meta{
+		float: right;
+		direction: rtl;
+		font-family: iran-sans;
+		color: #fff;
+		line-height: 45px;
+	}
+	.info-bar-ul {
+		float: left;
+		line-height: 45px;
+	}
+	.info-bar-ul  li{
+		float: left;
+		direction: rtl;
+		color: #fff;
+		font-family: iran-sans;
+		margin-right: 100px;
+	}
+	.info-bar-ul li i{
+		float: left;
+		line-height: 40px;
+		margin-right: 10px;
+	}
+	.subscribe-bar{
+		width: 100%;
+		background-color: #F7F8FA;
+		height: auto;
+		float: right;
+	}
+	.subscribe-bar-menu{
+		width: 640px;
+		float: right;
+		margin: 50px 0;
+	}
+	.subscribe-bar-form{
+		width: 550px;
+		float: right;
+		margin: 50px 0;
+		direction: rtl;
+	}
+	.subscribe-bar-form input{
+		font-family: iran-sans;
+		float: right;
+		padding: 0 10px;
+		line-height: 39px;
+		font-size: 15px;
+		width: 405px;
+		margin: 19px 0 40px 10px;
+	}
+	.subscribe-bar-form h2{
+		line-height: 40px;
+		font-family: iran-sans;
+	}
+	.subscribe-bar-form button{
+		    width: 110px;
+			line-height: 40px;
+			float: left;
+			margin: 18px 0 40px 0;
+			font-family: iran-sans;
+			background-color: #208DE6;
+			border: 1px solid #ebeced;
+			border-radius: 4px;
+			color: #fff;
+	}
+	.subscribe-bar-form #social-net{
+		float: right;
+	}
+	.menu-right{
+		float: right;
+		direction: rtl;
+		width: 30%;
+		line-height: 30px;
+		font-family: iran-sans;
+	}
+	.menu-right a{
+		direction: rtl;
+		float: right;
+		font-weight: bolder;
+	}
+	.menu-right ul{
+		float: right;
+		display: block;
+		margin: 10px 0;
+		font-size: 14px;
+	}
+	.menu-left{
+		float: right;
+		direction: rtl;
+		width: 30%;
+		line-height: 30px;
+		font-family: iran-sans;
+		margin-right: 170px;
+	}
+	.menu-left a{
+		direction: rtl;
+		float: right;
+		font-weight: bolder;
+	}
+	.menu-left ul{
+		float: right;
+		display: block;
+		margin: 10px 0;
+		font-size: 14px;
+	}
+	#social-net{
+		float: right;
+	}
+	#social-net i{
+		line-height: 48px;
+	}
+	#appStore{
+		float: left;
+	}
+</style><!--Footer-->
+		<div id="footer">
+				<div class="info-bar">
+					<div class="wrapper">
+						<span class="info-bar-meta">
+۷ روز هفته، ۲۴ ساعته پاسخگوی شما هستیم.
+						</span>
+						<ul class="info-bar-ul">
+							<li>
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+								info@digikala.com
+							</li>
+							<li>
+								<i class="fa fa-question-circle" aria-hidden="true"></i>
+								<a>
+									سوالات متداول
+								</a>
+							</li>
+							<li>
+								<a>
+									<span>۹٥۱۱۹۰۹٥ - ۰۲۱</span>
+									<span> | </span>
+									<span>۶۱۹۳۰۰۰۰ - ۰۲۱</span>
+								</a>
+								<i class="fa fa-phone" aria-hidden="true"></i>
+							</li>
+						</ul>
+					</div><!--info-bar-->
+					
+					<div class="subscribe-bar">
+						<div class="wrapper">
+							<div class="subscribe-bar-menu">
+								<div class="menu-right">
+									<a>راهنمای خرید از دیجی‌کالا</a>
+									<ul>
+										<li><a>ثبت سفارش</a></li>
+										<li><a>رویه های ارسال سفارش</a></li>
+										<li><a>شیوه های پرداخت</a></li>
+										<li><a>معرفی دیجی بن</a></li>
+									</ul>
+								</div>
+								<div class="menu-left">
+									<a>خدمات مشتریان</a>
+									<ul>
+										<li><a>پاسخ به پرسش های متداول</a></li>
+										<li><a>رویه های باز گرداندن کالا</a></li>
+										<li><a>شرایط استفاده</a></li>
+										<li><a>حریم خصوصی</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="subscribe-bar-form">
+								<h2>از تخفیف‌ها و جدیدترین‌های دیجی کالا باخبر شوید!</h2>
+								<input type="email" placeholder="آدرس ایمیل خود را وارد کنید" />
+								<button>تایید ایمیل</button>
+								<div id="social-net">
+									<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+									<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+									<i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i>
+									<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+									<i class="fa fa-telegram fa-2x" aria-hidden="true"></i>
+								</div>
+								<div id="appStore">
+									<a><img src="img/ios_app_bg.png"/></a>
+									<a><img src="img/cafebazaar-digikala.png"/></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+</body>
+</html>
