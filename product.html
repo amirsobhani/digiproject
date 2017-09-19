@@ -532,23 +532,23 @@ a{
 		width: 190px;
 		height: 100%;
 	}
-	#serives{
+	#product-serives{
 		width: 838px;
 		height: 80px;
 		position: relative;
 		left: -48px;
 	}
-	#serives li{
+	#product-serives li{
 		width: 18%;
 		height: 80px;
 		display: inline-block;
 	}
-	#serives li i{
+	#product-serives li i{
 		float: right;
 		line-height: 80px;
 		color: #9F9F9F;
 	}
-	#serives li span{
+	#product-serives li span{
 		font-size: 11px;
 	line-height: 80px;
 	direction: rtl;
@@ -677,7 +677,6 @@ a{
 			</nav>
 		</div><!--Menu-->
 		<div id="main">
-		
 			<div id="content">
 				<div id="breadcrumb" class="dk-box">
 					<ul class="breadcrumb">
@@ -722,7 +721,6 @@ a{
 										Samsung Galaxy S8 Plus SM-G955FD Dual SIM Mobile Phone
 									</span>
 								</h1>
-								
 							</div>
 							<div class="star">
 								<div class="ratedStar" style="width: 52%;"></div>
@@ -731,6 +729,75 @@ a{
 						</header>
 						<div class="product-config">
 							<div class="config-right">
+<style>
+	.product-back-color{
+		border-radius: 100%;
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+		text-align: center;
+		position: relative;
+		cursor: pointer;
+	}
+	.product-back-color i{
+		margin: 0 auto;
+		line-height: 25px;
+		color: #777;
+		display: none;
+		position: absolute;
+		left: 4px;
+		
+	}
+	.color-list{
+		margin-top: 15px;
+		text-align: right;
+	}
+	.color-list li{
+		direction: rtl;
+		display: inline-block;
+		background-color: #eee;
+		padding: 1px 13px;
+		border-radius: 3px;
+		border: 1px solid #dfe5e8;
+		margin-left: 15px;
+	}
+	.color-name{
+		margin-right: 10px;
+		position: relative;
+		top: -8px;
+		color: #777;
+	}
+	.product-color p{
+		direction: rtl;
+		margin-top: 20px;
+	}
+	.activecheck{
+		display: block!important;
+	}
+</style>
+								<div class="product-color">
+								<p>انتخاب رنگ</p>
+									<ul class="color-list">
+										<li>
+							<span class="product-back-color " style="background-color: red;">
+								<i class="fa fa-check color-check" aria-hidden="true"></i>
+							</span>
+							<span data-id="28" class="color-name per-text">قرمز</span>
+										</li>
+										<li>
+							<span class="product-back-color" style="background-color:#D8BFD8;">
+								<i class="fa fa-check color-check" aria-hidden="true"></i>
+							</span>
+							<span data-id="28" class="color-name per-text">یاسی</span>
+										</li>
+										<li>
+							<span class="product-back-color" style="background-color:#FFD700;">
+								<i class="fa fa-check color-check" aria-hidden="true"></i>
+							</span>
+							<span data-id="28" class="color-name per-text">طلایی</span>
+										</li>
+									</ul>
+								</div>
 								<div class="guarantee">
 									<p>انتخاب گارانتی</p>
 									<div class="select-list">
@@ -778,10 +845,35 @@ a{
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="config-left"></div>
+							</div><!--config-right-->
+							<div class="config-left">
+								<div class="product-detail">
+									<ul>
+										<li>
+										<span class="product-detail-title">تعداد سیم کارت :</span>
+										دو سیم کارت
+										</li>	
+										<li>
+										<span class="product-detail-title">حافظه داخلی :</span>
+										64 گیگابایت
+										</li>	
+										<li>
+										<span class="product-detail-title">حس گر ها :</span>
+										قطب‌نما (Compass)¡ شتاب‌سنج (Accelerometer)¡ مجاورت (Proximity)¡ فشارسنج (Barometer)¡ شمارنده ضربان قلب (Heart Rate)¡ سنجش اکسيژن خون (SPO2)¡ ژيروسکوپ (Gyro)¡ عنبيه چشم (Iris Scanner)¡ اثرانگشت روي قاب پشتي (FingerPrint|Rear-Mounted) 
+										</li>
+										<li>
+										<span class="product-detail-title">شبکه های ارتباطی :</span>
+										2G¡ 3G¡ 4G 
+										</li>	
+										<li>
+										<span class="product-detail-title">رزولوشن عکس :</span>
+										12.0 مگاپيکسل 
+										</li>
+									</ul>
+								</div>
+							</div><!--config-left-->
 							<div class="devider"></div>
-							<div id="serives">
+							<div id="product-serives">
 								<ul>
 									<li><a></a><i class="fa fa-truck fa-2x" aria-hidden="true"></i><span>تحویل اکسپرس</span>
 		</li>
@@ -800,6 +892,25 @@ a{
 				</section>
 			</div>
 		</div>
+		
+<style>
+	.product-detail{
+		direction: rtl;
+		line-height: 25px;
+		margin-top: 30px;
+	}	
+	.product-detail-title{
+		font-size: 13px;
+		color: #555;
+	}
+	.product-detail ul li{
+		font-size: 10px;
+		color: #999;
+	}
+	.product-detail ul{
+		list-style: inside;
+	}
+</style>		
 <style>
 	.devider{
 		
@@ -934,6 +1045,16 @@ a{
 	}
 	
 </style>
+<script>
+
+	
+	$('.product-back-color ').click(function(){
+		$('.product-back-color ').find('i').removeClass('activecheck');
+		$(this).find('i').addClass('activecheck');
+	});
+
+	
+</script>
 <script>
 
 	$('.select-list').click(function(){
