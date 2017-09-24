@@ -1378,7 +1378,27 @@ a{
 									 نظرات کاربران
 								</h2>
 								<span class="comment-count">(۷۵۳ نظر )</span>
-								
+								<div class="comment-sort">
+									<span>مرتب سازی بر اساس :</span>
+									<ul>
+										<li>
+											<label>
+												جدیدترین نظرات
+											</label>
+											<div class="input-sort">
+												<input type="radio" autocomplete="on" />
+											</div>
+										</li>
+										<li>
+											<label>
+												مفیدترین نظرات
+											</label>
+											<div class="input-sort">
+												<input type="radio" autocomplete="off"/>
+											</div>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</article>
@@ -1387,9 +1407,35 @@ a{
 		</div>
 		
 <style>
+	.input-sort{
+		display: inline-block;
+		position: relative;
+		top: 4px;
+	}
+	.comment-sort ul li{
+		float: right;
+		margin-left: 10px;
+	}
+	.comment-sort ul{
+		float: left;
+		font-size: 12px;
+	}
+	.comment-sort>span{
+		float: right;
+		font-size: 13px;
+		color: #2196F3;
+		margin-left: 15px;
+	}
+	.comment-sort{
+		line-height: 30px;
+		width: 32%;
+		float: left;
+	}
 	#last-comment{
 		display: block;
 		margin: 80px 10px 10px;
+		border-bottom: 2px solid #eee;
+		padding-bottom: 40px;
 	}	
 	.comment-count{
 		font-size: 12px;
