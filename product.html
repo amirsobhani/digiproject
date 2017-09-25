@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -1143,6 +1143,7 @@ a{
 					</div><!--Scroll Slider-->
 				<section class="product-tab">
 					<header>
+					<div id="navbar">
 						<ul class="product-tab-header dk-box">
 							<li class="active">
 								<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
@@ -1156,7 +1157,12 @@ a{
 								<i class="fa fa-list-alt" aria-hidden="true"></i>
 								نظرات کاربران
 							</li>
+							<li>
+								<i class="fa fa-comments" aria-hidden="true"></i>
+								پرسش و پاسخ
+							</li>
 						</ul>
+						</div>
 					</header>
 					<article id="tab">
 						<div class="item-tab">
@@ -1674,11 +1680,101 @@ a{
 									</div>
 								</div><!--user-comment-->
 							</div>
-						</div>
+						</div><!--item-tab 3-->
+						<div class="item-tab">
+							<h2><i class="fa fa-caret-left" aria-hidden="true"></i>پرسش و پاسخ خود را مطرح نمایید</h2>
+							<div class="question-write">
+								<textarea>متن پرسش خود را اینجا بنویسید . . .</textarea>
+							</div>
+							<button class="set-question">
+								ثبت پرسش
+							</button>
+							<div class="rules">
+								<label>
+									<input type="checkbox"/>
+								</label>
+								<label class="question-answer">
+									اولین پاسخی که به پرسش من داده شد، از طریق ایمیل به من اطلاع دهید.
+								</label>
+								<span>
+									با انتخاب دکمه “ثبت پرسش”، موافقت خود را با قوانین انتشار محتوا در دیجی کالا اعلام می کنم.
+								</span>
+							</div>
+						</div><!--item-tab 4-->
 					</article>
 				</section>
 			</div>
 		</div>
+
+<script>
+	$(document).ready(function(){
+		var sticky = $('#navbar').offset().top;
+		$(window).bind('scroll',function(){
+			if ($(window).scrollTop() >= sticky) {
+			$('#navbar').addClass('sticky');
+		  } else {
+			$('#navbar').removeClass('sticky');
+		  }
+		});
+	});
+
+</script><!--item-tab 4--><!--Sticky-->
+<style>
+	.sticky{
+		position: fixed;
+		top: 0;
+  		width: 100%;
+		z-index:5;
+		right: 0;
+	}
+	.rules span{
+		display: block;
+	}
+	.rules{
+		margin-left: 50px;
+		float: left;
+		width: 450px;
+		line-height: 30px;
+		font-size: 13px;
+	}
+	.set-question{
+		width: 140px;
+		line-height: 45px;
+		float: left;
+		margin: 18px 0 40px 20px;
+		font-family: iran-sans;
+		background-color: #208DE6;
+		border: 1px solid #ebeced;
+		border-radius: 4px;
+		color: #fff;
+		box-shadow: 0 3px 4px #eee;
+		overflow: hidden;
+	}
+	.question-write{
+		text-align: center;
+		margin: 30px auto;
+	}
+	.question-write textarea{
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		border: 1px solid #d4dbde;
+		width: 98%;
+		height: 135px;
+		text-align: right;
+		direction: rtl;
+		font: 13px iran-sans;
+		color: #555;
+		padding: 11px;
+		-ms-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		margin-bottom: 14px;
+		resize: none;
+	}
+</style><!--item-tab 4-->
+		
 <style>
 	.comment-usefull>span{
 		margin-left: 20px;
@@ -2035,7 +2131,7 @@ a{
 		padding: 30px;
 	}
 	.item-tab h2{
-		font-size: 25px;
+		font-size: 20px;
 		padding-right: 30px;
 	}
 	.fa-caret-left{
@@ -2062,6 +2158,8 @@ a{
 		border: 1px solid #eee;
 		border-bottom: none;
 		border-radius: 4px;
+		margin: 0 auto;
+		width: 1190px;
 	}
 	.product-tab-header li{
 		display: inline-block;
@@ -2100,6 +2198,10 @@ a{
 	});
 	
 	$('.product-tab-header li').click(function(){
+		var body = $("html, body");
+		var sticky = $('.product-tab').offset().top;
+		body.animate({scrollTop:sticky-50},500);
+		
 		$('.product-tab-header li').removeClass('active');
 		$(this).addClass('active');
 		var index = $(this).index();
