@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="391e4156-ead3-4de4-8e20-03b0779d85e2" name="Default" comment="scroll">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/product gallery/larg/pic1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/product gallery/larg/pic2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/product gallery/thumbnail/thumb-pic1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/product gallery/thumbnail/thumb-pic2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Scroll/mCSB_buttons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/1705.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Scroll/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Scroll/jquery.mCustomScrollbar.concat.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Scroll/jquery.mCustomScrollbar.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Scroll/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Scroll/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+    <list default="true" id="391e4156-ead3-4de4-8e20-03b0779d85e2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/product.html" afterPath="$PROJECT_DIR$/product.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,6 +49,7 @@
     <option name="PUSH_TAGS">
       <GitPushTagMode />
     </option>
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -171,12 +158,20 @@
       <updated>1503467878980</updated>
       <workItem from="1503467897533" duration="4973000" />
       <workItem from="1506429287267" duration="5080000" />
-      <workItem from="1506435841266" duration="9301000" />
+      <workItem from="1506435841266" duration="9374000" />
     </task>
+    <task id="LOCAL-00001" summary="scroll">
+      <created>1506451500855</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1506451500855</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19354000" />
+    <option name="totallyTimeSpent" value="19427000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1352" y="-8" width="1376" height="754" extended-state="6" />
