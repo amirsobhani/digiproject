@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="js/Scroll/jquery.mCustomScrollbar.min.css">
+  <script src="js/Scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
+
+
+
+  <style>
 body {
   margin: 0;
   font-size: 28px;
@@ -40,6 +48,9 @@ body {
 
 .content {
   padding: 16px;
+  height:300px;
+  overflow-y: auto;
+  direction: rtl;
 }
 
 .sticky {
@@ -52,6 +63,7 @@ body {
   padding-top: 60px;
 }
 </style>
+
 </head>
 <body onscroll="myFunction()">
 
@@ -78,17 +90,27 @@ body {
 </div>
 
 <script>
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-alert(sticky);
-	
-function myFunction() {
-  if (window.scrollY >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
+
+  $('.content').mCustomScrollbar({
+      theme:"dark-3",
+      setWidth: false,
+      setHeight: false,
+      setTop: 0,
+      setLeft: 0,
+      axis:"y",
+      autoExpandScrollbar:true,
+      mouseWheel:{
+          scrollAmount: "auto",
+          axis:"y",
+          invert:false,
+          updateOnContentResize:true,
+          updateOnSelectorChange:"ul li"
+      }
+
+
+  });
+
+
 </script>
 
 </body>

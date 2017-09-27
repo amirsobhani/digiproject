@@ -1712,49 +1712,75 @@ a{
 		</div>
 
 		<div id="dark">
-			<div id="product-gallery">
-				<header><i class="fa fa-3x fa-times-circle-o" aria-hidden="true"></i>
-</header>
-				<div class="right">
-					<div class="img-wrapper">
-						<img src=" " />
-					</div>
-				</div>
-				<div class="left">
-					<ul>
-						<li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
-							<img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
-						</li>
-						<li data-image-id="img/product gallery/larg/pic2.jpg">
-							<img src="img/product gallery/thumbnail/thumb-pic2.jpg"/>
-						</li><li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
-							<img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
-						</li>
-						<li data-image-id="img/product gallery/larg/pic2.jpg">
-							<img src="img/product gallery/thumbnail/thumb-pic2.jpg"/>
-						</li><li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
-							<img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
-						</li>
-						<li data-image-id="img/product gallery/larg/pic2.jpg">
-							<img src="img/product gallery/thumbnail/thumb-pic2.jpg"/>
-						</li><li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
-							<img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
-						</li>
-						<li data-image-id="img/product gallery/larg/pic2.jpg">
-							<img src="img/product gallery/thumbnail/thumb-pic2.jpg"/>
-						</li><li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
-							<img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
-						</li>
-						<li data-image-id="img/product gallery/larg/pic2.jpg">
-							<img src="img/product gallery/thumbnail/thumb-pic2.jpg"/>
-						</li>
-					</ul>
-				</div>
-			</div>
+
 		</div>
+
+        <div id="product-gallery">
+            <header><i class="fa fa-3x fa-times-circle-o" aria-hidden="true"></i>
+            </header>
+            <div class="right">
+                <div class="img-wrapper">
+                    <img src=" " />
+                </div>
+            </div>
+            <div class="left mCS-dir-rtl">
+                <ul>
+                    <li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
+                        <img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
+                    </li>
+                    <li data-image-id="img/product gallery/larg/pic2.jpg">
+                        <img src="img/product gallery/thumbnail/thumb-pic2.jpg"/>
+                    </li><li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
+                    <img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
+                </li>
+                    <li data-image-id="img/product gallery/larg/pic2.jpg">
+                        <img src="img/product gallery/thumbnail/thumb-pic2.jpg"/>
+                    </li><li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
+                    <img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
+                </li>
+                    <li data-image-id="img/product gallery/larg/pic2.jpg">
+                        <img src="img/product gallery/thumbnail/thumb-pic2.jpg"/>
+                    </li><li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
+                    <img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
+                </li>
+                    <li data-image-id="img/product gallery/larg/pic2.jpg">
+                        <img src="img/product gallery/thumbnail/thumb-pic2.jpg"/>
+                    </li><li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
+                    <img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
+                </li>
+                    <li data-image-id="img/product gallery/larg/pic2.jpg">
+                        <img src="img/product gallery/thumbnail/thumb-pic2.jpg"/>
+                    </li>
+                </ul>
+            </div>
+        </div>
 <script>
-	var thumbImage = $('#product-gallery .left li');
-	var image =  $('#product-gallery .right .img-wrapper');
+    var thumbImage = $('#product-gallery .left li');
+    var image =  $('#product-gallery .right .img-wrapper');
+
+    $('#dark').click(function () {
+        fadeOut();
+    });
+
+    $('.more-img').click(function () {
+        fadeIn();
+        thumbImage.removeClass('active');
+        thumbImage.eq(0).addClass('active');
+        var thumbImageId = thumbImage.eq(0).attr('data-image-id');
+        showGallery(0,thumbImageId);
+    });
+
+	$('.img-gallery li').click(function () {
+        fadeIn();
+        var thumbImageIndex = $(this).index();
+        var thumbImageId = thumbImage.eq(thumbImageIndex).attr('data-image-id');
+        showGallery(thumbImageIndex,thumbImageId);
+        thumbImage.removeClass('active');
+        thumbImage.eq(thumbImageIndex).addClass('active');
+    });
+
+
+
 	thumbImage.click(function () {
 		var thumbImageIndex = $(this).index();
 		var thumbImageId = $(this).attr('data-image-id');
@@ -1764,20 +1790,27 @@ a{
     });
 
 	function showGallery(thumbImageIndex,thumbImageId) {
-
 	    image.find('img').attr('src',thumbImageId);
     }
-    $('#product-gallery header i').click(function () {
-        $('#dark').fadeOut(200);
-		$('#product-gallery').fadeOut(200);
 
+    $('#product-gallery header i').click(function () {
+        fadeOut();
     });
 
+	function fadeIn() {
+        $('#dark').fadeIn(200);
+        $('#product-gallery').fadeIn(200);
+    }
+    function fadeOut() {
+        $('#dark').fadeOut(200);
+        $('#product-gallery').fadeOut(200);
+    }
     $('#product-gallery .left').mCustomScrollbar({
 		scrollAmount:"auto",
 		deltaFactor:"auto",
         axis:"y",
-		theme:"dark-3",
+        setLeft:0,
+		theme:"inset-dark",
         autoHideScrollbar:true,
         scrollbarPosition:"outside",
         scrollButtons:{
@@ -1785,15 +1818,16 @@ a{
 			scrollType:"stepless",
             scrollAmount:"auto"
 		},
-        callbacks:{
-            onTotalScroll:{
-                this.mcs.draggerLeft,
-            }
-        }
+        scrollbarPosition:"outside",
+
     });
-</script>
+</script> <!-- product-gallery -->
 
 <style>
+
+	.mCSB_scrollTools{
+		left: 5px!important;
+	}
 	.img-wrapper{
 		text-align: center;
 		height: 674px;
@@ -1850,14 +1884,15 @@ a{
 		right: 0;
 		margin: auto;
 		background-color: #fff;
-		z-index: 6;
-		width: 1600px;
+		z-index: 8;
+		width: 1630px;
 		height: 740px;
 		border: 1px solid #eee;
 		border-radius: 2px;
-		
+        display: none;
 	}	
 	#dark{
+        display: none;
 		position: fixed;
 		width: 100%;
 		height: 100%;
