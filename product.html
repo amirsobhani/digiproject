@@ -1777,8 +1777,7 @@ a{
     viewer.init();
     viewer.update();
 
-</script>
-
+</script><!--JSC3D-->
 <script>
 
 	$('.product-img img').magnify();
@@ -1861,7 +1860,6 @@ a{
 
     });
 </script> <!-- product-gallery -->
-
 <style>
 	#cv{
 		display: none;
@@ -1943,7 +1941,7 @@ a{
 		top: 0;
 		background-color: rgba(0,0,0,0.5);
 	}
-</style>
+</style><!--product-gallery-->
 <script>
 	$(document).ready(function(){
 		var sticky = $('#navbar').offset().top;
@@ -2012,7 +2010,6 @@ a{
 		resize: none;
 	}
 </style><!--item-tab 4-->
-		
 <style>
 	.comment-usefull>span{
 		margin-left: 20px;
@@ -2669,7 +2666,7 @@ a{
 		$(this).parent('.fast-explain').toggleClass('height');
 
 	});
-</script>
+</script><!---caption-more-less-->
 <script>
 
 	
@@ -2704,14 +2701,14 @@ a{
 </script>
 <script>
 	$('.menu-li').hover(function(){
-		$(this).find('.submenu1').slideDown(200);
+		$(this).find('.submenu1').fadeIn(400);
 	},function(){
-			$(this).find('.submenu1').slideUp(200);
+			$(this).find('.submenu1').fadeOut(200);
 	})
 	$('.submenu1-li').hover(function(){
-		$(this).find('.submenu2').fadeIn(100);
+		$(this).find('.submenu2').fadeIn(400);
 	},function(){
-			$(this).find('.submenu2').fadeOut(100);
+			$(this).find('.submenu2').fadeOut(200);
 	})
 	
 $('.menu-li').hover(function(){

@@ -17,8 +17,8 @@
       <file leaf-file-name="product.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/product.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="1747" column="43" lean-forward="false" selection-start-line="1747" selection-start-column="43" selection-end-line="1747" selection-end-column="43" />
+            <state relative-caret-position="341">
+              <caret line="2700" column="9" lean-forward="true" selection-start-line="2700" selection-start-column="9" selection-end-line="2700" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#1;n#html#0;n#!!top" expanded="false" />
@@ -30,6 +30,9 @@
                 <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#3;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#4;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#5;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -51,6 +54,16 @@
                 <element signature="n#style#15;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#5;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="1213" column="16" lean-forward="false" selection-start-line="1213" selection-start-column="16" selection-end-line="1213" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,30 +165,6 @@
               <item name="DigiProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="DigiProject" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="DigiProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DigiProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="DigiProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DigiProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="jsc3d" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="DigiProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DigiProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="jsc3d" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="bin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="DigiProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DigiProject" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Scroll" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -224,7 +213,7 @@
       <workItem from="1506509619190" duration="12063000" />
       <workItem from="1506529781229" duration="722000" />
       <workItem from="1506530516059" duration="6735000" />
-      <workItem from="1506597601321" duration="8757000" />
+      <workItem from="1506597601321" duration="9340000" />
     </task>
     <task id="LOCAL-00001" summary="scroll">
       <created>1506451500855</created>
@@ -261,11 +250,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506599089195</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="3d">
+      <created>1506621724719</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1506621724719</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47906000" />
+    <option name="totallyTimeSpent" value="48489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1352" y="-8" width="1376" height="754" extended-state="6" />
@@ -299,7 +295,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="scroll" />
     <MESSAGE value="zoom" />
-    <option name="LAST_COMMIT_MESSAGE" value="zoom" />
+    <MESSAGE value="3d" />
+    <option name="LAST_COMMIT_MESSAGE" value="3d" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -323,6 +320,9 @@
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#4;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#5;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -362,6 +362,9 @@
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#4;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#5;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -422,6 +425,9 @@
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#4;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#5;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -482,6 +488,9 @@
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#4;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#5;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -521,6 +530,9 @@
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#4;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#5;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -549,13 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="1213" column="16" lean-forward="false" selection-start-line="1213" selection-start-column="16" selection-end-line="1213" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -656,10 +661,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="1213" column="16" lean-forward="false" selection-start-line="1213" selection-start-column="16" selection-end-line="1213" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/product.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="1747" column="43" lean-forward="false" selection-start-line="1747" selection-start-column="43" selection-end-line="1747" selection-end-column="43" />
+        <state relative-caret-position="341">
+          <caret line="2700" column="9" lean-forward="true" selection-start-line="2700" selection-start-column="9" selection-end-line="2700" selection-end-column="9" />
           <folding>
             <element signature="n#style#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#1;n#html#0;n#!!top" expanded="false" />
@@ -671,6 +684,9 @@
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#canvas#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#2;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#4;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#5;n#body#0;n#html#0;n#!!top" expanded="false" />
