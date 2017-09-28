@@ -13,6 +13,9 @@
 <link rel="stylesheet" href="js/Scroll/jquery.mCustomScrollbar.min.css">
 <link rel="stylesheet" href="js/magnify/css/magnify.css">
 <script src="js/magnify/js/jquery.magnify.js"></script>
+<script src="js/jsc3d/jsc3d.touch.js"></script>
+<script src="js/jsc3d/jsc3d.webgl.js"></script>
+<script src="js/jsc3d/bin/jsc3d.min.js"></script>
 
 <style>
 html, body, div, span, applet, object, iframe,
@@ -424,6 +427,7 @@ a{
 		margin: 0 auto;
 		position: relative;
 		display: block;
+		cursor: pointer;
 		
 	}
 	#menu ul{ 
@@ -459,6 +463,7 @@ a{
 		border:1px solid rgb(218,219,221) ;
 		margin: 0 !important;
 		display: none;
+		cursor: pointer;
 	}
 	.submenu1-li:hover{
 		background-image: url(img/red.png);
@@ -468,6 +473,7 @@ a{
 	#menu ul li ul li{
 		float: right;
 		padding:0 12px;
+		cursor: pointer;
 	}
 	.submenu1 .submenu1-li:hover{
 		border-bottom: 4px solid red !important;
@@ -1722,39 +1728,59 @@ a{
             <div class="right">
                 <div class="img-wrapper">
                     <img src=" " />
+					<canvas id="cv" style=" margin: auto" width="830" height="447"></canvas>
                 </div>
             </div>
             <div class="left mCS-dir-rtl">
                 <ul>
+					<li>
+						<img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
+					</li>
                     <li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
                         <img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
                     </li>
                     <li data-image-id="img/product gallery/larg/pic2.jpg">
                         <img src="img/product gallery/thumbnail/thumb-pic2.jpg"/>
-                    </li><li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
-                    <img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
-                </li>
+                    </li>
+					<li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
+                    	<img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
+               		 </li>
                     <li data-image-id="img/product gallery/larg/pic2.jpg">
                         <img src="img/product gallery/thumbnail/thumb-pic2.jpg"/>
-                    </li><li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
-                    <img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
-                </li>
+                    </li>
+					<li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
+                    	<img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
+                	</li>
                     <li data-image-id="img/product gallery/larg/pic2.jpg">
                         <img src="img/product gallery/thumbnail/thumb-pic2.jpg"/>
-                    </li><li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
-                    <img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
-                </li>
+                    </li>
+					<li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
+                    	<img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
+                	</li>
                     <li data-image-id="img/product gallery/larg/pic2.jpg">
                         <img src="img/product gallery/thumbnail/thumb-pic2.jpg"/>
-                    </li><li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
-                    <img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
-                </li>
+                    </li>
+					<li class="active" data-image-id="img/product gallery/larg/pic1.jpg">
+                    	<img src="img/product gallery/thumbnail/thumb-pic1.jpg"/>
+                	</li>
                     <li data-image-id="img/product gallery/larg/pic2.jpg">
                         <img src="img/product gallery/thumbnail/thumb-pic2.jpg"/>
                     </li>
                 </ul>
             </div>
         </div>
+<script type="text/javascript">
+    var viewer = new JSC3D.Viewer(document.getElementById('cv'));
+    viewer.setParameter('SceneUrl',         'img/3d/galaxy-s8/source/phone.obj');
+    viewer.setParameter('ModelColor',       '#fff');
+    viewer.setParameter('BackgroundColor1', '#E5D7BA');
+    viewer.setParameter('BackgroundColor2', '#383840');
+    viewer.setParameter('RenderMode',       'texture');
+    viewer.setParameter('definition', 'high');
+    viewer.init();
+    viewer.update();
+
+</script><!--JSC3D-->
 <script>
 
 //	$('.product-img img').magnify();
@@ -1771,13 +1797,15 @@ a{
         fadeIn();
         thumbImage.removeClass('active');
         thumbImage.eq(0).addClass('active');
-        var thumbImageId = thumbImage.eq(0).attr('data-image-id');
-        showGallery(0,thumbImageId);
+        image.find('img').fadeOut(0);
+        $('#cv').fadeIn();
     });
 
 	$('.img-gallery li').click(function () {
         fadeIn();
         var thumbImageIndex = $(this).index();
+        thumbImageIndex++;
+        $('#cv').fadeOut(0);
         var thumbImageId = thumbImage.eq(thumbImageIndex).attr('data-image-id');
         showGallery(thumbImageIndex,thumbImageId);
         thumbImage.removeClass('active');
@@ -1788,14 +1816,22 @@ a{
 
 	thumbImage.click(function () {
 		var thumbImageIndex = $(this).index();
-		var thumbImageId = $(this).attr('data-image-id');
-		thumbImage.removeClass('active');
-		$(this).addClass('active');
-		showGallery(thumbImageIndex,thumbImageId);
+        thumbImage.removeClass('active');
+        $(this).addClass('active');
+		if(thumbImageIndex == 0){
+            image.find('img').fadeOut(0);
+            $('#cv').fadeIn();
+		}else {
+            $('#cv').fadeOut(0);
+            var thumbImageId = $(this).attr('data-image-id');
+            showGallery(thumbImageIndex,thumbImageId);
+		}
+
     });
 
 	function showGallery(thumbImageIndex,thumbImageId) {
 	    image.find('img').attr('src',thumbImageId);
+        image.find('img').fadeIn();
     }
 
     $('#product-gallery header i').click(function () {
@@ -1827,23 +1863,27 @@ a{
 
     });
 </script> <!-- product-gallery -->
-
 <style>
+	#cv{
+		display: none;
+		cursor: pointer;
+	}
 
 	.mCSB_scrollTools{
 		left: 5px!important;
 	}
 	.img-wrapper{
 		text-align: center;
-		height: 100%;
+		max-height: 440px;
 		line-height: 440px;
 	}
 	.img-wrapper img{
 		vertical-align: middle;
 		max-height: 350px;
+		display: none;
 	}
 	#product-gallery .left{
-		width: 20%;
+		width: 17%;
 		height: 88%;
 		background-color: #fff;
 		overflow-y: auto;
@@ -1904,7 +1944,7 @@ a{
 		top: 0;
 		background-color: rgba(0,0,0,0.5);
 	}
-</style>
+</style><!--product-gallery-->
 <script>
 	$(document).ready(function(){
 		var sticky = $('#navbar').offset().top;
@@ -1973,7 +2013,6 @@ a{
 		resize: none;
 	}
 </style><!--item-tab 4-->
-		
 <style>
 	.comment-usefull>span{
 		margin-left: 20px;
@@ -2630,7 +2669,7 @@ a{
 		$(this).parent('.fast-explain').toggleClass('height');
 
 	});
-</script>
+</script><!---caption-more-less-->
 <script>
 
 	
@@ -2665,14 +2704,14 @@ a{
 </script>
 <script>
 	$('.menu-li').hover(function(){
-		$(this).find('.submenu1').slideDown(200);
+		$(this).find('.submenu1').fadeIn(400);
 	},function(){
-			$(this).find('.submenu1').slideUp(200);
+			$(this).find('.submenu1').fadeOut(800);
 	})
 	$('.submenu1-li').hover(function(){
-		$(this).find('.submenu2').fadeIn(100);
+		$(this).find('.submenu2').fadeIn(400);
 	},function(){
-			$(this).find('.submenu2').fadeOut(100);
+			$(this).find('.submenu2').fadeOut(800);
 	})
 	
 $('.menu-li').hover(function(){
