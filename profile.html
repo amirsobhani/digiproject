@@ -945,7 +945,44 @@ $('.menu-li').hover(function(){
 														<td>مبلغ کل</td>
 													</tr>
 												</thead>
-												<tr></tr>
+												<tr>
+													<td>
+														<a>مودم همراه بی‌سیم LTE تی پی-لینک مدل M7350</a><br>
+														مشکی | گارانتی 3 ساله پارس ارتباط
+													</td>
+													<td>1 عدد</td>
+													<td>355,000</td>
+													<td>355,000</td>
+													<td>0</td>
+													<td>355,000</td>
+												</tr>
+											</table>
+											<table class="order-track">
+												<thead>
+													<tr>
+														<td>رهگیری سفارش</td>
+													</tr>
+												</thead>
+												<tr>
+													<td>
+														<div class="order-route">
+															<div class="dashed">
+																<span></span>
+																<span></span>
+																<span></span>
+																<span></span>
+															</div>
+															<ul>
+																<li class="current">
+																	<span class="state-circle"></span>
+																	<span class="state-title">
+																		تایید سفارش
+																	</span>
+																</li>
+															</ul>
+														</div>
+													</td>
+												</tr>
 											</table>
 										</div>
 									</td>
@@ -960,6 +997,37 @@ $('.menu-li').hover(function(){
 						</div><!--item-tab 4-->
 					</article>
 				</section>
+<style>
+	.order-route .state-title{
+		position: absolute;
+		right: -45px;
+		top: 30px;
+	}
+	.order-route .state-circle{
+		display: inline-block;
+		direction: rtl;
+		width: 18px;
+		height: 18px;
+		border-radius: 100%;
+		border: 3px solid #bec2cc;
+		position: absolute;
+		top: -10px;
+		right: -27px;
+	}
+	.order-route ul li{
+		padding-left: 80px;
+		height: 2px;
+		background: #dee1e7;
+		display: inline-block;
+		position: relative;
+	}
+	.order-route .dashed span{
+		display: inline-block;
+		width: 11px;
+		height: 2px;
+		background: #ccc;
+	}
+</style>
 <script>
                     $('.tabListChild h3').click(function(){
                         var tabContent = $(this).parent().find('.tabContent');
