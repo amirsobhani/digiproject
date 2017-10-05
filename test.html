@@ -1,117 +1,116 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <script src="js/jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" href="js/Scroll/jquery.mCustomScrollbar.min.css">
   <script src="js/Scroll/jquery.mCustomScrollbar.concat.min.js"></script>
 
 
 
-
-
-  <style>
-body {
-  margin: 0;
-  font-size: 28px;
-}
-
-.header {
-  background-color: #f1f1f1;
-  padding: 30px;
-  text-align: center;
-}
-
-#navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-#navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-#navbar a.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.content {
-  padding: 16px;
-  height:300px;
-  overflow-y: auto;
-  direction: rtl;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-
-.sticky + .content {
-  padding-top: 60px;
-}
-</style>
-
 </head>
-<body onscroll="myFunction()">
+<body>
 
-<div class="header">
-  <h2>Scroll Down</h2>
-  <p>Scroll down to see the sticky effect.</p>
+<div class="complete-price">
+  <div class="price">
+    <div class="discount">
+      <span>مجموع تخفیف</span>
+      <span>10,000 تـومان</span>
+    </div>
+    <span class="lable">جمع کل خرید شما:</span>
+    <span class="lable-price">
+      2,609,000
+      <span class="toman">تومان</span>
+    </span>
+  </div>
+  <div class="pay-price">
+    <span class="lable green">مبلغ قابل پرداخت :</span>
+    <span class="lable-price green">
+      2,599,000
+      <span class="toman green">تومان</span>
+    </span>
+  </div>
 </div>
 
-<div id="navbar">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-</div>
-
-<div class="content">
-  <h3>Sticky Navigation Example</h3>
-  <p>The navbar will stick to the top when you reach its scroll position.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-</div>
-
-<script>
-
-  $('.content').mCustomScrollbar({
-      theme:"dark-3",
-      setWidth: false,
-      setHeight: false,
-      setTop: 0,
-      setLeft: 0,
-      axis:"y",
-      autoExpandScrollbar:true,
-      mouseWheel:{
-          scrollAmount: "auto",
-          axis:"y",
-          invert:false,
-          updateOnContentResize:true,
-          updateOnSelectorChange:"ul li"
-      }
-
-
-  });
-
-
-</script>
+<style>
+  .complete-price{
+    width: 590px;
+    border: 1px solid #c0f0c1;
+  }
+  .complete-price::after{
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .price{
+    height: 55px;
+    line-height: 55px;
+    padding: 0 40px 0 0;
+    border-bottom: 1px solid #c0f0c1;
+  }
+  .discount{
+    display: inline-block;
+    text-align: center;
+    float: right;
+    min-width: 200px;
+    font-size: 13px;
+    padding: 5px;
+    line-height: 20px;
+    position: relative;
+    top: 7px;
+  }
+  .discount::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9px 0 8px 8px;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    left: 19px;
+    top: 11px;
+  }
+  .discount span:first-child{
+    background: #FF7272;
+    color: #fff;
+    padding: 5px 15px;
+    float: right;
+  }
+  .discount span:last-child{
+    background: #FF5252;
+    color: #fff;
+    padding: 5px 15px;
+    float: right;
+  }
+  .lable{
+    display: inline-block;
+    direction: rtl;
+    color: #818181;
+    font-size: 14px;
+    width: auto;
+    margin-left: 60px;
+  }
+  .lable-price{
+    display: inline-block;
+    float: left;
+    direction: rtl;
+    font-size: 20px;
+  }
+  .toman{
+    font-size: 12px;
+    margin: 0 15px;
+  }
+  .pay-price{
+    height: 55px;
+    line-height: 55px;
+    padding: 0 40px 0 0;
+    width: 100%;
+    float: left;
+  }
+  .green{
+    color: #4caf50 !important;
+  }
+</style><!---complete-price-->
 
 </body>
 </html>
