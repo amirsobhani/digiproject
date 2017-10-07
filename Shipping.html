@@ -1147,6 +1147,8 @@
 		float: right;
 		width: 490px;
 		background-color: #FBFDFC;
+		position: relative;
+		right: -50px;
 	}
 	.address-name{
 		line-height: 50px;
@@ -1259,82 +1261,283 @@
 		z-index: 2;
 	}
 </style>
-		<div class="address">
-			<div class="address-name">
-				<h3>امیرحسین سبحانی</h3>
-				<i class="fa fa-close" aria-hidden="true"></i>
-				<i class="fa fa-pencil" aria-hidden="true"></i>
-			</div>
-			<div class="location">
-				<div class="address-location">
-					<ul>
-						<li class="state">
-							 استان :
-							<span>
+<style>
+
+	.next-address{
+		width: 50px;
+		height: 305px;
+		float: right;
+		position: relative;
+		right: -60px;
+	}
+	.next-address i{
+		text-align: center;
+		display: block;
+		line-height: 305px;
+		color: #B8B8B8B8;
+		cursor: pointer;
+		box-shadow: -3px 0px 10px rgba(0,0,0,0.2);
+		height: 100%;
+	}
+	.prev-address{
+		width: 50px;
+		height: 305px;
+		float: left;
+		position: relative;
+		left: -60px;
+	}
+	.prev-address i{
+		text-align: center;
+		display: block;
+		line-height: 305px;
+		color: #B8B8B8B8;
+		cursor: pointer;
+		box-shadow: 3px 0px 10px rgba(0,0,0,0.2);
+		height: 100%;
+	}
+	.add-address{
+		margin-left: 30px;
+		float: right;
+		width: 140px;
+		border: 5px dashed #cdcdcd;
+		box-sizing: border-box;
+		min-height: 305px;
+		cursor: pointer;
+		position: relative;
+		right: -30px;
+	}
+	.add-address span{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%) rotate(-90deg);
+		white-space: nowrap;
+		color: #9ea4b0;
+		font-size: 25px;
+		min-height: 32px;
+		direction: rtl;
+	}
+	#address-bar {
+		overflow: hidden;
+		position: relative;
+		right: -50px;
+	}
+	#address-bar::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	#address-bar ul li{
+		float: right;
+	}
+</style>
+		<div class="next-address" onClick="scroll('left',this);"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></div>
+		<div class="prev-address" onClick="scroll('right',this);"><i class="fa fa-angle-left fa-4x" aria-hidden="true"></i></div>
+		<div id="address-bar">
+			<ul>
+				<li>
+						<div class="address">
+							<div class="address-name">
+								<h3>امیرحسین سبحانی</h3>
+								<i class="fa fa-close" aria-hidden="true"></i>
+								<i class="fa fa-pencil" aria-hidden="true"></i>
+							</div>
+							<div class="location">
+								<div class="address-location">
+									<ul>
+										<li class="state">
+											استان :
+											<span>
 								قم
 							</span>
-						</li>
-						<li class="city">
-							 شهر :
-							<span>
+										</li>
+										<li class="city">
+											شهر :
+											<span>
 								قم
 							</span>
-						</li>
-						<li class="distric">
-							 محله :
-							<span>
+										</li>
+										<li class="distric">
+											محله :
+											<span>
 								-
 							</span>
-						</li>
-					</ul>
-				</div>
-				<div class="complete-address">
-					<span class="1st">آدرس :</span>
-					<span class="2st">قم.خیابان صدوقی.خیابان یاسمن.پلاک120</span>
-					<div class="map-hint">
-						با ثبت آدرس روی نقشه، روند ارسال را سرعت ببخشید.
-					</div>
-				</div>
-				<div class="tell">
-					<div class="phone">
-						شماره تلفن ثابت :
-						<span>
+										</li>
+									</ul>
+								</div>
+								<div class="complete-address">
+									<span class="1st">آدرس :</span>
+									<span class="2st">قم.خیابان صدوقی.خیابان یاسمن.پلاک120</span>
+									<div class="map-hint">
+										با ثبت آدرس روی نقشه، روند ارسال را سرعت ببخشید.
+									</div>
+								</div>
+								<div class="tell">
+									<div class="phone">
+										شماره تلفن ثابت :
+										<span>
 							32104
 						</span>
-					</div>
-					<div class="emergency">
-						شماره تلفن ضروری :
-						<span>
+									</div>
+									<div class="emergency">
+										شماره تلفن ضروری :
+										<span>
 							09198508964
 						</span>
-					</div>
-				</div>
-			</div>
-			<div class="address-select">
-				<input type="radio" autocomplete="on">
-				<label class="checked"></label>
-				<span class="address-txt">
+									</div>
+								</div>
+							</div>
+							<div class="address-select">
+								<input type="radio" autocomplete="on">
+								<label class="checked"></label>
+								<span class="address-txt">
 							به این آدرس ارسال می‌شود .
+				</span>
+							</div>
+						</div>
+				</li>
+				<li>
+						<div class="address">
+							<div class="address-name">
+								<h3>امیرحسین سبحانی</h3>
+								<i class="fa fa-close" aria-hidden="true"></i>
+								<i class="fa fa-pencil" aria-hidden="true"></i>
+							</div>
+							<div class="location">
+								<div class="address-location">
+									<ul>
+										<li class="state">
+											استان :
+											<span>
+								قم
+							</span>
+										</li>
+										<li class="city">
+											شهر :
+											<span>
+								قم
+							</span>
+										</li>
+										<li class="distric">
+											محله :
+											<span>
+								-
+							</span>
+										</li>
+									</ul>
+								</div>
+								<div class="complete-address">
+									<span class="1st">آدرس :</span>
+									<span class="2st">قم.خیابان صدوقی.خیابان یاسمن.پلاک120</span>
+									<div class="map-hint">
+										با ثبت آدرس روی نقشه، روند ارسال را سرعت ببخشید.
+									</div>
+								</div>
+								<div class="tell">
+									<div class="phone">
+										شماره تلفن ثابت :
+										<span>
+							32104
+						</span>
+									</div>
+									<div class="emergency">
+										شماره تلفن ضروری :
+										<span>
+							09198508964
+						</span>
+									</div>
+								</div>
+							</div>
+							<div class="address-select">
+								<input type="radio" autocomplete="on">
+								<label class="checked"></label>
+								<span class="address-txt">
+							به این آدرس ارسال می‌شود .
+				</span>
+							</div>
+						</div>
+				</li>
+				<li>
+						<div class="address">
+							<div class="address-name">
+								<h3>امیرحسین سبحانی</h3>
+								<i class="fa fa-close" aria-hidden="true"></i>
+								<i class="fa fa-pencil" aria-hidden="true"></i>
+							</div>
+							<div class="location">
+								<div class="address-location">
+									<ul>
+										<li class="state">
+											استان :
+											<span>
+								قم
+							</span>
+										</li>
+										<li class="city">
+											شهر :
+											<span>
+								قم
+							</span>
+										</li>
+										<li class="distric">
+											محله :
+											<span>
+								-
+							</span>
+										</li>
+									</ul>
+								</div>
+								<div class="complete-address">
+									<span class="1st">آدرس :</span>
+									<span class="2st">قم.خیابان صدوقی.خیابان یاسمن.پلاک120</span>
+									<div class="map-hint">
+										با ثبت آدرس روی نقشه، روند ارسال را سرعت ببخشید.
+									</div>
+								</div>
+								<div class="tell">
+									<div class="phone">
+										شماره تلفن ثابت :
+										<span>
+							32104
+						</span>
+									</div>
+									<div class="emergency">
+										شماره تلفن ضروری :
+										<span>
+							09198508964
+						</span>
+									</div>
+								</div>
+							</div>
+							<div class="address-select">
+								<input type="radio" autocomplete="on">
+								<label class="checked"></label>
+								<span class="address-txt">
+							به این آدرس ارسال می‌شود .
+				</span>
+							</div>
+						</div>
+				</li>
+
+			</ul>
+
+
+
+			<div class="add-address">
+				<span>
+					<i class="fa fa-plus" aria-hidden="true"></i>
+					افزودن آدرس جدید
 				</span>
 			</div>
 		</div>
+
+
+
 		<div class="scroll-slider dk-box">
 			<h3>احتمالا به محصولات زیر هم علاقه مند باشید</h3>
 			<div class="scroll-next" onClick="scroll('left',this);"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></div>
 			<div class="scroll-main">
 				<ul>
-					<li>
-						<a class="scroll-product">
-							<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
-							<span class="product-meta">
-گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
-							<div class="product-price">
-								<span class="product-price-old">2,700,000</span>
-								<span class="product-price-new">2,809,000 تومان</span>
-							</div>
-
-						</a>
-					</li>
 					<li>
 						<a class="scroll-product">
 							<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
