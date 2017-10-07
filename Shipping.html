@@ -950,6 +950,103 @@
 		display: block;
 	}
 </style><!--Scroll Slider-->
+<style>
+	.order-route-wrapper{
+		background-color: #fff;
+		text-align: center;
+		padding: 10px 0;
+	}
+	.tracking-order-table tr td{
+		padding: 15px 0!important;
+		width: 33%;
+	}
+	.order-track tr:last-child td{
+		padding: 0;
+	}
+	.order-route{
+		text-align: center;
+		display: inline-block;
+		margin-bottom: 50px;
+	}
+	.order-route::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.order-route div.approved span{
+		background: #2396f3;
+	}
+	.dashed{
+		float: right;
+		margin-top: 20px;
+	}
+
+	.order-route ul li i{
+		position: absolute;
+		right: -23px;
+		top: -5px;
+		color: #FFFFFF;
+		z-index: 2;
+	}
+	.order-route ul li.approved{
+		background: #2396f3;
+		height: 2px;
+		display: inline-block;
+		position: relative;
+		margin-left: 30px;
+	}
+	.approved .state-circle{
+		border: 3px solid #2396f3!important;
+		background: #2396f3;
+	}
+	.approved .state-title{
+		color: #2396f3;
+	}
+	.order-route .state-title{
+		position: absolute;
+		right: -90px;
+		top: 30px;
+		width: 150px;
+	}
+	.order-route .state-circle{
+		display: inline-block;
+		direction: rtl;
+		width: 18px;
+		height: 18px;
+		border-radius: 100%;
+		border: 3px solid #bec2cc;
+		position: absolute;
+		top: -10px;
+		right: -27px;
+	}
+	.order-route ul li{
+		padding-left: 250px;
+		height: 2px;
+		background: #dee1e7;
+		display: inline-block;
+		position: relative;
+		margin-left: 30px;
+	}
+	.order-route ul li:last-child{
+		margin-left: 0;
+		padding: 0;
+	}
+	.order-route ul{
+		direction: rtl;
+		float: right;
+		margin: 20px 35px 0 10px;
+	}
+	.order-route .dashed span{
+		display: inline-block;
+		width: 11px;
+		height: 2px;
+		background: #ccc;
+	}
+	.rotate{
+		transform: rotate(180deg);
+		transition-duration: 0.4s;
+	}
+</style><!---order-track--->
 <div id="main">
 	<div id="content">
 		<div id="breadcrumb" class="dk-box">
@@ -958,199 +1055,267 @@
 				<li><a>سبد خرید</a></li>
 			</ul>
 		</div><!--breadcrumb-->
-		<div id="cart-div" class="dk-box">
-			<div class="cart-wrappper">
-				<div class="continue-cart">
-					<div class="right">
-						<h2><i class="fa fa-caret-left" aria-hidden="true"></i>سبد خرید شما در دیجی‌کالا</h2>
-						<p>افزودن کالاها به سبد خرید به معنی رزرو کالا برای شما نیست. برای ثبت سفارش باید مراحل بعدی خرید را تکمیل نمایید.</p>
-					</div>
-					<div class="left dk-box">
-						<span>
-							ادامه ثبت سفارش
-						</span>
-						<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-					</div>
-				</div><!--continue-cart--->
-				<div class="cart-table">
-					<table>
-						<thead>
-							<tr>
-								<td>شرح محصول</td>
-								<td>فروشنده</td>
-								<td>تعداد</td>
-								<td>قیمت واحد</td>
-								<td>قیمت کل</td>
-								<td></td>
-							</tr>
-						</thead>
-						<tr>
-							<td>
-								<div class="product-table">
-									<div class="product-table-img">
-										<img src="img/scroll%20slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg">
-									</div>
-									<div class="product-table-meta">
-										<h2>
-											گوشی موبایل سامسونگ مدل Galaxy S8 G950FD دو سیم کارت
-										</h2>
-										<h3>
-											Samsung Galaxy S8 G950FD Dual SIM Mobile Phone
-										</h3>
-										<div class="product-table-color">
-											<p>رنگ :</p>
-											<span class="color" style="background: #ADD8E6"></span>
-											<span>آبی روشن</span>
-										</div>
-										<p class="warranty">
-											گارانتی : 18ماه گارانتی مایکروتل
-										</p>
-									</div>
-								</div>
-							</td>
-							<td> دیجی کالا </td>
-							<td>
-								<div class="number-select">
-									<select>
-										<option selected="selected" value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="6">6</option>
-										<option value="7">7</option>
-										<option value="8">8</option>
-										<option value="9">9</option>
-										<option value="10">10</option>
-									</select>
-								</div>
-							</td>
-							<td>
-								2,599,000
-								<span class="toman">
-									تومان
-								</span>
-							</td>
-							<td class="unitprice">
-								2,599,000
-								<span class="toman">
-									تومان
-								</span>
-							</td>
-							<td class="delete">
-								<i class="fa fa-close" aria-hidden="true"></i>
-							</td>
-						</tr>
-						<tr class="gift">
-							<td>
-								<div class="product-table">
-									<div class="product-table-img">
-										<img src="img/mci-internet-gift-card---1gb-797044.jpg">
-									</div>
-									<div class="product-table-meta">
-										<h2>
-											کارت هدیه اینترنت همراه اول حجم 1 گیگابایت
-										</h2>
-										<h3>
-											MCI Internet Gift Card - 1GB
-										</h3>
-										<div class="product-table-color">
-											<p>رنگ :</p>
-											<span class="color" style="background: blue"></span>
-											<span>آبی</span>
-										</div>
-										<p class="warranty">
-											گارانتی : سرویس ویژه دیجی کالا ۷ روز تضمین تعویض کالا
-										</p>
-									</div>
-								</div>
-							</td>
-							<td> دیجی کالا </td>
-							<td>
-								<div class="number-select">
-									<select>
-										<option selected="selected" value="1">1</option>
-									</select>
-								</div>
-							</td>
-							<td>
-								10,000
-								<span class="toman">
-									تومان
-								</span>
-							</td>
-							<td class="unitprice">
-								<div>
-									<table class="unitprice-discoount">
-										<tr>
-											<td>قیمت کل :</td>
-											<td>
-												10,000
-												<span class="toman">تومان</span>
-											</td>
-										</tr>
-										<tr>
-											<td class="red">(-) تخفیف هدیه :</td>
-											<td class="red">
-												10,000
-												<span class="toman">تومان</span>
-											</td>
-										</tr>
-										<tr>
-											<td colspan="2">
-												<div class="seperate"></div>
-											</td>
-										</tr>
-										<tr>
-											<td colspan="2" style="text-align: center !important;">رایگان</td>
-										</tr>
-									</table>
-								</div>
-							</td>
-							<td class="last">
-								<span>
-									هدیه
-								</span>
-							</td>
-						</tr>
-					</table>
+		<div class="order-route-wrapper">
+			<div class="order-route">
+				<div class="dashed approved">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
-				<div class="complete-price">
-					<div class="price">
-						<div class="discount">
-							<span>مجموع تخفیف</span>
-							<span>10,000 تـومان</span>
-						</div>
-						<span class="lable">جمع کل خرید شما :</span>
-						<span class="lable-price">
-      2,609,000
-      <span class="toman">تومان</span>
-    </span>
-					</div>
-					<div class="pay-price">
-						<span class="lable green">مبلغ قابل پرداخت :</span>
-						<span class="lable-price green">
-      2,599,000
-      <span class="toman green">تومان</span>
-    </span>
+				<ul>
+					<li class="approved">
+						<i class="fa fa-check"></i>
+						<span class="state-circle"></span>
+						<span class="state-title">
+							ورود به دیجی کالا
+						</span>
+					</li>
+					<li class="">
+						<i class="fa fa-check"></i>
+						<span class="state-circle"></span>
+						<span class="state-title">
+							اطلاعات ارسال سفارش
+						</span>
+					</li>
+					<li class="">
+						<i class="fa fa-check"></i>
+						<span class="state-circle"></span>
+						<span class="state-title">
+							اطلاعات پرداخت
+						</span>
+					</li>
+				</ul>
+				<div class="dashed">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div><!---order-route---->
+		</div>
+<style>
+	.address-head{
+		direction: rtl;
+	}
+	.address-head::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.add{
+		display: inline-block;
+		float: right;
+		padding: 10px;
+		margin: 18px 15px;
+		color: #FFFFFF;
+		background-color: #999;
+		font-size: 13px;
+		cursor: pointer;
+		box-shadow: 0 3px 4px rgba(0,0,0,0.1);
+	}
+	.address-title{
+		display: inline-block;
+		line-height: 22px;
+		padding: 5px 0;
+		margin: 20px 0;
+		float: right;
+	}
+	.address-title i{
+		float: right;
+		margin-left: 10px;
+		color: #2396f3;
+	}
+	.address-title h2{
+		float: right;
+	}
+</style>
+		<div class="address-head">
+			<div class="address-title">
+				<i class="fa fa-caret-left" aria-hidden="true"></i>
+				<h2>
+					انتخاب آدرس
+				</h2>
+			</div>
+			<div class="add dk-box">
+				افزودن آدرس جدید
+			</div>
+		</div>
+<style>
+	.address{
+		display: inline-block;
+		float: right;
+		width: 490px;
+		background-color: #FBFDFC;
+	}
+	.address-name{
+		line-height: 50px;
+		padding: 0 15px;
+	}
+	.address-name h3{
+		display: inline-block;
+		direction: rtl;
+		float: right;
+	}
+	.address-name .fa-close{
+		color: red;
+		margin-right: 35px;
+	}
+	.address-name .fa-pencil{
+		color: #2396f3;
+	}
+	.address-location{
+		direction: rtl;
+		border-bottom: 1px solid #f0f0f0;
+	}
+	.address-location::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.address-location ul li{
+		line-height: 50px;
+		float: right;
+		width: calc(100%/3 - 12px);
+		display: inline-block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.location{
+		background-color: #fff;
+		padding: 0 15px;
+	}
+	.complete-address{
+		direction: rtl;
+		border-bottom: 1px solid #f0f0f0;
+		line-height: 50px;
+		font-size: 14px;
+	}
+	.map-hint{
+		line-height: 33px;
+		color: #7c6a26;
+		background: #fffcda;
+		display: inline-block;
+		padding: 0 10px;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	.tell{
+		direction: rtl;
+		font-size: 13px;
+		line-height: 50px;
+	}
+	.phone{
+		display: inline-block;
+		margin-right: 10px;
+	}
+	.emergency{
+		display: inline-block;
+		margin-right: 50px;
+	}
+	.address-select{
+		background: #f7fff7;
+		border-top: 1px solid #c0f0c1;
+		padding: 0 15px;
+		line-height: 50px;
+		direction: rtl;
+		text-align: center;
+		font-size: 14px;
+	}
+
+	.address-select label{
+		width: 14px;
+		height: 14px;
+		display: inline-block;
+		transition: none;
+		position: relative;
+		border-radius: 100%;
+		right: -2px;
+		top: 4px;
+		background: #fff;
+		border: 1px solid #ccc;
+	}
+	.address-select label.checked{
+		background: #2196f3;
+		border: 1px solid transparent;
+	}
+	.address-select label::after{
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		content: "";
+		background: #fff;
+		width: 2px;
+		height: 2px;
+		border-radius: 100%;
+		border: 1px solid #fff;
+	}
+	.address-select input{
+		position: relative;
+		right: 20px;
+		top: 2px;
+		opacity:0;
+		z-index: 2;
+	}
+</style>
+		<div class="address">
+			<div class="address-name">
+				<h3>امیرحسین سبحانی</h3>
+				<i class="fa fa-close" aria-hidden="true"></i>
+				<i class="fa fa-pencil" aria-hidden="true"></i>
+			</div>
+			<div class="location">
+				<div class="address-location">
+					<ul>
+						<li class="state">
+							 استان :
+							<span>
+								قم
+							</span>
+						</li>
+						<li class="city">
+							 شهر :
+							<span>
+								قم
+							</span>
+						</li>
+						<li class="distric">
+							 محله :
+							<span>
+								-
+							</span>
+						</li>
+					</ul>
+				</div>
+				<div class="complete-address">
+					<span class="1st">آدرس :</span>
+					<span class="2st">قم.خیابان صدوقی.خیابان یاسمن.پلاک120</span>
+					<div class="map-hint">
+						با ثبت آدرس روی نقشه، روند ارسال را سرعت ببخشید.
 					</div>
 				</div>
-				<div class="continue-cart">
-					<div class="right go-main dk-box">
+				<div class="tell">
+					<div class="phone">
+						شماره تلفن ثابت :
 						<span>
-							بازگشت به  صفحه اصلی
+							32104
 						</span>
 					</div>
-					<div class="left dk-box">
+					<div class="emergency">
+						شماره تلفن ضروری :
 						<span>
-							ادامه ثبت سفارش
+							09198508964
 						</span>
-						<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
 					</div>
-					<div class="reserv-alert">
-						<p>کالاهای موجود در سبد شما ثبت و رزرو نشده اند، برای ثبت سفارش مراحل بعدی را تکمیل کنید >></p>
-					</div>
-				</div><!--continue-cart--->
+				</div>
+			</div>
+			<div class="address-select">
+				<input type="radio" autocomplete="on">
+				<label class="checked"></label>
+				<span class="address-txt">
+							به این آدرس ارسال می‌شود .
+				</span>
 			</div>
 		</div>
 		<div class="scroll-slider dk-box">
@@ -1273,6 +1438,16 @@
 		</div><!--Scroll Slider-->
 	</div><!---Content--->
 </div>
+<script>
+	var input = $('.address-select').find('input');
+	input.click(function () {
+        if($(this).is(':checked')){
+            $(this).parent().find('label').addClass('checked');
+        }else {
+            $(this).parent().find('label').removeClass('checked');
+        }
+    });
+</script>
 <style>
 	.complete-price{
 		width: 590px;
@@ -1460,5 +1635,118 @@
 
 
 </script><!--Scroll Slider-->
+<style>
+	.scroll-slider{
+		width: 100%;
+		height: 310px;
+		background-color: #fff;
+		overflow: hidden;
+		position: relative;
+		margin: 15px 0;
+	}
+	.scroll-slider h3{
+		direction: rtl;
+		line-height: 35px;
+		padding: 0 13px;
+		font-family: iran-sans;
+		font-size: 13px;
+		background-color: #E8E8E8;
+	}
+	.scroll-next{
+		width: 50px;
+		height: 275px;
+		float: right;
+	}
+	.scroll-prev{
+		width: 50px;
+		height: 275px;
+		float: left;
+		position: absolute;
+		top: 35px;
+		left: 0;
+		background-color: #fff;
+		box-shadow: 0px 15px 15px #888888;
+	}
+	.scroll-slider i{
+		text-align: center;
+		display: block;
+		line-height: 275px;
+		color: #B8B8B8B8;
+		background-color: #fff;
+		cursor: pointer;
+	}
+	.scroll-main{
+		height: 90%;
+		overflow: hidden;
+		margin-right: 50px;
+	}
+	.scroll-main ul{
+		height: 100%;
+		width: 1160px;
+		float: right;
+		overflow: hidden;
+	}
+	.scroll-main ul li{
+		width: 250px;
+		height: 100%;
+		float: right;
+		padding: 0px 20px;
+		position: relative;
+	}
+	.scroll-main ul li::after{
+		content: " ";
+		height: 190px;
+		top: 41px;
+		left: 0;
+		margin: 0 auto;
+		position: absolute;
+		border-style: solid;
+		border-width: 0.5px;
+		border-color: #B8B8B8B8;
+
+	}
+	.scroll-product{
+		text-align: center;
+		display: block;
+		height: 90%;
+		padding-top: 25px;
+	}
+	.scroll-product img{
+		margin: 30px auto;
+		float: right;
+		display: block;
+	}
+	.scroll-product .product-meta{
+		direction: rtl;
+		font-family: iran-sans;
+		font-size: 14px;
+		line-height: 20px;
+		width: 40%;
+		display: block;
+		text-align: center;
+		padding: 20px 0;
+		color: #153574;
+	}
+	.scroll-product .product-price{
+		line-height: 25px;
+		text-align: center;
+		font-family: iran-sans;
+		font-size: 13px;
+		direction: rtl;
+		width: 40%;
+	}
+	.product-price-old{
+		background-color: #ccc;
+		width: 100%;
+		display: block;
+		text-decoration-line: line-through;
+		margin: 5px 0;
+	}
+	.product-price-old{
+		background-color: #a6d45b;
+		width: 100%;
+		display: block;
+	}
+</style><!--Scroll Slider-->
 </body>
 </html>
