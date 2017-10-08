@@ -333,6 +333,11 @@
 		width: 1190px;
 		margin: 0 auto;
 	}
+	#content::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
 	.dk-box{
 		background-color: #fff;
 		border: 1px solid #ebeced;
@@ -838,119 +843,6 @@
 	}
 </style><!---cart-table--->
 <style>
-	.scroll-slider{
-		width: 100%;
-		height: 310px;
-		background-color: #fff;
-		overflow: hidden;
-		position: relative;
-		margin: 15px 0;
-	}
-	.scroll-slider h3{
-		direction: rtl;
-		line-height: 35px;
-		padding: 0 13px;
-		font-family: iran-sans;
-		font-size: 13px;
-		background-color: #E8E8E8;
-	}
-	.scroll-next{
-		width: 50px;
-		height: 275px;
-		float: right;
-	}
-	.scroll-prev{
-		width: 50px;
-		height: 275px;
-		float: left;
-		position: absolute;
-		top: 35px;
-		left: 0;
-		background-color: #fff;
-		box-shadow: 0px 15px 15px #888888;
-	}
-	.scroll-slider i{
-		text-align: center;
-		display: block;
-		line-height: 275px;
-		color: #B8B8B8B8;
-		background-color: #fff;
-		cursor: pointer;
-	}
-	.scroll-main{
-		height: 90%;
-		overflow: hidden;
-		margin-right: 50px;
-	}
-	.scroll-main ul{
-		height: 100%;
-		width: 1160px;
-		float: right;
-		overflow: hidden;
-	}
-	.scroll-main ul li{
-		width: 250px;
-		height: 100%;
-		float: right;
-		padding: 0px 20px;
-		position: relative;
-	}
-	.scroll-main ul li::after{
-		content: " ";
-		height: 190px;
-		top: 41px;
-		left: 0;
-		margin: 0 auto;
-		position: absolute;
-		border-style: solid;
-		border-width: 0.5px;
-		border-color: #B8B8B8B8;
-
-	}
-	.scroll-product{
-		text-align: center;
-		display: block;
-		height: 90%;
-		padding-top: 25px;
-	}
-	.scroll-product img{
-		margin: 30px auto;
-		float: right;
-		display: block;
-	}
-	.scroll-product .product-meta{
-		direction: rtl;
-		font-family: iran-sans;
-		font-size: 14px;
-		line-height: 20px;
-		width: 40%;
-		display: block;
-		text-align: center;
-		padding: 20px 0;
-		color: #153574;
-	}
-	.scroll-product .product-price{
-		line-height: 25px;
-		text-align: center;
-		font-family: iran-sans;
-		font-size: 13px;
-		direction: rtl;
-		width: 40%;
-	}
-	.product-price-old{
-		background-color: #ccc;
-		width: 100%;
-		display: block;
-		text-decoration-line: line-through;
-		margin: 5px 0;
-	}
-	.product-price-old{
-		background-color: #a6d45b;
-		width: 100%;
-		display: block;
-	}
-</style><!--Scroll Slider-->
-<style>
 	.order-route-wrapper{
 		background-color: #fff;
 		text-align: center;
@@ -1148,7 +1040,6 @@
 		width: 490px;
 		background-color: #FBFDFC;
 		position: relative;
-		right: -50px;
 	}
 	.address-name{
 		line-height: 50px;
@@ -1178,7 +1069,7 @@
 	.address-location ul li{
 		line-height: 50px;
 		float: right;
-		width: calc(100%/3 - 12px);
+		width: 120px;
 		display: inline-block;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -1193,6 +1084,7 @@
 		border-bottom: 1px solid #f0f0f0;
 		line-height: 50px;
 		font-size: 14px;
+		text-align: center;
 	}
 	.map-hint{
 		line-height: 33px;
@@ -1260,9 +1152,12 @@
 		opacity:0;
 		z-index: 2;
 	}
-</style>
+</style><!----inner Address---->
 <style>
-
+	.addressScroll{
+		height: 305px;
+		margin-bottom: 10px;
+	}
 	.next-address{
 		width: 50px;
 		height: 305px;
@@ -1296,7 +1191,7 @@
 		height: 100%;
 	}
 	.add-address{
-		margin-left: 30px;
+		margin-right: 10px;
 		float: right;
 		width: 140px;
 		border: 5px dashed #cdcdcd;
@@ -1304,7 +1199,6 @@
 		min-height: 305px;
 		cursor: pointer;
 		position: relative;
-		right: -30px;
 	}
 	.add-address span{
 		position: absolute;
@@ -1320,7 +1214,10 @@
 	#address-bar {
 		overflow: hidden;
 		position: relative;
-		right: -50px;
+		float: right;
+		top: -305px;
+		width: 1190px;
+		height: 303px;
 	}
 	#address-bar::after{
 		content: "";
@@ -1329,13 +1226,21 @@
 	}
 	#address-bar ul li{
 		float: right;
+		margin-left: 10px;
 	}
-</style>
-		<div class="next-address" onClick="scroll('left',this);"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></div>
-		<div class="prev-address" onClick="scroll('right',this);"><i class="fa fa-angle-left fa-4x" aria-hidden="true"></i></div>
-		<div id="address-bar">
-			<ul>
-				<li>
+	.main-ul{
+		float: right;
+		width: 1500px;
+		overflow: hidden;
+		height:100%;
+	}
+</style><!-----addressScroll----->
+		<div class="addressScroll">
+			<div class="next-address" onClick="scroll('left',this);"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></div>
+			<div class="prev-address" onClick="scroll('right',this);"><i class="fa fa-angle-left fa-4x" aria-hidden="true"></i></div>
+			<div id="address-bar">
+				<ul class="main-ul">
+					<li class="main-li">
 						<div class="address">
 							<div class="address-name">
 								<h3>امیرحسین سبحانی</h3>
@@ -1395,8 +1300,8 @@
 				</span>
 							</div>
 						</div>
-				</li>
-				<li>
+					</li>
+					<li class="main-li">
 						<div class="address">
 							<div class="address-name">
 								<h3>امیرحسین سبحانی</h3>
@@ -1456,8 +1361,8 @@
 				</span>
 							</div>
 						</div>
-				</li>
-				<li>
+					</li>
+					<li class="main-li">
 						<div class="address">
 							<div class="address-name">
 								<h3>امیرحسین سبحانی</h3>
@@ -1517,128 +1422,19 @@
 				</span>
 							</div>
 						</div>
-				</li>
-
-			</ul>
-
-
-
-			<div class="add-address">
-				<span>
-					<i class="fa fa-plus" aria-hidden="true"></i>
-					افزودن آدرس جدید
-				</span>
-			</div>
-		</div>
-
-
-
-		<div class="scroll-slider dk-box">
-			<h3>احتمالا به محصولات زیر هم علاقه مند باشید</h3>
-			<div class="scroll-next" onClick="scroll('left',this);"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></div>
-			<div class="scroll-main">
-				<ul>
-					<li>
-						<a class="scroll-product">
-							<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
-							<span class="product-meta">
-گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
-							<div class="product-price">
-								<span class="product-price-old">2,700,000</span>
-								<span class="product-price-new">2,809,000 تومان</span>
-							</div>
-
-						</a>
 					</li>
-					<li>
-						<a class="scroll-product">
-							<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
-							<span class="product-meta">
-گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
-							<div class="product-price">
-								<span class="product-price-old">2,700,000</span>
-								<span class="product-price-new">2,809,000 تومان</span>
-							</div>
-
-						</a>
-					</li>
-					<li>
-						<a class="scroll-product">
-							<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
-							<span class="product-meta">
-گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
-							<div class="product-price">
-								<span class="product-price-old">2,700,000</span>
-								<span class="product-price-new">2,809,000 تومان</span>
-							</div>
-
-						</a>
-					</li>
-					<li>
-						<a class="scroll-product">
-							<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
-							<span class="product-meta">
-گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
-							<div class="product-price">
-								<span class="product-price-old">2,700,000</span>
-								<span class="product-price-new">2,809,000 تومان</span>
-							</div>
-
-						</a>
-					</li>
-					<li>
-						<a class="scroll-product">
-							<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
-							<span class="product-meta">
-گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
-							<div class="product-price">
-								<span class="product-price-old">2,700,000</span>
-								<span class="product-price-new">2,809,000 تومان</span>
-							</div>
-
-						</a>
-					</li>
-					<li>
-						<a class="scroll-product">
-							<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
-							<span class="product-meta">
-گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
-							<div class="product-price">
-								<span class="product-price-old">2,700,000</span>
-								<span class="product-price-new">2,809,000 تومان</span>
-							</div>
-
-						</a>
-					</li>
-					<li>
-						<a class="scroll-product">
-							<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
-							<span class="product-meta">
-گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
-							<div class="product-price">
-								<span class="product-price-old">2,700,000</span>
-								<span class="product-price-new">2,809,000 تومان</span>
-							</div>
-
-						</a>
-					</li>
-					<li>
-						<a class="scroll-product">
-							<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
-							<span class="product-meta">
-گوشي موبايل سامسونگ مدل Galaxy S8 Plus SM-G955FD دو سيم کارت</span>
-							<div class="product-price">
-								<span class="product-price-old">2,700,000</span>
-								<span class="product-price-new">2,809,000 تومان</span>
-							</div>
-
-						</a>
+					<li class="main-li">
+						<div class="add-address">
+						<span>
+							<i class="fa fa-plus" aria-hidden="true"></i>
+							افزودن آدرس جدید
+						</span>
+						</div>
 					</li>
 				</ul>
-			</div>
-			<div class="scroll-prev" onClick="scroll('right',this);"><i class="fa fa-angle-left fa-4x" aria-hidden="true"></i></div>
-
-		</div><!--Scroll Slider-->
+			</div><!-----addressScroll----->
+		</div>
+		</div>
 	</div><!---Content--->
 </div>
 <script>
@@ -1650,7 +1446,7 @@
             $(this).parent().find('label').removeClass('checked');
         }
     });
-</script>
+</script><!----address-select---->
 <style>
 	.complete-price{
 		width: 590px;
@@ -1803,16 +1599,19 @@
 	</div>
 </div>
 <script>
-    function scroll(direction,tag){
+	function addressScroll(direction , tag) {
 
-        var slideTag = $(tag);
-        var sliderScrollUl = slideTag.parent('.scroll-slider').find('ul');
-        var liLength = sliderScrollUl.find('li').length;
-        var liWidth = parseInt(sliderScrollUl.find('li').outerWidth());
-        var ulWidthSize = (liLength) * (liWidth);
-        var maxMargin = (liLength - 3) * liWidth;
-        var marginRight = parseFloat(sliderScrollUl.css('margin-right'));
-        sliderScrollUl.css("width", ulWidthSize);
+        var  slideTag = $(tag);
+        var addressScrollUl = $('#address-bar').find('.main-ul');
+        var liLength = addressScrollUl.find('.main-li').length;
+        var liWidth = parseInt(addressScrollUl.find('.main-li').outerWidth());
+        var ulWidthSize = (liLength) * (liWidth) ;
+        var maxMargin = (liLength - 2) * liWidth;
+		if (maxMargin == 0){
+		    maxMargin = -80;
+		}
+        var marginRight = parseFloat(addressScrollUl.css('margin-right'));
+        addressScrollUl.css("width", ulWidthSize);
 
         if(direction == 'left'){
             marginRight=marginRight-liWidth;
@@ -1826,130 +1625,15 @@
                 marginRight = 0;
             }
         }
-        sliderScrollUl.animate({'marginRight':marginRight},1000);
+        addressScrollUl.animate({'marginRight':marginRight},1000);
     }
-    $('.scroll-next').click(function(){
-        scroll('left',this);
+
+    $('.next-address').click(function(){
+        addressScroll('left',this);
     });
-    $('.scroll-prev').click(function(){
-        scroll('right',this);
+    $('.prev-address').click(function(){
+        addressScroll('right',this);
     });
-
-
-
-</script><!--Scroll Slider-->
-<style>
-	.scroll-slider{
-		width: 100%;
-		height: 310px;
-		background-color: #fff;
-		overflow: hidden;
-		position: relative;
-		margin: 15px 0;
-	}
-	.scroll-slider h3{
-		direction: rtl;
-		line-height: 35px;
-		padding: 0 13px;
-		font-family: iran-sans;
-		font-size: 13px;
-		background-color: #E8E8E8;
-	}
-	.scroll-next{
-		width: 50px;
-		height: 275px;
-		float: right;
-	}
-	.scroll-prev{
-		width: 50px;
-		height: 275px;
-		float: left;
-		position: absolute;
-		top: 35px;
-		left: 0;
-		background-color: #fff;
-		box-shadow: 0px 15px 15px #888888;
-	}
-	.scroll-slider i{
-		text-align: center;
-		display: block;
-		line-height: 275px;
-		color: #B8B8B8B8;
-		background-color: #fff;
-		cursor: pointer;
-	}
-	.scroll-main{
-		height: 90%;
-		overflow: hidden;
-		margin-right: 50px;
-	}
-	.scroll-main ul{
-		height: 100%;
-		width: 1160px;
-		float: right;
-		overflow: hidden;
-	}
-	.scroll-main ul li{
-		width: 250px;
-		height: 100%;
-		float: right;
-		padding: 0px 20px;
-		position: relative;
-	}
-	.scroll-main ul li::after{
-		content: " ";
-		height: 190px;
-		top: 41px;
-		left: 0;
-		margin: 0 auto;
-		position: absolute;
-		border-style: solid;
-		border-width: 0.5px;
-		border-color: #B8B8B8B8;
-
-	}
-	.scroll-product{
-		text-align: center;
-		display: block;
-		height: 90%;
-		padding-top: 25px;
-	}
-	.scroll-product img{
-		margin: 30px auto;
-		float: right;
-		display: block;
-	}
-	.scroll-product .product-meta{
-		direction: rtl;
-		font-family: iran-sans;
-		font-size: 14px;
-		line-height: 20px;
-		width: 40%;
-		display: block;
-		text-align: center;
-		padding: 20px 0;
-		color: #153574;
-	}
-	.scroll-product .product-price{
-		line-height: 25px;
-		text-align: center;
-		font-family: iran-sans;
-		font-size: 13px;
-		direction: rtl;
-		width: 40%;
-	}
-	.product-price-old{
-		background-color: #ccc;
-		width: 100%;
-		display: block;
-		text-decoration-line: line-through;
-		margin: 5px 0;
-	}
-	.product-price-old{
-		background-color: #a6d45b;
-		width: 100%;
-		display: block;
-	}
-</style><!--Scroll Slider-->
+</script><!-----addressScroll----->
 </body>
 </html>
