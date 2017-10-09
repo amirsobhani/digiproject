@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="391e4156-ead3-4de4-8e20-03b0779d85e2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Shipping.html" afterPath="$PROJECT_DIR$/Shipping.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +17,8 @@
       <file leaf-file-name="product.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/product.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="1036" column="22" lean-forward="false" selection-start-line="1036" selection-start-column="22" selection-end-line="1154" selection-end-column="46" />
+            <state relative-caret-position="377">
+              <caret line="1036" column="22" lean-forward="true" selection-start-line="1036" selection-start-column="22" selection-end-line="1154" selection-end-column="46" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#html#0;n#!!top" expanded="false" />
@@ -100,7 +101,7 @@
       <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/profile.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1188">
+            <state relative-caret-position="18">
               <caret line="862" column="24" lean-forward="false" selection-start-line="862" selection-start-column="24" selection-end-line="862" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
@@ -340,8 +341,7 @@
       <workItem from="1507228812935" duration="5000" />
       <workItem from="1507228941361" duration="14000" />
       <workItem from="1507375652541" duration="11733000" />
-      <workItem from="1507466147687" duration="7544000" />
-      <workItem from="1507548996404" duration="439000" />
+      <workItem from="1507466147687" duration="7504000" />
     </task>
     <task id="LOCAL-00001" summary="scroll">
       <created>1506451500855</created>
@@ -420,21 +420,15 @@
       <option name="project" value="LOCAL" />
       <updated>1507402382963</updated>
     </task>
-    <task id="LOCAL-00012" summary="shipment">
-      <created>1507488625506</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1507488625506</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100428000" />
+    <option name="totallyTimeSpent" value="99949000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1352" y="-8" width="1376" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11544117" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -468,8 +462,7 @@
     <MESSAGE value="3d" />
     <MESSAGE value="profile page" />
     <MESSAGE value="order track" />
-    <MESSAGE value="shipment" />
-    <option name="LAST_COMMIT_MESSAGE" value="shipment" />
+    <option name="LAST_COMMIT_MESSAGE" value="order track" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1662,7 +1655,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/profile.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
+        <state relative-caret-position="18">
           <caret line="862" column="24" lean-forward="false" selection-start-line="862" selection-start-column="24" selection-end-line="862" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
@@ -1691,8 +1684,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/product.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="1036" column="22" lean-forward="false" selection-start-line="1036" selection-start-column="22" selection-end-line="1154" selection-end-column="46" />
+        <state relative-caret-position="377">
+          <caret line="1036" column="22" lean-forward="true" selection-start-line="1036" selection-start-column="22" selection-end-line="1154" selection-end-column="46" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#html#0;n#!!top" expanded="false" />

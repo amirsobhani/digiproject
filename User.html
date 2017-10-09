@@ -1,0 +1,1925 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>فروشگاه دی جی کالا</title>
+	<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<link href="css/flipTimer.css" rel="stylesheet" type="text/css"/>
+	<script src="js/jquery.flipTimer.js"></script>
+
+
+	<style>
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed,
+		figure, figcaption, footer, header, hgroup,
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		HTML5 display-role reset for older browsers
+		article, aside, details, figcaption, figure,
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+		@font-face{
+			font-family: iran-sans;
+			src: url(font/IRANSansLight.ttf),
+			url(font/IRANSansLight.woff),
+			url(font/IRANSansMedium.ttf),
+			url(font/IRANSansMedium.woff);
+		}
+		a{
+			text-decoration: none;
+		}
+		.dk-box{
+			background-color: #fff;
+			border: 1px solid #ebeced;
+			-ms-border-radius: 4px;
+			border-radius: 4px;
+			-webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+			-ms-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+			box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			overflow: hidden;
+		}
+	</style>
+
+</head>
+
+<body>
+
+<style>
+	#header{
+		height: 95px;
+		width: 1190px;
+		margin: 0 auto;
+		position: relative;
+	}
+	#header-right{
+		float: right;
+		width: 70%;
+		height: 100%;
+	}
+	#header-left{
+		float: right;
+		width: 30%;
+		height: 100%;
+		margin: 17px;
+		position: absolute;
+	}
+	#header-right-top{
+		float: right;
+		height: 50%;
+		width: 100%;
+	}
+	#header-right-bottom{
+		float: right;
+		height: 50%;
+		width: 100%;
+	}
+
+	#header-right-top span,#header-right-top a{
+		float: right;
+		line-height: 47px;
+		color: rgb(150,155,168);
+		font-family: iran-sans;
+		font-size: 13px;
+		margin-left: 5px;
+	}
+	#header-right-top a:hover{
+		color: rgb(239,71,83);
+	}
+	.fa-lock{
+		float: right;
+		line-height: 47.5px;
+		color: rgb(150,155,168);
+		margin-left: 10px;
+	}
+	.fa-user{
+		float: right;
+		line-height: 47.5px;
+		color: rgb(150,155,168);
+		margin:0 30px 0 10px;
+	}
+	#cart{
+		width: 190px;
+		height: 36px;
+		background-color:rgb(70,163,73);
+		float: right;
+		border-radius: 3px;
+		margin: 5px 0;
+		position: relative;
+	}
+	#cart .fa-shopping-cart{
+		float: right;
+		line-height: 33.5px;
+		color: rgb(255,255,255);
+		margin: 0 9px;
+
+	}
+	#cart #cart-icon{
+		background-color: rgb(92,173,95);
+		width: 45px;
+		height: 36px;
+		float: right;
+		display: block;
+		border-radius: 0 3px 3px 0;
+	}
+	#cart-text{
+		float: right;
+		font-family: iran-sans;
+		font-size: 14px;
+		line-height: 36px;
+		margin-right: 20px;
+		color: #fff;
+	}
+	#cart-count{
+		border-radius: 100%;
+		background-color: rgb(92,173,95);
+		float: right;
+		width: 25px;
+		height: 25px;
+		position: absolute;
+		left: 15px;
+		top: 5px;
+		color: #fff;
+		text-align: center;
+		line-height: 23px;
+	}
+	#header-right-bottom input{
+		float: right;
+		direction: rtl;
+		width: 465px;
+		height: 30px;
+		margin: 6.5px 10px 0 0;
+		border-radius:0 3px 3px 0;
+		border: solid #A2A2A2 1px;
+		font-family: iran-sans;
+	}
+	.fa-search{
+		float: right;
+		width: 42px;
+		height: 35px;
+		background-color: rgb(156,162,176);
+		line-height: 30px;
+		text-align: center;
+		margin-top: 6px;
+		border-radius: 3px 0 0 3px;
+		color: #fff;
+		cursor: pointer;
+	}
+</style><!--Header Style-->
+<style>
+	#main-menu{
+		display: block;
+		width: 100%;
+		height: 42px;
+		background-color: rgb(247,248,250);
+		margin-top: 10px;
+		box-shadow: 1px 2px 2px 2px #eee;
+		-webkit-box-shadow:1px 2px 2px 2px #eee;
+		-moz-box-shadow:1px 2px 2px 2px #eee;
+		border: solid 1px #E5E5E5 ;
+	}
+	#menu{
+		width: 1190px;
+		height: 42px;
+		margin: 0 auto;
+		position: relative;
+		display: block;
+
+	}
+	#menu ul{
+		position: relative;
+		z-index: 5;
+	}
+	#menu li{
+		display: inline-block;
+		float: right;
+		font-family: iran-sans;
+		font-size: 14px;
+		line-height: 40px;
+		padding: 0 15px;
+	}
+	#menu i{
+		margin: 0 5px;
+	}
+	.active-li{
+		background-color: white;
+		box-shadow: 1px 1px 1px 1px red;
+	}
+
+	#menu .submenu1{
+		position: absolute;
+		width: 100%;
+		right: 0;
+		width: 100%;
+		height: 42px;
+		background-color: rgb(247,248,250);
+		box-shadow: 1px 1px 1px 1px #eee;
+		-webkit-box-shadow:1px 1px 1px 1px #eee;
+		-moz-box-shadow:1px 1px 1px 1px #eee;
+		border:1px solid rgb(218,219,221) ;
+		margin: 0 !important;
+		display: none;
+	}
+	.submenu1-li:hover{
+		background-image: url(img/red.png);
+		background-repeat: no-repeat;
+		background-position: center 30px;
+	}
+
+	#menu ul li ul li{
+		float: right;
+		padding:0 12px;
+	}
+	.submenu1 .submenu1-li:hover{
+		border-bottom: 4px solid red !important;
+	}
+
+	.submenu2{
+		width: 100%;
+		height: 400px;
+		position: absolute;
+		left: -1px;
+		box-shadow: 1px 1px 1px 1px #eee;
+		-webkit-box-shadow:1px 1px 1px 1px #eee;
+		-moz-box-shadow:1px 1px 1px 1px #eee;
+		border:1px solid rgb(218,219,221) ;
+		border-radius: 0 0 5px 5px;
+		border-top: none;
+		display: none;
+		top: 45px;
+		background-color: #fff;
+	}
+	#mobile-menu{
+		background-image: url(img/mobile.png);
+		background-repeat: no-repeat;
+		background-position: bottom left;
+	}
+	#tablet-menu{
+		background-image: url(img/tablet-ebook-reader.png);
+		background-repeat: no-repeat;
+		background-position: bottom left;
+	}
+	.submenu2 table{
+		width: 100%;
+		height: 400px;
+		direction: rtl;
+		float: right;
+	}
+	.submenu2 .sub-td{
+		width: 25%;
+		border-left: 1px solid #e2e2e2;
+	}
+	.sub-td ul{
+		height: auto;
+		width: 60%;
+		margin: 0;
+	}
+	.sub-td .title{
+		text-align: right;
+		font-size: 16px;
+		font-weight: bold;
+		color: rgb(96,193,243);
+		margin-left: 50px;
+	}
+	.item{
+		margin-left: 50px;
+	}
+
+</style><!--Menu Style-->
+<style>
+	#main{
+		background-image: url(img/1503990105pattern42.png);
+		background-color: #eee;
+		padding: 10px 0;
+	}
+	#content{
+		width: 1190px;
+		margin: 0 auto;
+	}
+	#content::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.dk-box{
+		background-color: #fff;
+		border: 1px solid #ebeced;
+		-ms-border-radius: 4px;
+		border-radius: 4px;
+		-webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+		-ms-box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+		box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		overflow: hidden;
+	}
+	.breadcrumb{
+		position: relative;
+		overflow: hidden;
+		line-height: 30px;
+		font-family: iran-sans;
+		font-size: 13px;
+		color: #7C7C7C;
+		margin: 5px 0;
+		width: 100%;
+		content: " ";
+		display: block;
+		clear: both;
+	}
+	#breadcrumb{
+		content: " ";
+		display: block;
+		clear: both;
+		margin-bottom: 10px;
+		padding: 0 10px;
+	}
+	.breadcrumb li{
+		float: right;
+		cursor: pointer;
+	}
+	.breadcrumb li:hover{
+		color: #000;
+	}
+	.breadcrumb i{
+		margin: 0px 10px;
+	}
+	body{
+		font-family: iran-sans;
+	}
+</style><!--breadcrumb-->
+<div id="header">
+	<div id="header-right">
+		<div id="header-right-top">
+			<i class="fa fa-lock fa-lg" aria-hidden="true"></i>
+			<span>،فروشگاه دی جی کالا</span><a href="#">وارد شوید</a>
+			<i class="fa fa-user fa-lg" aria-hidden="true"></i>
+			<a href="#">ثبت نام کنید</a>
+		</div>
+		<div id="header-right-bottom">
+			<div id="cart">
+				<span id="cart-icon"><i class="fa fa-shopping-cart fa-lg fa-flip-horizontal" aria-hidden="true"></i></span>
+				<span id="cart-text">سبد خرید</span>
+				<span id="cart-count">0</span>
+			</div>
+			<div>
+				<input type="text" placeholder="  محصول، دسته یا برند مورد نظرتان را جستجو کنید. . .">
+				<i class="fa fa-search" aria-hidden="true"></i>
+			</div>
+		</div>
+	</div>
+	<div id="header-left">
+		<img src="img/logo.png" alt="logo"/>
+	</div>
+</div><!--Header-->
+<div id="main-menu">
+	<nav id="menu">
+		<ul>
+			<li class="menu-li" ><i class="fa fa-angle-down" aria-hidden="true" ></i>
+				<span>کالای دیجیتال</span>
+				<ul class="submenu1">
+					<li class="submenu1-li">موبایل
+						<div class="submenu2" id="mobile-menu">
+							<table>
+								<tbody>
+								<tr>
+									<td class="sub-td">
+										<ul>
+											<li class="title">گوشی موبایل</li>
+											<li class="item">Apple</li>
+											<li class="item">Samsung</li>
+											<li class="item">LG</li>
+											<li class="item">Sony</li>
+										</ul>
+									</td>
+									<td class="sub-td">
+										<ul>
+											<li class="title">گوشی موبایل</li>
+											<li class="item">Apple</li>
+											<li class="item">Samsung</li>
+											<li class="item">LG</li>
+											<li class="item">Sony</li>
+										</ul>
+									</td>
+									<td><ul></ul></td>
+									<td><ul></ul></td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<li class="submenu1-li">تبلت و کتابخوان
+						<div class="submenu2" id="tablet-menu">
+							<table>
+								<tbody>
+								<tr>
+									<td class="sub-td">
+										<ul>
+											<li class="title">گوشی موبایل</li>
+											<li class="item">Apple</li>
+											<li class="item">Samsung</li>
+											<li class="item">LG</li>
+											<li class="item">Sony</li>
+										</ul>
+									</td>
+									<td class="sub-td">
+										<ul>
+											<li class="title">گوشی موبایل</li>
+											<li class="item">Apple</li>
+											<li class="item">Samsung</li>
+											<li class="item">LG</li>
+											<li class="item">Sony</li>
+										</ul>
+									</td>
+									<td><ul></ul></td>
+									<td><ul></ul></td>
+								</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<li class="submenu1-li">لپ تاپ</li>
+				</ul>
+			</li>
+			<li class="menu-li" ><i class="fa fa-angle-down" aria-hidden="true" ></i>
+				<span>لوازم خانگی
+</span>						<ul class="submenu1">
+					<li class="submenu1-li">صوتی و تصویری</li>
+					<li class="submenu1-li">لوازم برقی</li>
+					<li class="submenu1-li">آشپزخانه</li>
+				</ul>
+			</li>
+			<li class="menu-li"><i class="fa fa-angle-down" aria-hidden="true"></i>
+				<span>زیبایی و سلامت</span>
+				<ul class="submenu1">
+					<li class="submenu1-li">عطر</li>
+					<li class="submenu1-li">لوازم آرایشی</li>
+					<li class="submenu1-li">لوازم بهداشتی</li>
+				</ul>
+			</li>
+			<li class="menu-li"><i class="fa fa-angle-down" aria-hidden="true"></i>
+				<span>فرهنگ و هنر</span>
+				<ul class="submenu1">
+					<li class="submenu1-li">کتاب و مجلات</li>
+					<li class="submenu1-li">لوازم و تحریر</li>
+					<li class="submenu1-li">صنایع دستی</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</div><!--Menu-->
+<script>
+
+    $('.menu-li').hover(function(){
+        $(this).find('.submenu1').slideDown(200);
+    },function(){
+        $(this).find('.submenu1').slideUp(200);
+    })
+    $('.submenu1-li').hover(function(){
+        $(this).find('.submenu2').fadeIn(100);
+    },function(){
+        $(this).find('.submenu2').fadeOut(100);
+    })
+
+    $('.menu-li').hover(function(){
+        $(this).addClass('active-li');
+        $('.submenu1').css("background-color","#fff");
+    },function(){
+        $(this).removeClass('active-li');
+        $('.submenu1').css("background-color","rgb(247,248,250)");
+    })
+
+
+
+</script><!--Menu jQuery-->
+<style>
+	#footer{
+		width: 100%;
+		height: auto;
+	}
+	.info-bar{
+		width: 100%;
+		height: 45px;
+		background-color: #6D717A;
+	}
+	.wrapper{
+		width: 1190px;
+		margin: 0 auto;
+		height: 100%;
+	}
+	.info-bar-meta{
+		float: right;
+		direction: rtl;
+		font-family: iran-sans;
+		color: #fff;
+		line-height: 45px;
+	}
+	.info-bar-ul {
+		float: left;
+		line-height: 45px;
+	}
+	.info-bar-ul  li{
+		float: left;
+		direction: rtl;
+		color: #fff;
+		font-family: iran-sans;
+		margin-right: 100px;
+	}
+	.info-bar-ul li i{
+		float: left;
+		line-height: 40px;
+		margin-right: 10px;
+	}
+	.subscribe-bar{
+		width: 100%;
+		background-color: #F7F8FA;
+		height: auto;
+		float: right;
+	}
+	.subscribe-bar-menu{
+		width: 640px;
+		float: right;
+		margin: 50px 0;
+	}
+	.subscribe-bar-form{
+		width: 550px;
+		float: right;
+		margin: 50px 0;
+		direction: rtl;
+	}
+	.subscribe-bar-form input{
+		font-family: iran-sans;
+		float: right;
+		padding: 0 10px;
+		line-height: 39px;
+		font-size: 15px;
+		width: 405px;
+		margin: 19px 0 40px 10px;
+	}
+	.subscribe-bar-form h2{
+		line-height: 40px;
+		font-family: iran-sans;
+	}
+	.subscribe-bar-form button{
+		width: 110px;
+		line-height: 40px;
+		float: left;
+		margin: 18px 0 40px 0;
+		font-family: iran-sans;
+		background-color: #208DE6;
+		border: 1px solid #ebeced;
+		border-radius: 4px;
+		color: #fff;
+	}
+	.subscribe-bar-form #social-net{
+		float: right;
+	}
+	.menu-right{
+		float: right;
+		direction: rtl;
+		width: 30%;
+		line-height: 30px;
+		font-family: iran-sans;
+	}
+	.menu-right a{
+		direction: rtl;
+		float: right;
+		font-weight: bolder;
+	}
+	.menu-right ul{
+		float: right;
+		display: block;
+		margin: 10px 0;
+		font-size: 14px;
+	}
+	.menu-left{
+		float: right;
+		direction: rtl;
+		width: 30%;
+		line-height: 30px;
+		font-family: iran-sans;
+		margin-right: 170px;
+	}
+	.menu-left a{
+		direction: rtl;
+		float: right;
+		font-weight: bolder;
+	}
+	.menu-left ul{
+		float: right;
+		display: block;
+		margin: 10px 0;
+		font-size: 14px;
+	}
+	#social-net{
+		float: right;
+	}
+	#social-net i{
+		line-height: 48px;
+	}
+	#appStore{
+		float: left;
+	}
+</style><!--footer-->
+<style>
+	.continue-cart{
+		width:100%;
+		background: #fff;
+	}
+	.continue-cart::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.continue-cart .right{
+		display: inline-block;
+		float: right;
+	}
+	.continue-cart .left{
+		display: inline-block;
+		direction: rtl;
+		background: #4CAF50;
+		color: #fff;
+		margin: 55px 0;
+		padding: 10px;
+	}
+	.continue-cart .right p{
+		font-size: 11px;
+		margin: 20px 0;
+		direction: rtl;
+	}
+	.continue-cart .right h2{
+		direction: rtl;
+		margin: 30px 0 5px;
+	}
+	.continue-cart .right h2 i{
+		margin-left: 7px;
+		color: #2196F3;
+	}
+	.cart-wrappper{
+		margin:0 10px;
+	}
+	#cart-div{
+		background: #fff;
+		margin-bottom: 15px;
+	}
+	.go-main{
+		display: inline-block;
+		direction: rtl;
+		background-color: #969ba8;
+		color: #fff;
+		margin: 55px 0;
+		padding: 10px;
+	}
+	.reserv-alert{
+		direction: rtl;
+		font-size: 13px;
+		color: red;
+		display: inline-block;
+		position: relative;
+		top: -70px;
+		right: -10px;
+	}
+</style><!--continue-cart--->
+<style>
+	.cart-table{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	.cart-table table{
+		width: 100%;
+		direction: rtl;
+	}
+	.cart-table table tr td{
+		text-align: center;
+		vertical-align: middle;
+		border: 1px solid #eee;
+	}
+	.cart-table table tr td:first-child{
+		text-align: right!important;
+	}
+	.cart-table table thead{
+		line-height: 22px;
+		background: #F7F9FA;
+		text-align: center;
+		font-size: 13px;
+	}
+	.cart-table table thead tr td{
+		border: 1px solid #eee;
+		padding: 10px 0;
+	}
+	.cart-table table thead tr td:first-child{
+		text-align: center!important;
+	}
+	.cart-table table thead tr td:last-child{
+		border-right: none;
+	}
+	.cart-table table thead tr td:nth-child(5){
+		border-left:none;
+	}
+	.product-table-img{
+		display: inline-block;
+		float: right;
+	}
+	.product-table-img img{
+		width: 100px;
+		margin: 30px 10px;
+	}
+	.product-table-meta{
+		display: inline-block;
+		float: right;
+		margin: 30px 5px;
+	}
+	.product-table-meta h2{
+		font-size: 13px;
+		width: 300px;
+		line-height: 30px;
+		font-weight: 800;
+	}
+	.product-table-meta h3{
+		font-size: 10px;
+		line-height: 30px;
+		font-weight: 800;
+	}
+	.product-table-color p{
+		display: inline-block;
+		font-size: 11px;
+		line-height: 30px;
+	}
+	.product-table-color .color{
+		width: 18px;
+		height: 18px;
+		display: inline-block;
+		border-radius: 100%;
+		position: relative;
+		top:5px;
+	}
+	.product-table-color span:last-child , .warranty{
+		font-size: 12px;
+		color: #777;
+	}
+	.cart-table .delete{
+		border-left: 0;
+		background: #ffedee;
+		border-right: 0;
+		color: #ed4848;
+		width: 30px;
+		cursor: pointer;
+	}
+	.unitprice{
+		width: 25%;
+	}
+	.seperate{
+		margin: 14px 0;
+		border-bottom: 1px dashed #e9e9e9;
+		height: 1px;
+		margin-left: 15px;
+	}
+	.unitprice-discoount tr{
+		line-height: 30px;
+	}
+	.unitprice-discoount tr td{
+		border: none!important;
+		padding-right: 15px;
+		font-size: 13px;
+	}
+	.unitprice-discoount tr:last-child td{
+		color: #00B12A;
+		font-size: 21px;
+	}
+	.red{
+		color: #ff6b6b;
+	}
+	.cart-table tr.gift td.last span{
+		color: #ff6b6b;
+		font-size: 19px;
+		display: inline-block;
+		margin-top: -12px;
+		position: absolute;
+		right: -7px;
+		top: 50%;
+		transform: rotate(-90deg);
+		font-weight: 800;
+	}
+	.cart-table tr.gift td.last{
+		position: relative;
+	}
+</style><!---cart-table--->
+<style>
+	.order-route-wrapper{
+		background-color: #fff;
+		text-align: center;
+		padding: 10px 0;
+	}
+	.tracking-order-table tr td{
+		padding: 15px 0!important;
+		width: 33%;
+	}
+	.order-track tr:last-child td{
+		padding: 0;
+	}
+	.order-route{
+		text-align: center;
+		display: inline-block;
+		margin-bottom: 50px;
+	}
+	.order-route::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.order-route div.approved span{
+		background: #2396f3;
+	}
+	.dashed{
+		float: right;
+		margin-top: 20px;
+	}
+
+	.order-route ul li i{
+		position: absolute;
+		right: -23px;
+		top: -5px;
+		color: #FFFFFF;
+		z-index: 2;
+	}
+	.order-route ul li.approved{
+		background: #2396f3;
+		height: 2px;
+		display: inline-block;
+		position: relative;
+		margin-left: 30px;
+	}
+	.approved .state-circle{
+		border: 3px solid #2396f3!important;
+		background: #2396f3;
+	}
+	.approved .state-title{
+		color: #2396f3;
+	}
+	.order-route .state-title{
+		position: absolute;
+		right: -90px;
+		top: 30px;
+		width: 150px;
+	}
+	.order-route .state-circle{
+		display: inline-block;
+		direction: rtl;
+		width: 18px;
+		height: 18px;
+		border-radius: 100%;
+		border: 3px solid #bec2cc;
+		position: absolute;
+		top: -10px;
+		right: -27px;
+	}
+	.order-route ul li{
+		padding-left: 250px;
+		height: 2px;
+		background: #dee1e7;
+		display: inline-block;
+		position: relative;
+		margin-left: 30px;
+	}
+	.order-route ul li:last-child{
+		margin-left: 0;
+		padding: 0;
+	}
+	.order-route ul{
+		direction: rtl;
+		float: right;
+		margin: 20px 35px 0 10px;
+	}
+	.order-route .dashed span{
+		display: inline-block;
+		width: 11px;
+		height: 2px;
+		background: #ccc;
+	}
+	.rotate{
+		transform: rotate(180deg);
+		transition-duration: 0.4s;
+	}
+</style><!---order-track--->
+<div id="main">
+	<div id="content">
+		<div id="breadcrumb" class="dk-box">
+			<ul class="breadcrumb">
+				<li><i class="fa fa-angle-left"></i><a>فروشگاه اینترنتی دیجی کالا</a></li>
+				<li><a>سبد خرید</a></li>
+			</ul>
+		</div><!--breadcrumb-->
+		<div class="order-route-wrapper">
+			<div class="order-route">
+				<div class="dashed approved">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<ul>
+					<li class="approved">
+						<i class="fa fa-check"></i>
+						<span class="state-circle"></span>
+						<span class="state-title">
+							ورود به دیجی کالا
+						</span>
+					</li>
+					<li class="">
+						<i class="fa fa-check"></i>
+						<span class="state-circle"></span>
+						<span class="state-title">
+							اطلاعات ارسال سفارش
+						</span>
+					</li>
+					<li class="">
+						<i class="fa fa-check"></i>
+						<span class="state-circle"></span>
+						<span class="state-title">
+							اطلاعات پرداخت
+						</span>
+					</li>
+				</ul>
+				<div class="dashed">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div><!---order-route---->
+		</div>
+<style>
+	.address-head{
+		direction: rtl;
+	}
+	.address-head::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.add{
+		display: inline-block;
+		float: right;
+		padding: 10px;
+		margin: 18px 15px;
+		color: #FFFFFF;
+		background-color: #999;
+		font-size: 13px;
+		cursor: pointer;
+		box-shadow: 0 3px 4px rgba(0,0,0,0.1);
+	}
+	.address-title{
+		display: inline-block;
+		line-height: 22px;
+		padding: 5px 0;
+		margin: 20px 0;
+		float: right;
+	}
+	.address-title i{
+		float: right;
+		margin-left: 10px;
+		color: #2396f3;
+	}
+	.address-title h2{
+		float: right;
+	}
+</style>
+		<div class="address-head">
+			<div class="address-title">
+				<i class="fa fa-caret-left" aria-hidden="true"></i>
+				<h2>
+					انتخاب آدرس
+				</h2>
+			</div>
+			<div class="add dk-box">
+				افزودن آدرس جدید
+			</div>
+		</div>
+<style>
+	.address{
+		display: inline-block;
+		float: right;
+		width: 490px;
+		background-color: #FBFDFC;
+		position: relative;
+	}
+	.address-name{
+		line-height: 50px;
+		padding: 0 15px;
+	}
+	.address-name h3{
+		display: inline-block;
+		direction: rtl;
+		float: right;
+	}
+	.address-name .fa-close{
+		color: red;
+		margin-right: 35px;
+	}
+	.address-name .fa-pencil{
+		color: #2396f3;
+	}
+	.address-location{
+		direction: rtl;
+		border-bottom: 1px solid #f0f0f0;
+	}
+	.address-location::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.address-location ul li{
+		line-height: 50px;
+		float: right;
+		width: 120px;
+		display: inline-block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.location{
+		background-color: #fff;
+		padding: 0 15px;
+	}
+	.complete-address{
+		direction: rtl;
+		border-bottom: 1px solid #f0f0f0;
+		line-height: 50px;
+		font-size: 14px;
+		text-align: center;
+	}
+	.map-hint{
+		line-height: 33px;
+		color: #7c6a26;
+		background: #fffcda;
+		display: inline-block;
+		padding: 0 10px;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+	.tell{
+		direction: rtl;
+		font-size: 13px;
+		line-height: 50px;
+	}
+	.phone{
+		display: inline-block;
+		margin-right: 10px;
+	}
+	.emergency{
+		display: inline-block;
+		margin-right: 50px;
+	}
+	.address-select{
+		background: #f7fff7;
+		border-top: 1px solid #c0f0c1;
+		padding: 0 15px;
+		line-height: 50px;
+		direction: rtl;
+		text-align: center;
+		font-size: 14px;
+	}
+
+	.address-select label{
+		width: 14px;
+		height: 14px;
+		display: inline-block;
+		transition: none;
+		position: relative;
+		border-radius: 100%;
+		right: -2px;
+		top: 4px;
+		background: #fff;
+		border: 1px solid #ccc;
+	}
+	.address-select label.checked{
+		background: #2196f3;
+		border: 1px solid transparent;
+	}
+	.address-select label::after{
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		content: "";
+		background: #fff;
+		width: 2px;
+		height: 2px;
+		border-radius: 100%;
+		border: 1px solid #fff;
+	}
+	.address-select input{
+		position: relative;
+		right: 20px;
+		top: 2px;
+		opacity:0;
+		z-index: 2;
+	}
+</style><!----inner Address---->
+<style>
+	.addressScroll{
+		height: 305px;
+		margin-bottom: 10px;
+		position: relative;
+	}
+	.next-address{
+		width: 50px;
+		height: 305px;
+		float: right;
+		position: absolute;
+		right: -60px;
+	}
+	.next-address i{
+		text-align: center;
+		display: block;
+		line-height: 305px;
+		color: #B8B8B8B8;
+		cursor: pointer;
+		box-shadow: -3px 0px 10px rgba(0,0,0,0.2);
+		height: 100%;
+	}
+	.prev-address{
+		width: 50px;
+		height: 305px;
+		float: left;
+		position: absolute;
+		left: -60px;
+	}
+	.prev-address i{
+		text-align: center;
+		display: block;
+		line-height: 305px;
+		color: #B8B8B8B8;
+		cursor: pointer;
+		box-shadow: 3px 0px 10px rgba(0,0,0,0.2);
+		height: 100%;
+	}
+	.add-address{
+		margin-right: 10px;
+		float: right;
+		width: 140px;
+		border: 5px dashed #cdcdcd;
+		box-sizing: border-box;
+		min-height: 305px;
+		cursor: pointer;
+		position: relative;
+	}
+	.add-address span{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%) rotate(-90deg);
+		white-space: nowrap;
+		color: #9ea4b0;
+		font-size: 25px;
+		min-height: 32px;
+		direction: rtl;
+	}
+	#address-bar {
+		overflow: hidden;
+		float: right;
+		width: 1190px;
+		height: 303px;
+	}
+	#address-bar::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	#address-bar ul li{
+		float: right;
+		margin-left: 10px;
+	}
+	.main-ul{
+		float: right;
+		width: 1500px;
+		overflow: hidden;
+		height:100%;
+	}
+</style><!-----addressScroll----->
+		<div class="addressScroll">
+			<div id="address-bar">
+				<ul class="main-ul">
+					<li class="main-li">
+						<div class="address">
+							<div class="address-name">
+								<h3>امیرحسین سبحانی</h3>
+								<i class="fa fa-close" aria-hidden="true"></i>
+								<i class="fa fa-pencil" aria-hidden="true"></i>
+							</div>
+							<div class="location">
+								<div class="address-location">
+									<ul>
+										<li class="state">
+											استان :
+											<span>
+								قم
+							</span>
+										</li>
+										<li class="city">
+											شهر :
+											<span>
+								قم
+							</span>
+										</li>
+										<li class="distric">
+											محله :
+											<span>
+								-
+							</span>
+										</li>
+									</ul>
+								</div>
+								<div class="complete-address">
+									<span class="1st">آدرس :</span>
+									<span class="2st">قم.خیابان صدوقی.خیابان یاسمن.پلاک120</span>
+									<div class="map-hint">
+										با ثبت آدرس روی نقشه، روند ارسال را سرعت ببخشید.
+									</div>
+								</div>
+								<div class="tell">
+									<div class="phone">
+										شماره تلفن ثابت :
+										<span>
+							32104
+						</span>
+									</div>
+									<div class="emergency">
+										شماره تلفن ضروری :
+										<span>
+							09198508964
+						</span>
+									</div>
+								</div>
+							</div>
+							<div class="address-select">
+								<input type="radio" autocomplete="on">
+								<label class="checked"></label>
+								<span class="address-txt">
+							به این آدرس ارسال می‌شود .
+				</span>
+							</div>
+						</div>
+					</li>
+					<li class="main-li">
+						<div class="address">
+							<div class="address-name">
+								<h3>امیرحسین سبحانی</h3>
+								<i class="fa fa-close" aria-hidden="true"></i>
+								<i class="fa fa-pencil" aria-hidden="true"></i>
+							</div>
+							<div class="location">
+								<div class="address-location">
+									<ul>
+										<li class="state">
+											استان :
+											<span>
+								قم
+							</span>
+										</li>
+										<li class="city">
+											شهر :
+											<span>
+								قم
+							</span>
+										</li>
+										<li class="distric">
+											محله :
+											<span>
+								-
+							</span>
+										</li>
+									</ul>
+								</div>
+								<div class="complete-address">
+									<span class="1st">آدرس :</span>
+									<span class="2st">قم.خیابان صدوقی.خیابان یاسمن.پلاک120</span>
+									<div class="map-hint">
+										با ثبت آدرس روی نقشه، روند ارسال را سرعت ببخشید.
+									</div>
+								</div>
+								<div class="tell">
+									<div class="phone">
+										شماره تلفن ثابت :
+										<span>
+							32104
+						</span>
+									</div>
+									<div class="emergency">
+										شماره تلفن ضروری :
+										<span>
+							09198508964
+						</span>
+									</div>
+								</div>
+							</div>
+							<div class="address-select">
+								<input type="radio" autocomplete="on">
+								<label class="checked"></label>
+								<span class="address-txt">
+							به این آدرس ارسال می‌شود .
+				</span>
+							</div>
+						</div>
+					</li>
+					<li class="main-li">
+						<div class="address">
+							<div class="address-name">
+								<h3>امیرحسین سبحانی</h3>
+								<i class="fa fa-close" aria-hidden="true"></i>
+								<i class="fa fa-pencil" aria-hidden="true"></i>
+							</div>
+							<div class="location">
+								<div class="address-location">
+									<ul>
+										<li class="state">
+											استان :
+											<span>
+								قم
+							</span>
+										</li>
+										<li class="city">
+											شهر :
+											<span>
+								قم
+							</span>
+										</li>
+										<li class="distric">
+											محله :
+											<span>
+								-
+							</span>
+										</li>
+									</ul>
+								</div>
+								<div class="complete-address">
+									<span class="1st">آدرس :</span>
+									<span class="2st">قم.خیابان صدوقی.خیابان یاسمن.پلاک120</span>
+									<div class="map-hint">
+										با ثبت آدرس روی نقشه، روند ارسال را سرعت ببخشید.
+									</div>
+								</div>
+								<div class="tell">
+									<div class="phone">
+										شماره تلفن ثابت :
+										<span>
+							32104
+						</span>
+									</div>
+									<div class="emergency">
+										شماره تلفن ضروری :
+										<span>
+							09198508964
+						</span>
+									</div>
+								</div>
+							</div>
+							<div class="address-select">
+								<input type="radio" autocomplete="on">
+								<label class="checked"></label>
+								<span class="address-txt">
+							به این آدرس ارسال می‌شود .
+				</span>
+							</div>
+						</div>
+					</li>
+					<li class="main-li">
+						<div class="address">
+							<div class="address-name">
+								<h3>امیرحسین سبحانی</h3>
+								<i class="fa fa-close" aria-hidden="true"></i>
+								<i class="fa fa-pencil" aria-hidden="true"></i>
+							</div>
+							<div class="location">
+								<div class="address-location">
+									<ul>
+										<li class="state">
+											استان :
+											<span>
+								قم
+							</span>
+										</li>
+										<li class="city">
+											شهر :
+											<span>
+								قم
+							</span>
+										</li>
+										<li class="distric">
+											محله :
+											<span>
+								-
+							</span>
+										</li>
+									</ul>
+								</div>
+								<div class="complete-address">
+									<span class="1st">آدرس :</span>
+									<span class="2st">قم.خیابان صدوقی.خیابان یاسمن.پلاک120</span>
+									<div class="map-hint">
+										با ثبت آدرس روی نقشه، روند ارسال را سرعت ببخشید.
+									</div>
+								</div>
+								<div class="tell">
+									<div class="phone">
+										شماره تلفن ثابت :
+										<span>
+							32104
+						</span>
+									</div>
+									<div class="emergency">
+										شماره تلفن ضروری :
+										<span>
+							09198508964
+						</span>
+									</div>
+								</div>
+							</div>
+							<div class="address-select">
+								<input type="radio" autocomplete="on">
+								<label class="checked"></label>
+								<span class="address-txt">
+							به این آدرس ارسال می‌شود .
+				</span>
+							</div>
+						</div>
+					</li>
+					<li class="main-li">
+						<div class="add-address">
+						<span>
+							<i class="fa fa-plus" aria-hidden="true"></i>
+							افزودن آدرس جدید
+						</span>
+						</div>
+					</li>
+				</ul>
+			</div><!-----addressScroll----->
+			<div class="next-address" onClick="scroll('left',this);"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></div>
+			<div class="prev-address" onClick="scroll('right',this);"><i class="fa fa-angle-left fa-4x" aria-hidden="true"></i></div>
+		</div>
+<style>
+	#ShippingType .head {
+		line-height: 22px;
+		padding: 5px 0;
+		margin: 10px 0;
+	}
+	#ShippingType .head i , .shipment-selection i{
+		float: right;
+		margin-left: 10px;
+		color: #2396f3;
+	}
+	#ShippingType .head h2 , .shipment-selection h2{
+		direction: rtl;
+	}
+	.shipment-selection{
+		background-color: #fff;
+		padding: 10px;
+		border-bottom: 1px solid #ddd;
+		line-height: 22px;
+	}
+</style>
+		<div id="ShippingType">
+			<div class="head">
+				<i class="fa fa-caret-left" aria-hidden="true"></i>
+				<h2>
+					انتخاب شیوه ارسال
+				</h2>
+			</div>
+			<div class="product-pack">
+				<div class="shipment-selection">
+						<i class="fa fa-caret-left" aria-hidden="true"></i>
+					<h2>
+						لیست مرسوله‌ها
+					</h2>
+				</div>
+				<div class="scroll-slider">
+					<h3>محصولاتی که در این مرسوله ارسال می‌شوند: </h3>
+					<div class="scroll-next" onClick="scroll('left',this);"><i class="fa fa-angle-right fa-4x" aria-hidden="true"></i></div>
+					<div class="scroll-main">
+						<ul>
+							<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+								</a>
+							</li>
+							<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+								</a>
+							</li>
+							<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+								</a>
+							</li>
+							<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+								</a>
+							</li>
+							<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+								</a>
+							</li>
+							<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+								</a>
+							</li>
+							<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+								</a>
+							</li>
+							<li>
+								<a class="scroll-product">
+									<img src="img/scroll slider/Samsung-Galaxy-S8-Dual-SIM-Mobile-Phone-a8bcd0.jpg"/>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="scroll-prev" onClick="scroll('right',this);"><i class="fa fa-angle-left fa-4x" aria-hidden="true"></i></div>
+
+				</div><!--Scroll Slider-->
+			</div>
+		</div>
+	</div><!---Content--->
+</div>
+<script>
+	var input = $('.address-select').find('input');
+	input.click(function () {
+        if($(this).is(':checked')){
+            $(this).parent().find('label').addClass('checked');
+        }else {
+            $(this).parent().find('label').removeClass('checked');
+        }
+    });
+</script><!----address-select---->
+<style>
+	.complete-price{
+		width: 590px;
+		border: 1px solid #c0f0c1;
+		margin-bottom: 30px;
+	}
+	.complete-price::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.price{
+		height: 55px;
+		line-height: 55px;
+		padding: 0 40px 0 0;
+		border-bottom: 1px solid #c0f0c1;
+	}
+	.discount{
+		display: inline-block;
+		text-align: center;
+		float: right;
+		min-width: 200px;
+		font-size: 13px;
+		padding: 5px;
+		line-height: 20px;
+		position: relative;
+		top: 7px;
+		direction: rtl;
+	}
+	.discount::after{
+		content: "";
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 9px 0 10px 8px;
+		border-color: transparent transparent transparent #fff;
+		position: absolute;
+		left: 5px;
+		top: 11px;
+	}
+	.discount span:first-child{
+		background: #FF7272;
+		color: #fff;
+		padding: 5px 15px;
+		float: right;
+	}
+	.discount span:last-child{
+		background: #FF5252;
+		color: #fff;
+		padding: 5px 15px;
+		float: right;
+	}
+	.lable{
+		display: inline-block;
+		direction: rtl;
+		color: #818181;
+		font-size: 14px;
+		width: auto;
+		margin-left: 60px;
+	}
+	.lable-price{
+		display: inline-block;
+		float: left;
+		direction: rtl;
+		font-size: 20px;
+	}
+	.toman{
+		font-size: 12px;
+		margin: 0 15px;
+	}
+	.pay-price{
+		height: 55px;
+		line-height: 55px;
+		width: 100%;
+		float: left;
+		background-color: #F7FFF7;
+	}
+	.green{
+		color: #4caf50 !important;
+	}
+</style><!---complete-price-->
+<div id="footer">
+	<div class="info-bar">
+		<div class="wrapper">
+						<span class="info-bar-meta">
+۷ روز هفته، ۲۴ ساعته پاسخگوی شما هستیم.
+						</span>
+			<ul class="info-bar-ul">
+				<li>
+					<i class="fa fa-envelope" aria-hidden="true"></i>
+					info@digikala.com
+				</li>
+				<li>
+					<i class="fa fa-question-circle" aria-hidden="true"></i>
+					<a>
+						سوالات متداول
+					</a>
+				</li>
+				<li>
+					<a>
+						<span>۹٥۱۱۹۰۹٥ - ۰۲۱</span>
+						<span> | </span>
+						<span>۶۱۹۳۰۰۰۰ - ۰۲۱</span>
+					</a>
+					<i class="fa fa-phone" aria-hidden="true"></i>
+				</li>
+			</ul>
+		</div><!--info-bar-->
+
+		<div class="subscribe-bar">
+			<div class="wrapper">
+				<div class="subscribe-bar-menu">
+					<div class="menu-right">
+						<a>راهنمای خرید از دیجی‌کالا</a>
+						<ul>
+							<li><a>ثبت سفارش</a></li>
+							<li><a>رویه های ارسال سفارش</a></li>
+							<li><a>شیوه های پرداخت</a></li>
+							<li><a>معرفی دیجی بن</a></li>
+						</ul>
+					</div>
+					<div class="menu-left">
+						<a>خدمات مشتریان</a>
+						<ul>
+							<li><a>پاسخ به پرسش های متداول</a></li>
+							<li><a>رویه های باز گرداندن کالا</a></li>
+							<li><a>شرایط استفاده</a></li>
+							<li><a>حریم خصوصی</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="subscribe-bar-form">
+					<h2>از تخفیف‌ها و جدیدترین‌های دیجی کالا باخبر شوید!</h2>
+					<input type="email" placeholder="آدرس ایمیل خود را وارد کنید" />
+					<button>تایید ایمیل</button>
+					<div id="social-net">
+						<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+						<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+						<i class="fa fa-google-plus-square fa-2x" aria-hidden="true"></i>
+						<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+						<i class="fa fa-telegram fa-2x" aria-hidden="true"></i>
+					</div>
+					<div id="appStore">
+						<a><img src="img/ios_app_bg.png"/></a>
+						<a><img src="img/cafebazaar-digikala.png"/></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function addressScroll(direction , tag) {
+
+        var  slideTag = $(tag);
+        var addressScrollUl = $('#address-bar').find('.main-ul');
+        var liLength = addressScrollUl.find('.main-li').length;
+        var liWidth = parseInt(addressScrollUl.find('.main-li').outerWidth());
+        var ulWidthSize = ((liLength) * (liWidth)) ;
+        var maxMargin = (liLength - 3) * liWidth;
+		if (maxMargin == 0 || maxMargin < 0){
+		    maxMargin = 0;
+		}
+        var marginRight = parseFloat(addressScrollUl.css('margin-right'));
+        addressScrollUl.css("width", ulWidthSize);
+
+        if(direction == 'left'){
+            marginRight=marginRight-liWidth;
+            if((-marginRight) > maxMargin){
+                marginRight = (-maxMargin);
+            }
+        }
+        if(direction == 'right'){
+            marginRight=marginRight+liWidth;
+            if(marginRight > 0){
+                marginRight = 0;
+            }
+        }
+        addressScrollUl.animate({'marginRight':marginRight},1000);
+    }
+
+    $('.next-address').click(function(){
+        addressScroll('left',this);
+    });
+    $('.prev-address').click(function(){
+        addressScroll('right',this);
+    });
+</script><!-----addressScroll----->
+
+<style>
+	.scroll-slider{
+		width: 100%;
+		height: 310px;
+		background-color: #fff;
+		overflow: hidden;
+		position: relative;
+	}
+	.scroll-slider h3{
+		direction: rtl;
+		line-height: 35px;
+		padding: 0 13px;
+		font-family: iran-sans;
+		font-size: 13px;
+	}
+	.scroll-next{
+		width: 50px;
+		height: 275px;
+		float: right;
+	}
+	.scroll-prev{
+		width: 50px;
+		height: 275px;
+		float: left;
+		position: absolute;
+		top: 35px;
+		left: 0;
+		background-color: #fff;
+		box-shadow: 0px 15px 15px #888888;
+	}
+	.scroll-slider i{
+		text-align: center;
+		display: block;
+		line-height: 275px;
+		color: #B8B8B8B8;
+		background-color: #fff;
+		cursor: pointer;
+	}
+	.scroll-main{
+		height: 90%;
+		overflow: hidden;
+		margin-right: 50px;
+	}
+	.scroll-main ul{
+		height: 100%;
+		width: 1160px;
+		float: right;
+		overflow: hidden;
+	}
+	.scroll-main ul li{
+		width: 250px;
+		height: 100%;
+		float: right;
+		padding: 0px 20px;
+		position: relative;
+		text-align: center;
+	}
+	.scroll-product{
+		text-align: center;
+		display: inline-block;
+		height: 90%;
+		padding-top: 25px;
+		margin: 0 auto;
+	}
+	.scroll-product img{
+		margin: 30px auto;
+		float: right;
+		display: block;
+	}
+	.scroll-product .product-meta{
+		direction: rtl;
+		font-family: iran-sans;
+		font-size: 14px;
+		line-height: 20px;
+		width: 40%;
+		display: block;
+		text-align: center;
+		padding: 20px 0;
+		color: #153574;
+	}
+	.scroll-product .product-price{
+		line-height: 25px;
+		text-align: center;
+		font-family: iran-sans;
+		font-size: 13px;
+		direction: rtl;
+		width: 40%;
+	}
+	.product-price-old{
+		background-color: #ccc;
+		width: 100%;
+		display: block;
+		text-decoration-line: line-through;
+		margin: 5px 0;
+	}
+	.product-price-old{
+		background-color: #a6d45b;
+		width: 100%;
+		display: block;
+	}
+</style><!--Scroll Slider-->
+<script>
+    function scroll(direction,tag){
+
+        var slideTag = $(tag);
+        var sliderScrollUl = slideTag.parent('.scroll-slider').find('ul');
+        var liLength = sliderScrollUl.find('li').length;
+        var liWidth = parseInt(sliderScrollUl.find('li').outerWidth());
+        var ulWidthSize = (liLength) * (liWidth);
+        var maxMargin = (liLength - 4) * liWidth;
+        var marginRight = parseFloat(sliderScrollUl.css('margin-right'));
+        sliderScrollUl.css("width", ulWidthSize);
+        if (maxMargin == 0 || maxMargin < 0){
+            maxMargin = 0;
+        }
+        if(direction == 'left'){
+            marginRight=marginRight-liWidth;
+            if((-marginRight) > maxMargin){
+                marginRight = (-maxMargin)-80;
+            }
+        }
+        if(direction == 'right'){
+            marginRight=marginRight+liWidth;
+            if(marginRight > 0){
+                marginRight = 0;
+            }
+        }
+        sliderScrollUl.animate({'marginRight':marginRight},1000);
+    }
+    $('.scroll-next').click(function(){
+        scroll('left',this);
+    });
+    $('.scroll-prev').click(function(){
+        scroll('right',this);
+    });
+
+
+
+</script><!--Scroll Slider-->
+</body>
+</html>
