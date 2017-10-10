@@ -1290,7 +1290,7 @@
 								</div>
 							</div>
 							<div class="address-select">
-								<input type="radio" autocomplete="on">
+								<input type="radio" autocomplete="on" name="address">
 								<label class="checked"></label>
 								<span class="address-txt">
 							به این آدرس ارسال می‌شود .
@@ -1351,8 +1351,8 @@
 								</div>
 							</div>
 							<div class="address-select">
-								<input type="radio" autocomplete="on">
-								<label class="checked"></label>
+								<input type="radio" autocomplete="off" name="address">
+								<label class=""></label>
 								<span class="address-txt">
 							به این آدرس ارسال می‌شود .
 				</span>
@@ -1412,8 +1412,8 @@
 								</div>
 							</div>
 							<div class="address-select">
-								<input type="radio" autocomplete="on">
-								<label class="checked"></label>
+								<input type="radio" autocomplete="off" name="address">
+								<label class=""></label>
 								<span class="address-txt">
 							به این آدرس ارسال می‌شود .
 				</span>
@@ -1473,8 +1473,8 @@
 								</div>
 							</div>
 							<div class="address-select">
-								<input type="radio" autocomplete="on">
-								<label class="checked"></label>
+								<input type="radio" autocomplete="off" name="address">
+								<label class=""></label>
 								<span class="address-txt">
 							به این آدرس ارسال می‌شود .
 				</span>
@@ -1577,12 +1577,226 @@
 						</ul>
 					</div>
 					<div class="scroll-prev" onClick="scroll('right',this);"><i class="fa fa-angle-left fa-4x" aria-hidden="true"></i></div>
-
 				</div><!--Scroll Slider-->
+<style>
+	.wrapper-shipping{
+		background: #fff;
+		height: 100px;
+		padding: 20px;
+	}
+	.shipping{
+		background-color: #fff;
+		border: 1px solid #c0f0c1;
+		width: 96%;
+		margin: 10px auto;
+		padding: 10px;
+		cursor: pointer;
+	}
+	.shipping .right{
+		float: right;
+	}
+	.shipping .ship-img{
+		float: right;
+	}
+	.ship-title{
+		float: right;
+		direction: rtl;
+		margin: 0 20px;
+	}
+	.ship-title h2{
+		font-size: 15px;
+		line-height: 25px;
+	}
+	.ship-title p{
+		font-size: 13px;
+		line-height: 25px;
+		color: #777;
+	}
+	.shipping .left{
+		line-height: 25px;
+		padding-left: 40px;
+	}
+	.shipping .left p{
+		font-size: 14px;
+	}
+	.shipping .left span{
+		margin: 12px;
+		white-space: nowrap;
+		color: #4caf50;
+		font-size: 17px;
+	}
+	.next-shipment{
+		height: 70px;
+		background-color: #fff;
+	}
+	.next-shipment-btn{
+		display: inline-block;
+		line-height: 30px;
+		font-size: 14px;
+		background-color: #3ca3f4;
+		color: #fff;
+		border-radius: 2px;
+		padding: 5px 10px;
+		margin-left: 25px;
+		cursor: pointer;
+	}
+	.factor-pack{
+		direction: rtl;
+		font-size: 13px;
+		padding: 15px 0;
+	}
+	.factor-pack i{
+		float: right;
+		margin-left: 10px;
+		margin-top: 9px;
+		color: #2396f3;
+	}
+	.factor-pack p{
+		display: inline-block;
+	}
+	.factor-pack form{
+		display: inline-block;
+	}
+	.factor-pack form span input{
+		position: relative;
+		top: 4px;
+		right: -3px;
+	}
+	.factor-pack form span{
+		margin-right: 10px;
+	}
+	.factor-message-green{
+		direction: rtl;
+		padding: 12px 10px;
+		background: #f7fff7;
+		color: #4caf50;
+		border: 1px solid #c0f0c1;
+		font-size: 14px;
+	}
+	.factor-message-brown{
+		display: none;
+		direction: rtl;
+		padding: 12px 10px;
+		background: #fffcda;
+		color: #7C6A26;
+		border: 1px solid #E2C868;
+		font-size: 14px;
+	}
+	.factor-message-green i , .factor-message-brown i{
+		float: right;
+		margin-left: 10px;
+	}
+	.shipping-route{
+		margin: 20px 0 60px;
+	}
+	.shipping-route::after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.return-cart{
+		float: right;
+	}
+	.return-cart span{
+		background-color: #969BA8;
+		padding: 5px 15px;
+		color: #fff;
+		border-radius: 2px;
+		font-size: 13px;
+		cursor: pointer;
+	}
+	.next-step span{
+		padding: 5px 15px;
+		color: #fff;
+		border-radius: 2px;
+		font-size: 13px;
+		cursor: pointer;
+		background-color: #4CAF50;
+	}
+</style>
+			<div class="wrapper-shipping">
+					<div class="shipping">
+						<div class="right">
+							<div class="ship-img">
+								<img src="img/express_delivery_dk_48_icon.png"/>
+							</div>
+							<div class="ship-title">
+								<h2>
+									تحویل اکسپرس دیجی‌کالا
+								</h2>
+								<p>
+									زمان تقريبي تحويل سفارشات: 24 ساعت
+								</p>
+							</div>
+
+						</div>
+						<div class="left">
+							<p>
+								هزینه ارسال
+							</p>
+							<span class="ship-price">
+								رایگان
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="next-shipment">
+					<span class="next-shipment-btn">
+						تایید و ثبت مرسوله
+					</span>
+				</div>
+				<div class="factor-pack">
+					<i class="fa fa-caret-left"></i>
+					<p>
+						آیا مایل هستید به همراه این سفارش فاکتور (فقط اقلام عرضه شده توسط دیجی کالا) ارسال شود؟
+					</p>
+					<form>
+						<span class="factor-pack-radio">
+							<input type="radio" name="factor-pack" value="no" autocomplete="on" onclick="factorY(this)">خیر
+						</span>
+						<span class="factor-pack-radio">
+							<input type="radio" name="factor-pack" value="yes" autocomplete="off" onclick="factorN(this)">آره
+						</span>
+					</form>
+				</div>
+				<div class="factor-message-green">
+					<i class="fa fa-tree" aria-hidden="true"></i>
+					<p>
+						از شما سپاسگزاریم که با عدم دریافت فاکتور کاغذی به سبز ماندن زمین کمک می کنید.
+					</p>
+				</div>
+				<div class="factor-message-brown">
+					<i class="fa fa-tree" aria-hidden="true"></i>
+					<p>
+						بیاییم با عدم دریافت فاکتور کاغذی به سبز ماندن زمین کمک کنیم.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="shipping-route">
+			<div class="return-cart">
+				<span>
+					بازگشت به سبد خرید
+				</span>
+			</div>
+			<div class="next-step">
+				<span>
+					ثبت اطلاعات و ادامه خرید
+				</span>
 			</div>
 		</div>
 	</div><!---Content--->
 </div>
+<script>
+	function factorN (tag) {
+		$('.factor-message-green').fadeOut(0);
+		$('.factor-message-brown').fadeIn(50);
+}
+	function factorY (tag){
+		$('.factor-message-brown').fadeOut(0);
+		$('.factor-message-green').fadeIn(50);
+}
+</script>
 <script>
 	var input = $('.address-select').find('input');
 	input.click(function () {
